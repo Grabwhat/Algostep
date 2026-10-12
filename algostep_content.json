@@ -1,0 +1,1866 @@
+[
+{
+  "model": "learning.cptopic",
+  "pk": 1,
+  "fields": {
+    "name": "Arrays & Hashing",
+    "slug_name": "arrays-hashing",
+    "description": "Arrays and hashing are some basic data structures that help in storing and managing data effectively. An array is defined as a sequence of values that are stored adjacent to one another in memory, and therefore you can find any particular value in the array if you know its index. But it will take a long time to find out a particular value in unsorted arrays and also insertion and deletion operations in arrays will take much time since you need to do operations on all the elements of the array. On the other hand, hashing will allow you to overcome the searching operation in an array. It maps data to an index with the help of a hash function, making access to that data incredibly fast.",
+    "topic_level": 1,
+    "mini_level_req": 1,
+    "user_level_req": 0,
+    "requirements": []
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 2,
+  "fields": {
+    "name": "Two Pointers",
+    "slug_name": "two-pointers",
+    "description": "Two Pointers is an algorithmic technique in which two reference variables (you can think of them as indices) are maintained to point to distinct indices within the same array or string to solve problems effectively. This algorithm does not make use of any nested loops that are too slow, as it operates with a time complexity of <code>O(n)</code>. However, it makes use of traversing the data structure in two different directions or at two different speeds to solve the problem in an efficient manner. The common techniques include the two-sum problem (using pointers starting from two different ends and moving towards the center of the sorted array) and the fast and slow pointer problem (to check for cycles in linked lists).",
+    "topic_level": 2,
+    "mini_level_req": 1,
+    "user_level_req": 1,
+    "requirements": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 3,
+  "fields": {
+    "name": "Stack",
+    "slug_name": "stack",
+    "description": "Stacks are linear data structures, characterized by the Last-In, First-Out (LIFO) nature of the structure. This means that the last item to be inserted into the stack will be the first to leave it. It can be visualized as a physical stack of plates at the cafeteria. In this case, one may insert an item only on the top, and also remove the top item first, before any other items below it can be reached. The stack has two main operations; the push operation that pushes an item on the top of the stack and the pop operation that pops off the topmost item.",
+    "topic_level": 2,
+    "mini_level_req": 1,
+    "user_level_req": 1,
+    "requirements": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 4,
+  "fields": {
+    "name": "Binary Search",
+    "slug_name": "binary-search",
+    "description": "Binary Search is a very efficient divide-and-conquer searching algorithm that determines the index position of a particular target value in a sorted array. Rather than going through each element sequentially from start to finish, this algorithm first determines the midpoint element in the array. If they do not match, the algorithm determines whether the target value is greater or less than the midpoint value. In case the target value is smaller, the entire right side of the array can be safely ignored; if it is bigger, the left side is completely ignored. This algorithm divides the array in half each time, hence the name \"binary search.\" By dividing the available information into two halves each time, it has a very efficient time complexity of <code>O(n log n)</code>, enabling it to determine a particular value among billions of other values within a matter of dozens of steps.",
+    "topic_level": 3,
+    "mini_level_req": 1,
+    "user_level_req": 2,
+    "requirements": [
+      2
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 5,
+  "fields": {
+    "name": "Complete Search",
+    "slug_name": "complete-search",
+    "description": "Complete Search is one of the basics in Competitive Programming. In Complete Search, all possible solutions in the search space of a particular problem must be traversed to find all feasible solutions or even an optimal solution. The idea behind this algorithm is based on the blazing-fast speed of modern computers. That is, using loops or even recursion, like backtracking, we must visit all possible combinations, like generating all subsets, all permutations, and so on. The time complexity of complete search is always exponential or factorial (like <code>O(2<sup>n</sup>)</code> or <code>O(n!)</code>). Thus, it can only be applied when constraints (<code>N</code>) of the problem are very low, like (<code>N</code> ≤ 20). In contests, it is a great idea for obtaining partial points or even as a stress-testing tool.",
+    "topic_level": 1,
+    "mini_level_req": 3,
+    "user_level_req": 0,
+    "requirements": [
+      1
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 6,
+  "fields": {
+    "name": "Simulation",
+    "slug_name": "simulation",
+    "description": "Simulation competitive programming is where one solves a particular problem by writing code that simulates a real-world procedure, game, or a sequence of actions as it is stated in the problem itself. This type of problem-solving does not involve searching for complicated formulas or sophisticated data structures. In most cases, this kind of problem solving requires accurate tracking and updating of the system's \"state\" through the use of loops, arrays, or simple conditional statements.",
+    "topic_level": 1,
+    "mini_level_req": 2,
+    "user_level_req": 0,
+    "requirements": [
+      1
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 7,
+  "fields": {
+    "name": "Sliding Window",
+    "slug_name": "sliding-window",
+    "description": "The Sliding Window is an optimization strategy that helps to solve the problem of processing sequential data structures such as arrays or strings. Unlike using multiple loops that check every possible overlap of elements in a data structure, resulting in inefficient performance due to its quadratic time complexity (<code>O(n<sup>2</sup>)</code>), it utilizes two pointers to maintain a continuous \"window\" of elements in a data set. To calculate the result incrementally, the window adds a single new element at the start of the sliding window and subtracts the element from the end of the sliding window while shifting it from left to right throughout the entire data structure. Such an approach allows significantly decreasing the runtime to a much faster linear time complexity (<code>O(n)</code>). The sliding window could be fixed or dynamic depending on the task, for instance, finding the shortest/longest subarray that meets some condition.",
+    "topic_level": 3,
+    "mini_level_req": 1,
+    "user_level_req": 2,
+    "requirements": [
+      2
+    ]
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "topic": 1,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "TestUser@company.com"
+    ],
+    "topic": 1,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "NU3@company.com"
+    ],
+    "topic": 1,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "NU2@company.com"
+    ],
+    "topic": 1,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "TU2@company.com"
+    ],
+    "topic": 1,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "NU67@company.com"
+    ],
+    "topic": 1,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "NU67@company.com"
+    ],
+    "topic": 2,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "NU67@company.com"
+    ],
+    "topic": 3,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 11,
+  "fields": {
+    "user": [
+      "NU67@company.com"
+    ],
+    "topic": 4,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 12,
+  "fields": {
+    "user": [
+      "NU67@company.com"
+    ],
+    "topic": 5,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 13,
+  "fields": {
+    "user": [
+      "NU67@company.com"
+    ],
+    "topic": 6,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "NU67@company.com"
+    ],
+    "topic": 7,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "topic": 6,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 16,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "topic": 5,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 17,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "topic": 2,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "topic": 3,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "TU2@company.com"
+    ],
+    "topic": 5,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 20,
+  "fields": {
+    "user": [
+      "NU2@company.com"
+    ],
+    "topic": 5,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 21,
+  "fields": {
+    "user": [
+      "NU2@company.com"
+    ],
+    "topic": 6,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 22,
+  "fields": {
+    "user": [
+      "NU2@company.com"
+    ],
+    "topic": 3,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "learning.usertopic",
+  "pk": 23,
+  "fields": {
+    "user": [
+      "NU2@company.com"
+    ],
+    "topic": 2,
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 2,
+  "fields": {
+    "title": "Shifted MEX",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/contest/2185/problem/C",
+    "slug": "shifted-mex",
+    "external_id": "2185C",
+    "difficulty": "900",
+    "category_difficulty": "EASY",
+    "description": "You are given an array of n integers a<sub>1</sub>,a<sub>2</sub>,…,a<sub>n</sub>. You are allowed to perform the following operation once.\r\n\r\n- Select an integer x (which may be negative), and for each value i (1≤i≤n), set a<sub>i</sub>=a<sub>i</sub>+ x.\r\n\r\nFor example, if a=[1,3,4,2], and you perform the operation with x=3, a is now equal to [4,6,7,5].\r\n\r\nOutput the maximum possible value of MEX(a)∗  after the operation is performed.\r\n\r\n<hr>\r\n∗MEX(a) is defined as the smallest non-negative integer that is not present in the array. For example, MEX([1,2,0,5]) is 3, and MEX([1,2,4,9]) is 0.\r\n\r\nInput\r\nThe first line of the input contains a single integer t (1≤t≤1000) — the number of test cases.\r\n\r\nThe first line of each test case contains a single integer n (1≤n≤3000) — the length of array a.\r\n\r\nThe second line contains n integers a<sub>1</sub>,a<sub>2</sub>,…,a<sub>n</sub> (−10<sub>9</sub>≤a<sub>i</sub>≤10<sub>9</sub>) — the array a.\r\n\r\nIt is guaranteed that the sum of n over all test cases does not exceed 3000.\r\n\r\nOutput\r\nFor each test case, output the maximum possible value of MEX(a) after the operation has been performed.\r\n\r\nExample\r\n<pre>\r\nInput\r\n6\r\n1\r\n4\r\n5\r\n0 1 1 2 3\r\n2\r\n1 1\r\n4\r\n4 2 3 6\r\n5\r\n2 4 1 0 -1\r\n6\r\n-1 1 2 3 5 6\r\n\r\nOutput\r\n1\r\n4\r\n1\r\n3\r\n4\r\n3\r\n</pre>\r\n\r\nNote\r\nFor the first test case, performing the operation with x=−4 makes a=[0], and MEX([0])=1.\r\n\r\nFor the second test case, the MEX is already 4, which is the highest possible, so we can perform the operation with x=0, which will not change the array.",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 0,
+    "mini_level_access": 3,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 3,
+  "fields": {
+    "title": "Daisy Chains",
+    "platform": "USACO",
+    "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1060",
+    "slug": "daisy-chains",
+    "external_id": "1060",
+    "difficulty": "Bronze",
+    "category_difficulty": "EASY",
+    "description": "Every day, as part of her walk around the farm, Bessie the cow visits her favorite pasture, which has N flowers (all colorful daisies) labeled 1…N  lined up in a row (1≤N≤100). Flower i has pi petals (1≤p<sub>i</sub>≤1000).\r\n\r\nAs a budding photographer, Bessie decides to take several photos of these flowers. In particular, for every pair of flowers (i,j) satisfying 1≤i≤j≤N, Bessie takes a photo of all flowers from flower i to flower j (including i and j).\r\n\r\nBessie later looks at these photos and notices that some of these photos have an \"average flower\" -- a flower that has P petals, where P is the exact average number of petals among all flowers in the photo.\r\n\r\nHow many of Bessie's photos have an average flower?\r\n\r\nINPUT FORMAT (input arrives from the terminal / stdin):\r\nThe first line of input contains N. The second line contains N space-separated integers p<sub>1</sub>…p<sub>N</sub>.\r\n\r\nOUTPUT FORMAT (print output to the terminal / stdout):\r\nPlease print out the number of photos that have an average flower.\r\n\r\nSAMPLE INPUT:\r\n4\r\n1 1 2 3\r\nSAMPLE OUTPUT:\r\n6\r\n\r\nEvery picture containing just a single flower contributes to the count (there are four of these in the example). Also, the (i,j) ranges (1,2) and (2,4) in this example correspond to pictures that have an average flower.",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 4,
+  "fields": {
+    "title": "Vowel Count",
+    "platform": "Codewars",
+    "url": "https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/python",
+    "slug": "vowel-count",
+    "external_id": "54ff3102c1bad923760001f3",
+    "difficulty": "7kyu",
+    "category_difficulty": "EASY",
+    "description": "Return the number (count) of vowels in the given string.\r\n\r\nWe will consider <code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code> as vowels for this Kata (but not <code>y</code>).\r\n\r\nThe input string will only consist of lower case letters and/or spaces.",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 0,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 5,
+  "fields": {
+    "title": "Do you know the second highest mountain?",
+    "platform": "AtCoder",
+    "url": "https://atcoder.jp/contests/abc201/tasks/abc201_b",
+    "slug": "do-you-know-the-second-highest-mountain",
+    "external_id": "201B",
+    "difficulty": "ABC",
+    "category_difficulty": "EASY",
+    "description": "The Republic of AtCoder has N mountains. The i-th mountain has a name <code>S<sub>i</sub></code> and a height of <code>T<sub>i</sub></code>.\r\n\r\nReturn the name of the second highest mountain there. It is guaranteed that all the mountains have different names and different heights.\r\n\r\n<strong>Constraints</strong>\r\n<ul class=\"list-disc list-inside\">\r\n<li>2 ≤ <code>N</code> ≤ 1000</li>\r\n<li>1 ≤ (the length of <code>S<sub>i</sub></code>) ≤ 15</li>\r\n<li>1 ≤ <code>T<sub>i</sub></code> ≤ 10<sup>5</sup></li>\r\n<li><code>S<sub>i</sub></code> != <code>S<sub>j</sub></code> (i != j)</li>\r\n<li><code>T<sub>i</sub></code> != <code>T<sub>j</sub></code> (i != j)</li>\r\n<li><code>S<sub>i</sub></code> consists of uppercase English letters, lowercase English letters, and digits.</li>\r\n<li><code>N</code> and <code>T<sub>i</sub></code> are integers.</li>\r\n</ul>",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 0,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 6,
+  "fields": {
+    "title": "Longest Consecutive Sequence",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/longest-consecutive-sequence/description/",
+    "slug": "longest-consecutive-sequence",
+    "external_id": "128",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>You must write an algorithm that runs in <code>O(n)</code> time.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<strong>Input:</strong> nums = [100,4,200,1,3,2]\r\n<strong>Output:</strong> 4\r\n<strong>Explanation:</strong> The longest consecutive elements sequence is <code>[1, 2, 3, 4]</code>. Therefore its length is 4.\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> nums = [0,3,7,2,5,8,4,6,0,1]\r\n<strong>Output:</strong> 9\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<strong>Input:</strong> nums = [1,0,1,2]\r\n<strong>Output:</strong> 3\r\n\r\n<p><strong>Constraints:</strong></p>\r\n<ul class=\"list-disc list-inside\">\r\n<li><code>0 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\r\n<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\r\n</ul>",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 7,
+  "fields": {
+    "title": "Two Sum",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/two-sum/description/",
+    "slug": "two-sum",
+    "external_id": "1",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>You are given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\r\n<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>\r\n<p>You can return the answer in any order.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> nums = [2,7,11,15], target = 9\r\n<strong>Output:</strong> [0,1]\r\n<strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> nums = [3,2,4], target = 6\r\n<strong>Output:</strong> [1,2]\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> nums = [3,3], target = 6\r\n<strong>Output:</strong> [0,1]\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul class=\"list-disc list-inside\">\r\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\r\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\r\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\r\n\t<li><strong>Only one valid answer exists.</strong></li>\r\n</ul>\r\n<strong>Follow-up: </strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code>time complexity?",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 0,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 8,
+  "fields": {
+    "title": "Contains Duplicate",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/contains-duplicate/description/",
+    "slug": "contains-duplicate",
+    "external_id": "217",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>Given an integer array <code>nums</code>, return <code>true</code> if any value appears at least twice in the array, and return <code>false</code> if every element is distinct.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<div class=\"example-block\">\r\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,3,1]</span></p>\r\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\r\n<p><strong>Explanation:</strong></p>\r\n<p>The element 1 occurs at the indices 0 and 3.</p>\r\n</div>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<div class=\"example-block\">\r\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,3,4]</span></p>\r\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\r\n<p><strong>Explanation:</strong></p>\r\n<p>All elements are distinct.</p>\r\n</div>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<div class=\"example-block\">\r\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,1,1,3,3,4,3,2,4,2]</span></p>\r\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\r\n</div>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li><li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li></ul>",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 0,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 9,
+  "fields": {
+    "title": "Find the odd int",
+    "platform": "Codewars",
+    "url": "https://www.codewars.com/kata/54da5a58ea159efa38000836/train/python",
+    "slug": "find-the-odd-int",
+    "external_id": "54da5a58ea159efa38000836",
+    "difficulty": "6kyu",
+    "category_difficulty": "EASY",
+    "description": "Given an array of integers, find the one that appears an odd number of times.\r\n\r\nThere will always be only one integer that appears an odd number of times.\r\n\r\nExamples\r\n<code>[7]</code> should return <code>7</code>, because it occurs 1 time (which is odd).\r\n<code>[0]</code> should return <code>0</code>, because it occurs 1 time (which is odd).\r\n<code>[1,1,2]</code> should return <code>2</code>, because it occurs 1 time (which is odd).\r\n<code>[0,1,0,1,0]</code> should return <code>0</code>, because it occurs 3 times (which is odd).\r\n<code>[1,2,2,3,3,3,4,3,3,3,2,2,1]</code> should return <code>4</code>, because it appears 1 time (which is odd).",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 0,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 10,
+  "fields": {
+    "title": "Bear and Big Brother",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/791/A",
+    "slug": "bear-and-big-brother",
+    "external_id": "791A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "Bear Limak wants to become the largest of bears, or at least to become larger than his brother Bob.\r\n\r\nRight now, Limak and Bob weigh a and b respectively. It's guaranteed that Limak's weight is smaller than or equal to his brother's weight.\r\n\r\nLimak eats a lot and his weight is tripled after every year, while Bob's weight is doubled after every year.\r\n\r\nAfter how many full years will Limak become strictly larger (strictly heavier) than Bob?\r\n\r\nInput\r\nThe only line of the input contains two integers a and b (1 ≤ a ≤ b ≤ 10) — the weight of Limak and the weight of Bob respectively.\r\n\r\nOutput\r\nPrint one integer, denoting the integer number of years after which Limak will become strictly larger than Bob.\r\n\r\nExamples\r\nInput\r\n4 7\r\nOutput\r\n2\r\n\r\nInput\r\n4 9\r\nOutput\r\n3\r\n\r\nInput\r\n1 1\r\nOutput\r\n1",
+    "topic": "simulation",
+    "topic_relation": 6,
+    "user_level_access": 0,
+    "mini_level_access": 2,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 11,
+  "fields": {
+    "title": "Beautiful Matrix",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/263/A",
+    "slug": "beautiful-matrix",
+    "external_id": "263A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "You've got a 5 × 5 matrix, consisting of 24 zeroes and a single number one. Let's index the matrix rows by numbers from 1 to 5 from top to bottom, let's index the matrix columns by numbers from 1 to 5 from left to right. In one move, you are allowed to apply one of the two following transformations to the matrix:\r\n\r\n1. Swap two neighboring matrix rows, that is, rows with indexes i and i + 1 for some integer i (1 ≤ i < 5).\r\n2. Swap two neighboring matrix columns, that is, columns with indexes j and j + 1 for some integer j (1 ≤ j < 5).\r\nYou think that a matrix looks beautiful, if the single number one of the matrix is located in its middle (in the cell that is on the intersection of the third row and the third column). Count the minimum number of moves needed to make the matrix beautiful.\r\n\r\nInput\r\nThe input consists of five lines, each line contains five integers: the j-th integer in the i-th line of the input represents the element of the matrix that is located on the intersection of the i-th row and the j-th column. It is guaranteed that the matrix consists of 24 zeroes and a single number one.\r\n\r\nOutput\r\nPrint a single integer — the minimum number of moves needed to make the matrix beautiful.\r\n\r\ninput\r\n0 0 0 0 0\r\n0 0 0 0 1\r\n0 0 0 0 0\r\n0 0 0 0 0\r\n0 0 0 0 0\r\noutput\r\n3\r\n\r\ninput\r\n0 0 0 0 0\r\n0 0 0 0 0\r\n0 1 0 0 0\r\n0 0 0 0 0\r\n0 0 0 0 0\r\noutput\r\n1",
+    "topic": "simulation",
+    "topic_relation": 6,
+    "user_level_access": 0,
+    "mini_level_access": 2,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 12,
+  "fields": {
+    "title": "Wrong Subtraction",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/977/A",
+    "slug": "wrong-subtraction",
+    "external_id": "977A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "Little girl Tanya is learning how to decrease a number by one, but she does it wrong with a number consisting of two or more digits. Tanya subtracts one from a number by the following algorithm:\r\n<ul class=\"list-disc list-inside\">\r\n<li>if the last digit of the number is non-zero, she decreases the number by one;</li>\r\n<li>if the last digit of the number is zero, she divides the number by 10 (i.e. removes the last digit).</li?\r\n</ul>\r\n\r\nYou are given an integer number n. Tanya will subtract one from it k times. Your task is to print the result after all k subtractions.\r\n\r\nIt is guaranteed that the result will be positive integer number.\r\n\r\nInput\r\nThe first line of the input contains two integer numbers <code>n</code> and <code>k</code> <code>(2 ≤ n ≤ 10<sup>9</sup>, 1 ≤k ≤ 50)</code> — the number from which Tanya will subtract and the number of subtractions correspondingly.\r\n\r\nOutput\r\nPrint one integer number — the result of the decreasing <code>n</code> by one <code>k</code> times.\r\n\r\nIt is guaranteed that the result will be positive integer number.\r\n\r\ninput\r\n512 4\r\noutput\r\n50\r\n\r\ninput\r\n1000000000 9\r\noutput\r\n1\r\n\r\nNote\r\nThe first example corresponds to the following sequence: 512→511→510→51→50.",
+    "topic": "simulation",
+    "topic_relation": 6,
+    "user_level_access": 0,
+    "mini_level_access": 2,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 13,
+  "fields": {
+    "title": "Shift only",
+    "platform": "AtCoder",
+    "url": "https://atcoder.jp/contests/abc081/tasks/abc081_b",
+    "slug": "shift-only",
+    "external_id": "81B",
+    "difficulty": "ABC",
+    "category_difficulty": "EASY",
+    "description": "Problem Statement\r\nThere are <code>N</code> positive integers written on a blackboard: <code>A<sub>1</sub></code>, ... , <code>A <sub>N</sub></code>.\r\n\r\nSnuke can perform the following operation when all integers on the blackboard are even:\r\n<ul class=\"list-inside list-disc\"><li>Replace each integer <code>X</code> on the blackboard by <code>X</code> divided by 2.</li></ul>\r\n\r\nFind the maximum possible number of operations that Snuke can perform.\r\n\r\nConstraints\r\n<ul class=\"list-inside list-disc\">\r\n<li><code>1≤ N ≤ 200</code></li>\r\n<li><code>1≤ A<sub>i</sub> ≤10<sup>9</sup></code></li>\r\n</ul>\r\nInput\r\nInput is given from Standard Input in the following format:\r\nN \r\nA<sub>1</sub> A<sub>2</sub> ... A<sub>N</sub>\r\n​ \r\nOutput\r\nPrint the maximum possible number of operations that Snuke can perform.\r\n\r\nSample Input 1\r\n3\r\n8 12 40\r\nSample Output 1\r\n2\r\n\r\nInitially, [8,12,40] are written on the blackboard. Since all those integers are even, Snuke can perform the operation.\r\n\r\nAfter the operation is performed once, [4,6,20] are written on the blackboard. Since all those integers are again even, he can perform the operation.\r\n\r\nAfter the operation is performed twice, [2,3,10] are written on the blackboard. Now, there is an odd number 3 on the blackboard, so he cannot perform the operation any more.\r\n\r\nThus, Snuke can perform the operation at most twice.\r\n\r\nSample Input 2\r\n4\r\n5 6 8 10\r\nSample Output 2\r\n0\r\n\r\nSince there is an odd number 5 on the blackboard already in the beginning, Snuke cannot perform the operation at all.\r\n\r\nSample Input 3\r\n6\r\n382253568 723152896 37802240 379425024 404894720 471526144\r\nSample Output 3\r\n8",
+    "topic": "simulation",
+    "topic_relation": 6,
+    "user_level_access": 0,
+    "mini_level_access": 2,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 14,
+  "fields": {
+    "title": "Fizz Buzz",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/fizz-buzz/description/",
+    "slug": "fizz-buzz",
+    "external_id": "412",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "Given an integer <code>n</code>, return a string array <code>answer</code> (1-indexed) where:\r\n\r\n<ul class=\"list-inside list-disc\"><li><code>answer[i] == &quot;FizzBuzz&quot;</code> if <code>i</code> is divisible by <code>3</code> and <code>5</code>.</li>\r\n<li><code>answer[i] == &quot;Fizz&quot;</code> if <code>i</code> is divisible by <code>3</code>.</li>\r\n<li><code>answer[i] == &quot;Buzz&quot;</code> if <code>i</code> is divisible by <code>5</code>.</li>\r\n<li><code>answer[i] == i</code> (as a string) if none of the above conditions are true.</li></ul>\r\n\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> n = 3\r\n<strong>Output:</strong> [&quot;1&quot;,&quot;2&quot;,&quot;Fizz&quot;]\r\n</pre><p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> n = 5\r\n<strong>Output:</strong> [&quot;1&quot;,&quot;2&quot;,&quot;Fizz&quot;,&quot;4&quot;,&quot;Buzz&quot;]\r\n</pre><p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> n = 15\r\n<strong>Output:</strong> [&quot;1&quot;,&quot;2&quot;,&quot;Fizz&quot;,&quot;4&quot;,&quot;Buzz&quot;,&quot;Fizz&quot;,&quot;7&quot;,&quot;8&quot;,&quot;Fizz&quot;,&quot;Buzz&quot;,&quot;11&quot;,&quot;Fizz&quot;,&quot;13&quot;,&quot;14&quot;,&quot;FizzBuzz&quot;]\r\n</pre>\r\n\r\n<p><strong>Constraints:</strong></p><ul class=\"list-inside list-disc\"><li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li></ul>",
+    "topic": "simulation",
+    "topic_relation": 6,
+    "user_level_access": 0,
+    "mini_level_access": 2,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 15,
+  "fields": {
+    "title": "Sum of Three Integers",
+    "platform": "AtCoder",
+    "url": "https://atcoder.jp/contests/abc051/tasks/abc051_b",
+    "slug": "sum-of-three-integers",
+    "external_id": "51B",
+    "difficulty": "ABC",
+    "category_difficulty": "EASY",
+    "description": "Problem Statement\r\nYou are given two integers <code>K</code> and <code>S</code>.\r\nThree variable <code>X</code>, <code>Y</code> and <code>Z</code> takes integer values satisfying <code>0 ≤ X, Y, Z ≤ K</code>.\r\nHow many different assignments of values to <code>X</code>, <code>Y</code> and <code>Z</code> are there such that <code>X + Y + Z = S</code>?\r\n\r\nConstraints\r\n<ul class=\"list-inside list-disc\">\r\n<li><code>2 ≤ K ≤ 2500</code></li>\r\n<li><code>0 ≤ S ≤ 3K</code></li>\r\n<li><code>K</code> and <code>S</code> are integers.</li>\r\n</ul>\r\nInput\r\nThe input is given from Standard Input in the following format:\r\nK S\r\n\r\nOutput\r\nPrint the number of the triples of <code>X</code>, <code>Y</code> and <code>Z</code> that satisfy the condition.\r\n\r\nSample Input 1\r\n2 2\r\nSample Output 1\r\n6\r\n\r\nThere are six triples of <code>X</code>, <code>Y</code> and <code>Z</code> that satisfy the condition:\r\n<ul class=\"list-inside list-disc\">\r\n<li><code>X=0, Y=0, Z=2</code></li>\r\n<li><code>X=0, Y=2, Z=0</code></li>\r\n<li><code>X=2, Y=0, Z=0</code></li>\r\n<li><code>X=0, Y=1, Z=1</code></li>\r\n<li><code>X=1, Y=0, Z=1</code></li>\r\n<li><code>X=1, Y=1, Z=0</code></li>\r\n</ul>\r\n\r\nSample Input 2\r\n5 15\r\nSample Output 2\r\n1\r\n\r\nThe maximum value of <code>X + Y + Z</code> is 15, achieved by one triple of <code>X</code>, <code>Y</code> and <code>Z</code>.",
+    "topic": "complete-search",
+    "topic_relation": 5,
+    "user_level_access": 0,
+    "mini_level_access": 3,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 16,
+  "fields": {
+    "title": "Team",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/231/A",
+    "slug": "team",
+    "external_id": "231A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "One day three best friends Petya, Vasya and Tonya decided to form a team and take part in programming contests. Participants are usually offered several problems during programming contests. Long before the start the friends decided that they will implement a problem if at least two of them are sure about the solution. Otherwise, the friends won't write the problem's solution.\r\n\r\nThis contest offers n problems to the participants. For each problem we know, which friend is sure about the solution. Help the friends find the number of problems for which they will write a solution.\r\n\r\nInput\r\nThe first input line contains a single integer <code>n</code> (1 ≤ <code>n</code> ≤ 1000) — the number of problems in the contest. Then n lines contain three integers each, each integer is either 0 or 1. If the first number in the line equals 1, then Petya is sure about the problem's solution, otherwise he isn't sure. The second number shows Vasya's view on the solution, the third number shows Tonya's view. The numbers on the lines are separated by spaces.\r\n\r\nOutput\r\nPrint a single integer — the number of problems the friends will implement on the contest.\r\n\r\n<strong>Examples</strong>\r\n\r\ninput\r\n3\r\n1 1 0\r\n1 1 1\r\n1 0 0\r\noutput\r\n2\r\n\r\ninput\r\n2\r\n1 0 0\r\n0 1 1\r\noutput\r\n1\r\n\r\nNote\r\nIn the first sample Petya and Vasya are sure that they know how to solve the first problem and all three of them know how to solve the second problem. That means that they will write solutions for these problems. Only Petya is sure about the solution for the third problem, but that isn't enough, so the friends won't take it.\r\n\r\nIn the second sample the friends will only implement the second problem, as Vasya and Tonya are sure about the solution.",
+    "topic": "complete-search",
+    "topic_relation": 5,
+    "user_level_access": 0,
+    "mini_level_access": 2,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 17,
+  "fields": {
+    "title": "Milk Pails",
+    "platform": "USACO",
+    "url": "https://usaco.org/index.php?page=viewproblem2&cpid=615",
+    "slug": "milk-pails",
+    "external_id": "615",
+    "difficulty": "Bronze",
+    "category_difficulty": "EASY",
+    "description": "Farmer John has received an order for exactly M units of milk (1 ≤ M ≤ 1,000) that he needs to fill right away. Unfortunately, his fancy milking machine has just become broken, and all he has are three milk pails of integer sizes X, Y, and M (1 ≤ X < Y < M). All three pails are initially empty. Using these three pails, he can perform any number of the following two types of operations:\r\n\r\n- He can fill the smallest pail (of size X) completely to the top with X units of milk and pour it into the size-M pail, as long as this will not cause the size-M pail to overflow.\r\n\r\n- He can fill the medium-sized pail (of size Y) completely to the top with Y units of milk and pour it into the size-M pail, as long as this will not cause the size-M pail to overflow.\r\n\r\nAlthough FJ realizes he may not be able to completely fill the size-M pail, please help him determine the maximum amount of milk he can possibly add to this pail.\r\n\r\nINPUT FORMAT (file pails.in):\r\nThe first, and only line of input, contains X, Y, and M, separated by spaces.\r\n\r\nOUTPUT FORMAT (file pails.out):\r\nOutput the maximum amount of milk FJ can possibly add to the size-M pail.\r\n\r\nSAMPLE INPUT:\r\n17 25 77\r\nSAMPLE OUTPUT:\r\n76\r\n\r\nIn this example, FJ fills the pail of size 17 three times and the pail of size 25 once, accumulating a total of 76 units of milk.",
+    "topic": "complete-search",
+    "topic_relation": 5,
+    "user_level_access": 0,
+    "mini_level_access": 3,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 18,
+  "fields": {
+    "title": "Valid Palindrome",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/valid-palindrome/description/",
+    "slug": "valid-palindrome",
+    "external_id": "125",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;\r\n<strong>Output:</strong> true\r\n<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> s = &quot;race a car&quot;\r\n<strong>Output:</strong> false\r\n<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> s = &quot; &quot;\r\n<strong>Output:</strong> true\r\n<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.\r\nSince an empty string reads the same forward and backward, it is a palindrome.\r\n</pre>\r\n<p><strong>Constraints:</strong></p><ul>\r\n<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>\r\n<li><code>s</code> consists only of printable ASCII characters.</li>\r\n</ul>",
+    "topic": "two-pointers",
+    "topic_relation": 2,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 19,
+  "fields": {
+    "title": "Two Sum II - Input Array Is Sorted",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/",
+    "slug": "two-sum-ii-input-array-is-sorted",
+    "external_id": "167",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>You are given a <strong>1-indexed</strong> array of integers <code>numbers</code> that is <strong>already sorted in non-decreasing order.</strong></p>\r\n<p>Find <strong>two</strong> numbers such that they add up to a specific <code>target</code> number. Let these two numbers be <code>numbers[index<sub>1</sub>]</code> and <code>numbers[index<sub>2</sub>]</code> where <code>1 &lt;= index<sub>1</sub> &lt; index<sub>2</sub> &lt;= numbers.length</code>.</p>\r\n<p>Return the indices of the two numbers <code>index<sub>1</sub></code> and <code>index<sub>2</sub></code> as an integer array <code>[index<sub>1</sub>, index<sub>2</sub>]</code> of length 2.</p>\r\n<p>The tests are generated such that there is <strong>exactly one solution</strong>. You <strong>may not</strong> use the same element twice.</p>\r\n<p>Your solution must use only constant extra space.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> numbers = [<u>2</u>,<u>7</u>,11,15], target = 9\r\n<strong>Output:</strong> [1,2]\r\n<strong>Explanation:</strong> The sum of 2 and 7 is 9. Therefore, index<sub>1</sub> = 1, index<sub>2</sub> = 2. We return [1, 2].\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> numbers = [<u>2</u>,3,<u>4</u>], target = 6\r\n<strong>Output:</strong> [1,3]\r\n<strong>Explanation:</strong> The sum of 2 and 4 is 6. Therefore index<sub>1</sub> = 1, index<sub>2</sub> = 3. We return [1, 3].\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> numbers = [<u>-1</u>,<u>0</u>], target = -1\r\n<strong>Output:</strong> [1,2]\r\n<strong>Explanation:</strong> The sum of -1 and 0 is -1. Therefore index<sub>1</sub> = 1, index<sub>2</sub> = 2. We return [1, 2].\r\n</pre>\r\n<p><strong>Constraints:</strong></p><ul>\r\n<li><code>2 &lt;= numbers.length &lt;= 3 * 10<sup>4</sup></code></li>\r\n<li><code>-1000 &lt;= numbers[i] &lt;= 1000</code></li>\r\n<li><code>numbers</code> is sorted in <strong>non-decreasing order</strong>.</li>\r\n<li><code>-1000 &lt;= target &lt;= 1000</code></li>\r\n<li>The tests are generated such that there is <strong>exactly one solution</strong>.</li>\r\n</ul>",
+    "topic": "two-pointers",
+    "topic_relation": 2,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 20,
+  "fields": {
+    "title": "Evaluate Reverse Polish Notation",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+    "slug": "evaluate-reverse-polish-notation",
+    "external_id": "150",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>You are given an array of strings <code>tokens</code> that represents an arithmetic expression in a Reverse Polish Notation.</p>\r\n<p>Evaluate the expression. Return <em>an integer that represents the value of the expression</em>.</p>\r\n<p><strong>Note</strong> that:</p>\r\n<ul><li>The valid operators are <code>&#x27;+&#x27;</code>, <code>&#x27;-&#x27;</code>, <code>&#x27;*&#x27;</code>, and <code>&#x27;/&#x27;</code>.</li>\r\n<li>Each operand may be an integer or another expression.</li>\r\n<li>The division between two integers always <strong>truncates toward zero</strong>.</li>\r\n<li>There will not be any division by zero.</li>\r\n<li>The input represents a valid arithmetic expression in a reverse polish notation.</li>\r\n<li>The answer and all the intermediate calculations can be represented in a <strong>32-bit</strong> integer.</li></ul>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n\r\n<pre><strong>Input:</strong> tokens = [&quot;2&quot;,&quot;1&quot;,&quot;+&quot;,&quot;3&quot;,&quot;*&quot;]\r\n<strong>Output:</strong> 9\r\n<strong>Explanation:</strong> ((2 + 1) * 3) = 9\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> tokens = [&quot;4&quot;,&quot;13&quot;,&quot;5&quot;,&quot;/&quot;,&quot;+&quot;]\r\n<strong>Output:</strong> 6\r\n<strong>Explanation:</strong> (4 + (13 / 5)) = 6\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> tokens = [&quot;10&quot;,&quot;6&quot;,&quot;9&quot;,&quot;3&quot;,&quot;+&quot;,&quot;-11&quot;,&quot;*&quot;,&quot;/&quot;,&quot;*&quot;,&quot;17&quot;,&quot;+&quot;,&quot;5&quot;,&quot;+&quot;]\r\n<strong>Output:</strong> 22\r\n<strong>Explanation:</strong> ((10 * (6 / ((9 + 3) * -11))) + 17) + 5\r\n= ((10 * (6 / (12 * -11))) + 17) + 5\r\n= ((10 * (6 / -132)) + 17) + 5\r\n= ((10 * 0) + 17) + 5\r\n= (0 + 17) + 5\r\n= 17 + 5\r\n= 22\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= tokens.length &lt;= 10<sup>4</sup></code></li>\r\n<li><code>tokens[i]</code> is either an operator: <code>&quot;+&quot;</code>, <code>&quot;-&quot;</code>, <code>&quot;*&quot;</code>, or <code>&quot;/&quot;</code>, or an integer in the range <code>[-200, 200]</code>.</li>\r\n</ul>",
+    "topic": "stack",
+    "topic_relation": 3,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 21,
+  "fields": {
+    "title": "Directions Reductions",
+    "platform": "Codewars",
+    "url": "https://www.codewars.com/kata/550f22f4d758534c1100025a/train/",
+    "slug": "directions-reductions",
+    "external_id": "550f22f4d758534c1100025a",
+    "difficulty": "5kyu",
+    "category_difficulty": "EASY",
+    "description": "Once upon a time, on a way through the old wild mountainous west,…\r\n… a man was given directions to go from one point to another. The directions were \"NORTH\", \"SOUTH\", \"WEST\", \"EAST\". Clearly \"NORTH\" and \"SOUTH\" are opposite, \"WEST\" and \"EAST\" too.\r\n\r\nGoing to one direction and coming back the opposite direction right away is a needless effort. Since this is the wild west, with dreadful weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!\r\n\r\nHow I crossed a mountainous desert the smart way.\r\nThe directions given to the man are, for example, the following (depending on the language):\r\n\r\n[\"NORTH\", \"SOUTH\", \"SOUTH\", \"EAST\", \"WEST\", \"NORTH\", \"WEST\"].\r\nor\r\n{ \"NORTH\", \"SOUTH\", \"SOUTH\", \"EAST\", \"WEST\", \"NORTH\", \"WEST\" };\r\nor\r\n[North, South, South, East, West, North, West]\r\nYou can immediately see that going \"NORTH\" and immediately \"SOUTH\" is not reasonable, better stay to the same place! So the task is to give to the man a simplified version of the plan. A better plan in this case is simply:\r\n\r\n[\"WEST\"]\r\nor\r\n{ \"WEST\" }\r\nor\r\n[West]\r\nOther examples:\r\nIn [\"NORTH\", \"SOUTH\", \"EAST\", \"WEST\"], the direction \"NORTH\" + \"SOUTH\" is going north and coming back right away.\r\n\r\nThe path becomes [\"EAST\", \"WEST\"], now \"EAST\" and \"WEST\" annihilate each other, therefore, the final result is [] (nil in Clojure).\r\n\r\nIn [\"NORTH\", \"EAST\", \"WEST\", \"SOUTH\", \"WEST\", \"WEST\"], \"NORTH\" and \"SOUTH\" are not directly opposite but they become directly opposite after the reduction of \"EAST\" and \"WEST\" so the whole path is reducible to [\"WEST\", \"WEST\"].\r\n\r\nTask\r\nWrite a function dirReduc which will take an array of strings and returns an array of strings with the needless directions removed (W<->E or S<->N side by side).\r\n\r\nNotes\r\n<ul>\r\n<li>Not all paths can be made simpler. The path [\"NORTH\", \"WEST\", \"SOUTH\", \"EAST\"] is not reducible. \"NORTH\" and \"WEST\", \"WEST\" and \"SOUTH\", \"SOUTH\" and \"EAST\" are not directly opposite of each other and can't become such. Hence the result path is itself : [\"NORTH\", \"WEST\", \"SOUTH\", \"EAST\"].</li>\r\n</ul>",
+    "topic": "stack",
+    "topic_relation": 3,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 22,
+  "fields": {
+    "title": "Binary Search",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/binary-search/",
+    "slug": "binary-search",
+    "external_id": "704",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>Given an array of integers <code>nums</code> which is sorted in ascending order, and an integer <code>target</code>, write a function to search <code>target</code> in <code>nums</code>. If <code>target</code> exists, then return its index. Otherwise, return <code>-1</code>.</p>\r\n<p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> nums = [-1,0,3,5,9,12], target = 9\r\n<strong>Output:</strong> 4\r\n<strong>Explanation:</strong> 9 exists in nums and its index is 4\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> nums = [-1,0,3,5,9,12], target = 2\r\n<strong>Output:</strong> -1\r\n<strong>Explanation:</strong> 2 does not exist in nums so return -1\r\n</pre>\r\n<p><strong>Constraints:</strong></p><ul>\r\n<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\r\n<li><code>-10<sup>4</sup> &lt; nums[i], target &lt; 10<sup>4</sup></code></li>\r\n<li>All the integers in <code>nums</code> are <strong>unique</strong>.</li>\r\n<li><code>nums</code> is sorted in ascending order.</li>\r\n</ul>",
+    "topic": "binary-search",
+    "topic_relation": 4,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 23,
+  "fields": {
+    "title": "Find First and Last Position of Element in Sorted Array",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/",
+    "slug": "find-first-and-last-position-of-element-in-sorted-array",
+    "external_id": "34",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>Given an array of integers <code>nums</code> sorted in non-decreasing order, find the starting and ending position of a given <code>target</code> value.</p>\r\n<p>If <code>target</code> is not found in the array, return <code>[-1, -1]</code>.</p>\r\n<p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> nums = [5,7,7,8,8,10], target = 8\r\n<strong>Output:</strong> [3,4]\r\n</pre><p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> nums = [5,7,7,8,8,10], target = 6\r\n<strong>Output:</strong> [-1,-1]\r\n</pre><p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> nums = [], target = 0\r\n<strong>Output:</strong> [-1,-1]\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul>\r\n<li><code>0 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\r\n<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\r\n<li><code>nums</code> is a non-decreasing array.</li>\r\n<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\r\n</ul>",
+    "topic": "binary-search",
+    "topic_relation": 4,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 24,
+  "fields": {
+    "title": "Maximum Average Subarray I",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-average-subarray-i/description/",
+    "slug": "maximum-average-subarray-i",
+    "external_id": "643",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>You are given an integer array <code>nums</code> consisting of <code>n</code> elements, and an integer <code>k</code>.</p>\r\n<p>Find a contiguous subarray whose <strong>length is equal to</strong> <code>k</code> that has the maximum average value and return <em>this value</em>. Any answer with a calculation error less than <code>10<sup>-5</sup></code> will be accepted.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> nums = [1,12,-5,-6,50,3], k = 4\r\n<strong>Output:</strong> 12.75000\r\n<strong>Explanation:</strong> Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> nums = [5], k = 1\r\n<strong>Output:</strong> 5.00000\r\n</pre>\r\n<p><strong>Constraints:</strong></p><ul>\r\n<li><code>n == nums.length</code></li>\r\n<li><code>1 &lt;= k &lt;= n &lt;= 10<sup>5</sup></code></li>\r\n<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\r\n</ul>",
+    "topic": "sliding-window",
+    "topic_relation": 7,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
+  "model": "problems.problem",
+  "pk": 25,
+  "fields": {
+    "title": "Longest Substring Without Repeating Characters",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
+    "slug": "longest-substring-without-repeating-characters",
+    "external_id": "3",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>Given a string <code>s</code>, find the length of the <strong>longest</strong> substring without duplicate characters.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> s = &quot;abcabcbb&quot;\r\n<strong>Output:</strong> 3\r\n<strong>Explanation:</strong> The answer is &quot;abc&quot;, with the length of 3. Note that <code>&quot;bca&quot;</code> and <code>&quot;cab&quot;</code> are also correct answers.\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> s = &quot;bbbbb&quot;\r\n<strong>Output:</strong> 1\r\n<strong>Explanation:</strong> The answer is &quot;b&quot;, with the length of 1.\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> s = &quot;pwwkew&quot;\r\n<strong>Output:</strong> 3\r\n<strong>Explanation:</strong> The answer is &quot;wke&quot;, with the length of 3.\r\nNotice that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.\r\n</pre>\r\n<p><strong>Constraints:</strong></p><ul>\r\n<li><code>0 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\r\n<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>\r\n</ul>",
+    "topic": "sliding-window",
+    "topic_relation": 7,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 4,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 5,
+    "status": "COMPLETED",
+    "starred": true,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 6,
+    "status": "NOT_STARTED",
+    "starred": false,
+    "earned_xp": false
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 8,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 9,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 7,
+    "status": "COMPLETED",
+    "starred": true,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 11,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 10,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 12,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 11,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 13,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 12,
+    "status": "COMPLETED",
+    "starred": true,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 13,
+    "status": "COMPLETED",
+    "starred": true,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 14,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 16,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 15,
+    "status": "IN_PROGRESS",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 17,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 16,
+    "status": "IN_PROGRESS",
+    "starred": false,
+    "earned_xp": false
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 19,
+    "status": "IN_PROGRESS",
+    "starred": false,
+    "earned_xp": false
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 20,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 20,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 24,
+    "status": "COMPLETED",
+    "starred": true,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 21,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 23,
+    "status": "COMPLETED",
+    "starred": false,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 22,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 2,
+    "status": "COMPLETED",
+    "starred": true,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.problemstatus",
+  "pk": 23,
+  "fields": {
+    "user": [
+      "winstonw0711@gmail.com"
+    ],
+    "problem": 3,
+    "status": "COMPLETED",
+    "starred": true,
+    "earned_xp": true
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 4,
+  "fields": {
+    "problem": 2,
+    "order": 1,
+    "text": "Duplicate values don't matter, nor does the order of the elements."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 5,
+  "fields": {
+    "problem": 2,
+    "order": 2,
+    "text": "Let's consider the inverse problem, where we have an array that is equal to [0, 1, 2, ..., k-1] and we can add x to each value in the array. No matter which value of x we choose, the values in a are consecutive."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 6,
+  "fields": {
+    "problem": 3,
+    "order": 1,
+    "text": "The constraints are pretty small, since N can be at most 100. You should be able to implement a brute-force solution without worrying about exceeding the time limit."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 7,
+  "fields": {
+    "problem": 3,
+    "order": 2,
+    "text": "We can iterate through every possible range of flowers using two nested for loops. You can then loop through the range of flowers to determine if a flower has the average number of petals."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 8,
+  "fields": {
+    "problem": 3,
+    "order": 3,
+    "text": "The average number of petals in a range of flowers is just the sum of the total number of petals in the range divided by the length of the range."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 9,
+  "fields": {
+    "problem": 4,
+    "order": 1,
+    "text": "Just like an array, we can loop through each character in a string."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 10,
+  "fields": {
+    "problem": 4,
+    "order": 2,
+    "text": "How do we check if something contains a certain value or element?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 11,
+  "fields": {
+    "problem": 5,
+    "order": 1,
+    "text": "We should probably store all the heights in an array. What happens when you sort that array? Can you easily find the tallest mountain?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 12,
+  "fields": {
+    "problem": 5,
+    "order": 2,
+    "text": "After we've gotten the height of the second-tallest mountain, how do we know the name of the mountain? Maybe we could use a HashMap to map the height to the name of the mountain?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 13,
+  "fields": {
+    "problem": 5,
+    "order": 3,
+    "text": "Optional: Is there a solution where you don't need to sort an array, or even need any data structures at all? Could our solution have <code>O(n)</code> time complexity and <code>O(1)</code> space complexity?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 14,
+  "fields": {
+    "problem": 6,
+    "order": 1,
+    "text": "Let's ignore what the problem says about needing an <code>O(n)</code> time complexity. for now We could use two nested loops to iterate over every possible sequence. However, this solution would be <code>O(n<sup>2</sup>)</code>. Is there a faster solution?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 15,
+  "fields": {
+    "problem": 6,
+    "order": 2,
+    "text": "Try to find the answer for this array: <code>[1, 2, 3, 4, 5, 10, 11, 12, 13, 15]</code>. You probably only cared about starting with <code>1</code> or <code>10</code>, as those are the starts of sequences. Why didn't you start with a number like <code>2</code>? Or a number like <code>11</code>?  - Because it isn't worth counting them, as they are not the start of a sequence, and so it would be a waste of time to count from there. So, ignore numbers that are not the start of a sequence."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 16,
+  "fields": {
+    "problem": 6,
+    "order": 3,
+    "text": "For a number <code>num</code>, if <code>num - 1</code> is not in <code>nums</code>, we can skip it. Instead of directly checking if <code>num - 1</code> is in <code>nums</code>, we can use a HashSet for an <code>O(1)</code> lookup. Now, can you think of a way to get the length of a sequence?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 17,
+  "fields": {
+    "problem": 7,
+    "order": 1,
+    "text": "A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions just for completeness. It is from these brute force solutions that you can come up with optimizations."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 18,
+  "fields": {
+    "problem": 7,
+    "order": 2,
+    "text": "So, if we fix one of the numbers, say <code>x</code>, we have to scan the entire array to find the next number <code>y</code> which is <code>value - x</code> where value is the input parameter. Can we change our array somehow so that this search becomes faster?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 19,
+  "fields": {
+    "problem": 7,
+    "order": 3,
+    "text": "The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 20,
+  "fields": {
+    "problem": 8,
+    "order": 1,
+    "text": "We should first iterate through each of the elements. For each element, we can go through all other elements to see if there is one that is equal to the current element we are on. We can do this with nested for loops.\r\n\r\nHowever, this approach is unfortunately too slow. Is there a better approach that uses only one for loop?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 21,
+  "fields": {
+    "problem": 8,
+    "order": 2,
+    "text": "There must be some kind of way to check if an element is a duplicate without trying all the other elements. Perhaps a certain data structure could be useful here?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 22,
+  "fields": {
+    "problem": 8,
+    "order": 3,
+    "text": "We can use a hash data structure (you can review what hashing is in your skill tree). We can use a hash map or a hash set to store all the elements we've already seen. It will be super fast to check if an element is in a hash data structure."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 23,
+  "fields": {
+    "problem": 9,
+    "order": 1,
+    "text": "Hmm, maybe we can make a variable for every element in the array, and then we can iterate through the array to count the number of times it appears? The problem is that we don't know how many variables to create beforehand. Maybe we can use some kind of data structure?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 24,
+  "fields": {
+    "problem": 9,
+    "order": 2,
+    "text": "We need a data structure that holds the number we want and the number of times it appears in the array. Like a key and a value....."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 25,
+  "fields": {
+    "problem": 9,
+    "order": 3,
+    "text": "We can use a hash map to track the frequency of each element (how many times that element appears in the array). Hash maps store data as key-value pairs. Our key can be the number (like 5 or 3 or 6, etc.), and our value can be how many times it appears in the array."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 26,
+  "fields": {
+    "problem": 10,
+    "order": 1,
+    "text": "Don't think too much about a mathematical formula that can solve this problem."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 27,
+  "fields": {
+    "problem": 10,
+    "order": 2,
+    "text": "We might need a loop to solve this problem. Would it be a for loop or a while loop?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 28,
+  "fields": {
+    "problem": 11,
+    "order": 1,
+    "text": "For 1-based indexing, what are the coordinates of the middle cell of the 5x5 grid?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 29,
+  "fields": {
+    "problem": 11,
+    "order": 2,
+    "text": "You have to read the input data for this problem. You can do so with 2 nested for loops. How can we find the coordinates of the cell with a '1'?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 30,
+  "fields": {
+    "problem": 12,
+    "order": 1,
+    "text": "Our input k is very small, so we can simulate all the moves—no fancy math formula needed."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 31,
+  "fields": {
+    "problem": 12,
+    "order": 2,
+    "text": "How can we check if the last digit is 0? Maybe convert the number into a string, then get the last character? That's a bit too inconvenient. There's a simple yet cool math property involving taking a number modulo 10. Try it for some numbers."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 32,
+  "fields": {
+    "problem": 13,
+    "order": 1,
+    "text": "Snuke can't perform operations anymore if even one odd number is on the board. So, he just needs to keep dividing all numbers by 2 until an odd number appears."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 33,
+  "fields": {
+    "problem": 13,
+    "order": 2,
+    "text": "What if instead of focusing on all the numbers at once, we just focus on dividing each number by 2 until it is odd? Simulate this in your mind or on a piece of paper. Track how many times you need to divide each number until it is odd. Compare the number of operations between all the numbers. Is there something you notice?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 34,
+  "fields": {
+    "problem": 13,
+    "order": 3,
+    "text": "The number with the least number of operations is the answer."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 35,
+  "fields": {
+    "problem": 14,
+    "order": 1,
+    "text": "Iterate through the range from 1 to n. For each number, check it against the conditions given by the problem."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 36,
+  "fields": {
+    "problem": 14,
+    "order": 2,
+    "text": "Watch out for the order in which you check your conditions."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 37,
+  "fields": {
+    "problem": 15,
+    "order": 1,
+    "text": "Look at the constraints. K is at most 2500. You might think of using three nested for loops to find X, Y, and Z; however, that would give a time complexity of <code>O(K<sup>3</sup>)</code>, which is too slow for the constraints. How can we reduce the time complexity?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 38,
+  "fields": {
+    "problem": 15,
+    "order": 2,
+    "text": "If we know the value of two numbers, how can we find the third?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 39,
+  "fields": {
+    "problem": 15,
+    "order": 3,
+    "text": "We only need two nested for loops for X and Y. You should now know how to find Z easily."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 40,
+  "fields": {
+    "problem": 16,
+    "order": 1,
+    "text": "You will probably need to use two loops, depending on the language you are using. Essentially, you will need to do a bit of brute forcing."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 41,
+  "fields": {
+    "problem": 16,
+    "order": 2,
+    "text": "Count the ones in each row. The friends will only write a solution if at least two of them are sure."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 42,
+  "fields": {
+    "problem": 17,
+    "order": 1,
+    "text": "The constraints are small, so we can try every possible combination of X and Y. We can do so using two nested loops. Can you figure out the stopping condition for each of the loops?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 43,
+  "fields": {
+    "problem": 17,
+    "order": 2,
+    "text": "Let i be the number of pails for size X, and let j be the number of pails for size Y. i * X + j * Y cannot exceed M."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 44,
+  "fields": {
+    "problem": 17,
+    "order": 3,
+    "text": "Loop through all possible numbers of times we can use the pail with size X. After we have the number of times we use the pail with size X, loop through all possible numbers of times we can use the pail with size Y. (You can also do the vice versa of checking Y first then X; it doesn't matter)."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 45,
+  "fields": {
+    "problem": 18,
+    "order": 1,
+    "text": "You need to first get rid of all the characters that are not letters or numbers. Python and C++ both have a function called <code>isalnum()</code> that checks whether a character is a letter or a number."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 46,
+  "fields": {
+    "problem": 18,
+    "order": 2,
+    "text": "A palindrome reads the same forward and backward. What if you check both ends simultaneously?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 47,
+  "fields": {
+    "problem": 18,
+    "order": 3,
+    "text": "For your two pointers on the front and back of the string, if at any point they are not equal, then the string is not a palindrome (return false)."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 48,
+  "fields": {
+    "problem": 19,
+    "order": 1,
+    "text": "Set two pointers on each end of the array. Try moving one of the pointers and see how the sum changes. (Sum as in using the pointers as indices, indexing the array, then adding the two values)"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 49,
+  "fields": {
+    "problem": 19,
+    "order": 2,
+    "text": "If you move the left pointer, the sum gets bigger. If you move the right pointer, the sum gets smaller. How can we use this information to achieve our target sum?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 50,
+  "fields": {
+    "problem": 19,
+    "order": 3,
+    "text": "If your current sum is too big, then move the right pointer. If your current sum is too small, then move the left pointer. Eventually, you will get your answer. Remember that this is 1-indexed, so add one to your indices."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 51,
+  "fields": {
+    "problem": 20,
+    "order": 1,
+    "text": "We can use a stack to evaluate the expressions. Whenever we come across an operator, we can take the last two elements, operate on them, and then push the result back onto the stack."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 52,
+  "fields": {
+    "problem": 20,
+    "order": 2,
+    "text": "If you perform everything correctly, there should only be one element left in the stack at the end."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 53,
+  "fields": {
+    "problem": 20,
+    "order": 3,
+    "text": "Watch out for checking for negative numbers and how to divide properly. Floor division would be incorrect here, since something like <code>6 / -132</code> would give <code>-1</code> when it should give <code>0</code>."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 54,
+  "fields": {
+    "problem": 21,
+    "order": 1,
+    "text": "If <code>\"NORTH\"</code> is the opposite of <code>\"SOUTH\"</code> and vice versa, and <code>\"EAST\"</code> is the opposite of <code>\"WEST\"</code> and vice versa, how can we \"cancel\" them out?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 55,
+  "fields": {
+    "problem": 21,
+    "order": 2,
+    "text": "Maybe store the directions in an array as you iterate through <code>arr</code>. During iteration, if the last direction in the array is the opposite of the current direction you're on, then you can get rid of that direction from the array. Does this ring a bell for a type of data structure?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 56,
+  "fields": {
+    "problem": 21,
+    "order": 3,
+    "text": "We can use a stack to solve this problem. If the last element in the stack is in the opposite direction, you can pop it; otherwise, push the current direction."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 57,
+  "fields": {
+    "problem": 22,
+    "order": 1,
+    "text": "There isn't much to say here; implement a binary search! If you forgot how, continue with the hints."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 58,
+  "fields": {
+    "problem": 22,
+    "order": 2,
+    "text": "We always want to find the middle index in a binary search. You can do so by getting the average of the left and right pointers; make sure that the result is not a decimal."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 59,
+  "fields": {
+    "problem": 22,
+    "order": 3,
+    "text": "If the value at <code>mid</code> is too small, then we must search the right half. If it is too big, we must search the left half."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 60,
+  "fields": {
+    "problem": 23,
+    "order": 1,
+    "text": "You might want to define a custom method for a binary search. However, this binary search will be a bit different from the usual. Maybe make the function take an argument to determine whether you are searching for the first or last position."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 61,
+  "fields": {
+    "problem": 23,
+    "order": 2,
+    "text": "When you find your target, do not return your middle index immediately. Instead, depending on which occurrence you're searching for (first or last occurrence), keep searching that half."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 62,
+  "fields": {
+    "problem": 23,
+    "order": 3,
+    "text": "For simplicity, keep an answer variable that will keep track of all the indices that are equal to the target. You will return this at the end of the function."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 63,
+  "fields": {
+    "problem": 24,
+    "order": 1,
+    "text": "This is a fixed sliding window problem. Whenever you have a fixed sliding window problem, it's usually best to compute the first window."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 64,
+  "fields": {
+    "problem": 24,
+    "order": 2,
+    "text": "If all our windows are size <code>k</code>, how many windows can we make? After you find your answer to that, that is how many times you will iterate through the array."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 65,
+  "fields": {
+    "problem": 24,
+    "order": 3,
+    "text": "As you move the window, subtract the previous number that you left, and add in the new one. Finding the indices for them might be a bit of a challenge."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 66,
+  "fields": {
+    "problem": 25,
+    "order": 1,
+    "text": "You could brute force this problem by checking every substring at each index, but that would be too slow. Is there a better solution? To check for duplicates, you can use a hash set to check in <code>O(1)</code> time."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 67,
+  "fields": {
+    "problem": 25,
+    "order": 2,
+    "text": "We can use a sliding window approach to solve this problem. Here, the window can vary in size, so it is a dynamic sliding-window problem. Can you think of a condition for moving the window?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 68,
+  "fields": {
+    "problem": 25,
+    "order": 3,
+    "text": "As you iterate through the array, keep one pointer (boundary) at the start of the array (note: the index of iteration you are on is the other boundary/pointer). You should only move the left boundary if you come across a letter you've seen before in your current substring. You need to move the left boundary until there are no more duplicates in your current substring. It's also worth noting that the size of your window at all times will be <code>r - l + 1</code>, so you can compare this with your global maximum answer."
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 2,
+  "fields": {
+    "problem": 2,
+    "explanation": "Find the longest consecutive subarray.\r\n\r\nWe already know that if an array has MEX of n, then 0, 1, 2, 3…, n-1 is in the array (after the operation). Notice how this is a subarray, and also that each element differs by 1 (so they are consecutive numbers).\r\n\r\nSo how can we actually get this subarray of 0, 1, 2, … n-1? \r\nWell, actually, we don’t need to perform the operation to get this.\r\n\r\nFirst, we need to remove the duplicates, then sort the list. \r\nThen, we can keep a global max and a current max to get the longest consecutive subarray.\r\n\r\nWhy don’t we need to perform the operation? Because when we perform the operation (adding x to every element), the values change, but the differences between those values do not. So, we can simply find a consecutive subarray without performing the operation.\r\n\r\n0, 1, 2, 3 is a subarray, just like 5, 6, 7, 8.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    data = sys.stdin.read().strip().split()\r\n    \r\n    t = int(data[0])\r\n    idx = 1\r\n    \r\n    for _ in range(t):\r\n        n = int(data[idx])\r\n        idx += 1\r\n\r\n        arr = sorted(list(set(map(int, data[idx:idx+n]))))\r\n        idx += n\r\n\r\n        largest = 0\r\n        current = 0\r\n\r\n        for i in range(len(arr)):\r\n            if i == 0 or (arr[i] != arr[i-1] + 1):\r\n                current = 0\r\n\r\n            current += 1\r\n            largest = max(largest, current)\r\n\r\n        print(largest)\r\n\r\nif __name__ == \"__main__\":\r\n    main()",
+    "cpp_solution": "#include <bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main() {\r\n    int t;\r\n    cin >> t;\r\n\r\n    while (t--) {\r\n        int n;\r\n        cin >> n;\r\n\r\n        vector<int> vec(n); \r\n        for (auto &x: vec) cin >> x;\r\n\r\n        sort(vec.begin(), vec.end());\r\n        // Remove duplicates\r\n        vec.erase(unique(vec.begin(), vec.end()), vec.end());\r\n        n = vec.size();\r\n        int best = 0;\r\n        int current = 0;\r\n        for (int i = 0; i < n; i++) {\r\n            if (i == 0 || vec[i] != vec[i-1]+1) {\r\n                current = 0;\r\n            }\r\n            current++;\r\n            best = max(best, current);\r\n        }\r\n        cout << best << \"\\n\";\r\n    }\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 3,
+  "fields": {
+    "problem": 3,
+    "explanation": "<strong class=\"text-red-600\">Note: the problem asks for the number of Bessie's photos that have an average flower, not the total number of average flowers in all photos.</strong>\r\n\r\nThe constraints of this problem are very small, since N can be at most 100. That means we can freely implement a brute-force solution without worrying about exceeding the time limit.\r\n\r\nThe brute-force part should be straightforward: go through every possible range of flowers and count how many of the flowers have the average petal count. \r\n<ul class=\"list-disc list-inside\">\r\n<li>We can easily achieve this through two nested for loops</li>\r\n</ul>\r\nOkay, but now how do we calculate the average number of petals, and check if a flower in the range has the average number of petals?\r\n\r\nWell, in math, the average is the sum of all the numbers divided by the number of numbers. Here, it is the same thing. The average is the sum of all the petals divided by the number of flowers in the range.\r\n\r\nLet's say our outer for loop has the loop variable <code>i</code>, and the inner for loop has the loop variable <code>j</code>. Then the number of flowers in the photo is just <code>j - i + 1</code>.\r\n\r\n<strong>Why <code>j - i + 1</code> and not <code>j - i</code>?</strong>\r\n<ul class=\"list-disc list-inside\">\r\n<li><code>j - i</code> finds the distance (or number of steps) to get from <code>i</code> to <code>j</code></li>\r\n<li>Since we have to count all the flowers, that includes the starting flower, <code>i</code>, so we add one more</li>\r\n</ul>\r\nSo we got the range length, but how do we get the sum? - There are multiple neat ways you can achieve the sum, but the most straightforward and recommended way is to iterate through the range and sum the flower petals.\r\n\r\n<strong class=\"text-red-600\">WAIT!!!!</strong> Isn't three nested loops way too slow??\r\n<ul class=\"list-disc list-inside\">\r\n<li>Normally, yes, but here? - No!</li>\r\n<li>Three nested loops is roughly <code>O(n<sup>3</sup>)</code> time complexity</li>\r\n<li>Here that is a maximum of 100<sup>3</sup> or 1,000,000 operations</li>\r\n<li>This is not bad at all, and will run really fast</li>\r\n</ul>\r\nNow, we have the <code>length</code> and the <code>sum</code>, so we basically have the average. All that's left to do is to go through all the flowers in the range again and see if a flower has the average number of petals.\r\n\r\nTip: Since we just need to check if at least one average flower exists, we can just stop searching as soon as we find it, just to save a little bit of time.",
+    "py_solution": "def count_daisy_photos(n, petals):\r\n    valid_photos = 0\r\n    \r\n    for i in range(n):\r\n        \r\n        for j in range(i, n):\r\n            subsequence = petals[i:j+1]\r\n            total_petals = sum(subsequence)\r\n            count = len(subsequence)\r\n\r\n            if total_petals % count == 0:\r\n                average = total_petals // count\r\n                \r\n                if average in subsequence:\r\n                    valid_photos += 1\r\n                    \r\n    return valid_photos",
+    "cpp_solution": "#include <iostream>\r\n#include <vector>\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n    ios_base::sync_with_stdio(false);\r\n    cin.tie(NULL);\r\n\r\n    int n;\r\n    cin >> n;\r\n    vector<int> flowers(n);\r\n    for (int i = 0; i < n; i++) {\r\n        cin >> flowers[i];\r\n    }\r\n\r\n    int total_photos = 0;\r\n\r\n   \r\n    for (int i = 0; i < n; i++) {\r\n        for (int j = i; j < n; j++) {\r\n            \r\n            int sum = 0;\r\n            for (int k = i; k <= j; k++) {\r\n                sum += flowers[k];\r\n            }\r\n\r\n            int count = (j - i + 1);\r\n            bool found_average = false;\r\n            for (int k = i; k <= j; k++) {\r\n                if (flowers[k] * count == sum) {\r\n                    found_average = true;\r\n                    break;\r\n                }\r\n            }\r\n\r\n            if (found_average) {\r\n                total_photos++;\r\n            }\r\n        }\r\n    }\r\n\r\n    cout << total_photos << \"\\n\";\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 4,
+  "fields": {
+    "problem": 4,
+    "explanation": "First, we should store all the vowels in a variable so we can check if a certain letter is in it. We'll call this variable <code>vowels</code>. So, <code>vowels</code> = <code>\"aeiou\"</code>. \r\n\r\nThen, we can use a for loop to iterate through each character in <code>sentence</code>. Because we've created the <code>vowels</code> variable, we can check if a character is a vowel by checking if it is in the variable <code>vowels</code>.\r\n\r\nBut we have to count the number of vowels. So, let's create another variable called <code>ans</code> to store the count. If a character is in <code>vowels</code>, then add 1 to <code>count</code>.\r\n\r\nFollow-up: Instead of storing the vowels in a string, what else can we store them in to make our code more efficient?",
+    "py_solution": "def get_count(sentence):\r\n    vowels = \"aeiou\"\r\n    ans = 0\r\n    \r\n    for character in sentence:\r\n        if character in vowels:\r\n            ans += 1\r\n    \r\n    return ans",
+    "cpp_solution": "#include <string>\r\nusing namespace std;\r\n\r\nint getCount(const string& inputStr){\r\n    string vowels = \"aeiou\";\r\n    int ans = 0;\r\n    \r\n   // range-based for loop\r\n    for (char character : inputStr){\r\n        if (vowels.find(character) != string::npos){\r\n          ans++;\r\n        }\r\n    }\r\n  \r\n  return ans;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 5,
+  "fields": {
+    "problem": 5,
+    "explanation": "We can keep it simple and just store all the heights in an array. If we sort this array, we get all the heights from shortest to tallest. \r\n\r\nWe can easily get the tallest mountain: it's just the last element in the array. So, the second-tallest mountain must be the second-to-last element in the array.\r\n\r\nBut we need to print out the name of the mountain, not the height. There are multiple ways to do this, but the most straightforward is to use a HashMap. We can map the height of the mountain to its name.\r\n\r\nDoing this, we get a time complexity of <code>O(n log n)</code> and a space complexity of <code>O(n)</code>.\r\n\r\n<span class=\"text-green-500 font-bold\">------------------------------ Optimization ------------------------------ </span>\r\n\r\nWhile our previous solution works, we can make it faster and more memory efficient.\r\n\r\nInstead of storing the mountains and sorting, we should keep track of 2 mountains: the tallest mountain and the second-tallest mountain.\r\n\r\nAs we read the input, we can check two things. \r\n\r\nFirst, we check if a mountain is taller than the tallest mountain so far. If so, then we update our tallest mountain to that mountain, and we can make our second-tallest mountain our previous tallest mountain.\r\n\r\nSecond, if a mountain is only taller than the second-tallest mountain so far, then we simply update our second-tallest mountain to that one.\r\n\r\nAs we are doing all of this, we should also keep two string variables for the names of the mountains. Whenever one of the two conditions is met, we update not only the heights, but also the names.\r\n\r\nBecause we only did one pass and didn't store anything in data structures, our time complexity is <code>O(n)</code> and our space complexity is <code>O(1)</code>.\r\n\r\n<span class=\"text-red-600 font-bold\">Challenge:</span> Implement this solution, as only the code for the less-efficient solutions is given.",
+    "py_solution": "def main():\r\n    n = int(input())\r\n\r\n    names = {}\r\n    heights = []\r\n\r\n    for i in range(n):\r\n        name, height = input().split()\r\n\r\n        names[int(height)] = name\r\n        heights.append(int(height))\r\n    \r\n    heights.sort()\r\n    \r\n    print(names[heights[-2]])\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "cpp_solution": "#include <bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n    \r\n    int n; cin >> n;\r\n    unordered_map<int, string> names;\r\n    vector<int> heights(n);\r\n\r\n    for (int x=0; x < n; ++x){\r\n        string name;\r\n        int height;\r\n        cin >> name >> height;\r\n        \r\n        names[height] = name;\r\n        heights[x] = height;\r\n    }\r\n\r\n    sort(heights.begin(), heights.end());\r\n    cout << names[heights[n-2]] << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 6,
+  "fields": {
+    "problem": 6,
+    "explanation": "For our solution to be <code>O(n)</code> time complexity, we must not sort <code>nums</code> as that would be <code>O(n log n)</code>, and we must not use a brute force solution, as that would be <code>O(n<sup>2</sup>)</code>\r\n\r\nSo how do we find the longest consecutive sequence (or any sequence) without doing any of that?\r\n\r\nWell, if you read the hints (which you should), you should realize that we do not care about a number if it isn't the start of a sequence. Why? - If you are given <code>[1, 2, 3, 4, 5]</code>, the answer is obviously 5, as you start with <code>1</code>. If you started from <code>2</code>, you would have gotten 4, which is smaller than the correct answer. <strong>If you start with a number that isn't the start of a sequence, your answers will always be smaller than the correct one.</strong>\r\n\r\nAlright, now how do we translate this into code?\r\n\r\nLet's iterate through <code>nums</code>. We'll call each number we come across <code>num</code>. If <code>num - 1</code> is in <code>nums</code>, then <code>num</code> obviously isn't the start of a sequence, since there is a smaller number in the sequence that <code>num</code> is in.\r\n\r\nFor example, for <code>[1, 10, 5, 6, 3, 2]</code>, if we come across <code>3</code>, we can see that <code>3 - 1</code>, or <code>2</code>, is in <code>nums</code>. This means that <code>3</code> is not the start of a sequence. Why? - Because <code>1, 2, 3</code> is the sequence that <code>3</code> is in, and <code>3</code> obviously isn't the start of it, since <code>2</code> comes before <code>3</code>.\r\n\r\nOkay, now we know that we should skip numbers that aren't the start of a sequence. But how do we actually get the length of a sequence?\r\n\r\nWe know that we are starting from the very start of a sequence. So, the next value in the sequence will be <code>num + 1</code>. Then it will be <code>num + 2</code>. Then <code>num + 3</code>, <code>num + 4</code>, and so on.\r\n\r\nBut obviously, <code>num + x</code> (let's just say that x is some number) isn't always going to be in <code>nums</code>. That's our stopping point. You might be inclined to use a for loop to keep adding to <code>num</code> to progress through the sequence, but we don't know when it will stop, so we can't really use a for loop. So, we'll just use a while loop.\r\n\r\nOur while condition will be this: \r\n\r\nwhile num + length is in nums:\r\n    increment length\r\n\r\nAfter the loop stops (meaning we've reached the end of the sequence), <code>length</code> will be the length of the sequence. Then, we just take the max between the longest sequence we've seen so far and <code>length</code>.\r\n\r\nConfused by the while loop? Here's a visual example:\r\n\r\nnums = [1, 2, 3, 4]\r\nnum = 1\r\nlength = 1\r\n\r\n1 + 1 = 2 --> in nums --> length = 2\r\n1 + 2 = 3 --> in nums --> length = 3\r\n1 + 3 = 4 --> in nums --> length = 4\r\n1 + 4 = 5 --> not in nums --> stop loop\r\n\r\nlength = 4 is the length of this sequence.",
+    "py_solution": "class Solution(object):\r\n    def longestConsecutive(self, nums):\r\n        nums = set(nums)\r\n        longest = 0\r\n\r\n        for num in nums:\r\n            if num - 1 not in nums:\r\n                length = 1\r\n\r\n                while num + length in nums:\r\n                    length += 1\r\n\r\n                longest = max(longest, length)\r\n        \r\n        return longest",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int longestConsecutive(vector<int>& nums) {\r\n        unordered_set<int> numSet(nums.begin(), nums.end());\r\n        int longest = 0;\r\n        for (int num : numSet){\r\n            if (numSet.find(num - 1) == numSet.end()){\r\n                int length = 1;\r\n\r\n                while (numSet.find(num + length) != numSet.end()){\r\n                    length++;   \r\n                }\r\n\r\n                longest = max(longest, length);\r\n            }\r\n        }\r\n        return longest;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 7,
+  "fields": {
+    "problem": 7,
+    "explanation": "<strong>Intuition</strong>\r\n\r\nTo improve our runtime complexity, we need a more efficient way to check if the complement exists in the array. If the complement exists, we need to get its index. What is the best way to maintain a mapping of each element in the array to its index? A hash table.\r\n\r\nWe can reduce the lookup time from O(n) to O(1) by trading space for speed. A hash table is well suited for this purpose because it supports fast lookup in near constant time. I say \"near\" because if a collision occurred, a lookup could degenerate to O(n) time. However, lookup in a hash table should be amortized O(1) time as long as the hash function was chosen carefully.\r\n\r\n<strong>Algorithm</strong>\r\n\r\nA simple implementation uses two iterations. In the first iteration, we add each element's value as a key and its index as a value to the hash table. Then, in the second iteration, we check if each element's complement (target−nums[i]) exists in the hash table. If it does exist, we return current element's index and its complement's index. Beware that the complement must not be nums[i] itself!",
+    "py_solution": "class Solution:\r\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\r\n        seen = {}\r\n\r\n        for i, num in enumerate(nums):\r\n            comp = target - num\r\n            if comp in seen:\r\n                return [i, seen[comp]]\r\n\r\n            seen[num] = i",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    vector<int> twoSum(vector<int>& nums, int target) {\r\n        unordered_map<int, int> seen;\r\n        for (int i = 0; i < nums.size(); i++){\r\n            int comp = target - nums[i];\r\n            if (seen.find(comp) != seen.end()){\r\n                return {i, seen[comp]};\r\n            }\r\n\r\n            seen[nums[i]] = i;\r\n        }\r\n\r\n        return {};\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 8,
+  "fields": {
+    "problem": 8,
+    "explanation": "While we can just use two nested for loops to check each element against every other element, a better approach exists. Not to mention, that brute-force solution would have <code>O(n<sup>2</sup>)</code> time complexity, which would be too slow under our given constraints.\r\n\r\nA more optimal approach would be to use a hash set. A hash set is a data structure that stores unique elements in some order and is very fast when you want to check if an element is in it. You can check if an element is in a hash set in <code>O(1)</code> time.\r\n\r\nSo, we should just iterate through the array, adding every element we see to the hash set. At the same time, we can check if the current element is in the hash set. If it is, then we can just return <code>true</code>, since that means we've seen this value before, so it is a duplicate. If the current element is not already in the hash set, we can just add it to the set.\r\n\r\nIf we went through the entire array without finding a duplicate, then we can return <code>false</code>.\r\n\r\nDoing this, we get a time complexity of <code>O(n)</code>",
+    "py_solution": "class Solution(object):\r\n    def containsDuplicate(self, nums):\r\n        seen = set()\r\n\r\n        for i in nums:\r\n            if i in seen:\r\n                return True\r\n\r\n            seen.add(i)\r\n\r\n        return False",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    bool containsDuplicate(vector<int>& nums) {\r\n        unordered_set<int> seen;\r\n        \r\n        // range-based for loop\r\n        for (int num : nums) {\r\n            if (seen.find(num) != seen.end()) {\r\n                return true;\r\n            }\r\n            \r\n            seen.insert(num);\r\n        }\r\n        \r\n        return false;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 9,
+  "fields": {
+    "problem": 9,
+    "explanation": "There are multiple ways to solve this problem, but the recommended, readable solution utilizes a hash map.\r\n\r\nA hash map stores its data in key-value pairs. This would be perfect for what we are trying to do. We can track each number in the array and its frequency, or the number of times it appears in the array. We can iterate through the array and go to that number in the hash map; then, we just need to increase its count by 1.\r\n\r\nAfter making the hash map, all we need to do is iterate through it, checking if the frequency of the number is odd or not. If it is, then we return that number.",
+    "py_solution": "from collections import Counter\r\n\r\ndef find_it(seq):\r\n    # built into Python, gives us a hash map of the frequencies of the elements in seq\r\n    freq = Counter(seq)\r\n    \r\n    for num in freq:\r\n        if freq[num] % 2 != 0:\r\n            return num",
+    "cpp_solution": "#include <vector>\r\n#include <unordered_map>\r\nusing namespace std;\r\n\r\nint findOdd(const vector<int>& numbers){\r\n  unordered_map<int, int> freq;\r\n  \r\n  for (int num : numbers){\r\n    freq[num]++;\r\n  }\r\n  \r\n  // range-based for loop\r\n  for (const auto& pair : freq){\r\n    if (pair.second % 2 != 0){\r\n      return pair.first;\r\n    }\r\n  }\r\n  \r\n  return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 10,
+  "fields": {
+    "problem": 10,
+    "explanation": "While there might be some kind of math formula to solve this problem, it is unnecessary. \r\n\r\nWe can directly simulate the bears growing up by using a while loop. We will only loop as long as Limak's (a) weight is less than or equal to Bob's (b) weight. For each iteration, we triple Limak's weight and double Bob's weight, then increase the year count.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n  input_data = sys.stdin.read().split()\r\n\r\n  a = int(input_data[0])\r\n  b = int(input_data[1])\r\n\r\n  years = 0\r\n\r\n  while a <= b:\r\n    a *= 3\r\n    b *= 2\r\n    years += 1\r\n\r\n  print(years)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n  main()",
+    "cpp_solution": "#include <iostream>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int a, b; \r\n    cin >> a >> b;\r\n\r\n    int years = 0;\r\n\r\n    while (a <= b){\r\n        a *= 3;\r\n        b *= 2;\r\n        years++;\r\n    }\r\n\r\n    cout << years << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 11,
+  "fields": {
+    "problem": 11,
+    "explanation": "We want to know the distance from the cell with a <code>1</code> to the middle cell. If we think of this <code>5 x 5</code> grid as a coordinate plane, you can kind of say that the middle cell is at <code>(3, 3)</code>.\r\n\r\nIf we want to find the distance from the cell with a <code>1</code> to <code>(3, 3)</code>, we should find the coordinates of the cell with a <code>1</code>. We can use nested for loops to iterate through the input data. If we come across a <code>1</code> when reading, then our x and y coordinates are just the loop variables of the 2 loops.\r\n\r\nFor Python, we don't need to use nested for loops, as we have more built-in functions that allow us to read row by row instead of each cell; we can use <code>.index()</code> to get one of the coordinates, and our other coordinate is just the loop variable for the one loop we have.\r\n\r\nAs soon as we get our coordinate point for the cell with a <code>1</code>, we just need to print the sum of the absolute value differences between the coordinates and 3. Meaning, we can just print <code>abs(x - 3) + abs(y - 3)</code>, where x and y are the coordinates of the cell with a <code>1</code>.",
+    "py_solution": "import sys\r\n\r\ndef solve():\r\n    for i in range(5):\r\n        row = list(map(int, sys.stdin.readline().split()))\r\n        \r\n        if 1 in row:\r\n            j = row.index(1)\r\n           \r\n            ans = abs(i - 2) + abs(j - 2) # 0-based indexing here\r\n            \r\n            print(ans)\r\n            return\r\n\r\nif __name__ == '__main__':\r\n    solve()",
+    "cpp_solution": "#include <iostream>\r\n#include <cmath>\r\nusing namespace std;\r\n\r\nint main() {\r\n    ios_base::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    for (int r = 1; r <= 5; ++r) {\r\n        for (int c = 1; c <= 5; ++c) {\r\n            int val;\r\n            cin >> val;\r\n\r\n            if (val == 1) {\r\n                cout << abs(r - 3) + abs(c - 3) << \"\\n\";\r\n                return 0; // early return, since we already found our answer\r\n            }\r\n        }\r\n    }\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 12,
+  "fields": {
+    "problem": 12,
+    "explanation": "We only have to operate <code>k</code> times, and <code>k</code> can be at most 50, so at most 50 operations. This is super small, so we can directly simulate the wrong subtraction.\r\n\r\nWe can use a for loop that iterates k times: for each iteration, subtract one if the last digit is not zero; otherwise, divide by 10. The minor difficulty here is checking whether the last digit is zero or not. There are a couple of ways to do this. We can convert our current number to a string, index the last character, convert that into an integer, and see if it's zero or not.\r\n\r\nBut that is a bit inconvenient. There's a cool math property with the modulo operator (<code>%</code>), which gives the remainder when divided by the number. For example, 5 % 2 is 1, and 7 % 3 is 4. But things get interesting when we do modulo 10. \r\n\r\n54 % 10 is 4; 68 mod 10 is 8; 109199838136 mod 10 is 6. Notice something? Modulo 10 always gives us the last digit of the number. So, to check if the last digit of the number is zero, all we need to check is if the number % 10 is 0 or not.\r\n\r\nIt is also important to note that this is not just one trick for this problem; getting the last digit like this is extremely common in competitive programming problems. Also, if you want to get the last 2 digits, you can mod by 100; for 3, mod by 1000; for 4, mod by 10000, and so on.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    data = sys.stdin.read().strip().split()\r\n    n, k = list(map(int, data))\r\n\r\n    for _ in range(k):\r\n        if n % 10 == 0:\r\n            n //= 10\r\n\r\n        else:\r\n            n -= 1\r\n\r\n    print(n)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()",
+    "cpp_solution": "#include <iostream>\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n    ios_base::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int n;\r\n    int k;\r\n    cin >> n >> k;\r\n\r\n    for (int i = 0; i < k; ++i) {\r\n        if (n % 10 == 0) {\r\n            n /= 10;\r\n\r\n        } else {\r\n            n -= 1; \r\n        }\r\n    }\r\n\r\n    cout << n << \"\\n\";\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 13,
+  "fields": {
+    "problem": 13,
+    "explanation": "We can conclude that when there is even one odd number on the board, Snuke cannot perform operations anymore. So the algorithm is simple: keep dividing all numbers in the array by 2 until an odd number shows up, then print the number of operations.\r\n\r\nTo do so, we can use a while loop that will run indefinitely until we tell it to stop. We first go through the array, checking if there is an odd number. If there is, then we can print our answer. Otherwise, we can go through again and repeat until we cannot.\r\n\r\n\r\n<span class=\"text-green-200\">------------------ More Optimized Approach -------------------</span>\r\n\r\nWe know that as soon as one number is odd, we stop operating. But what if we looked at each number individually instead of all of them?\r\n\r\nMeaning, we divide a single number until it is odd, then track the number of operations it takes. We can do it for all of the numbers in the array. But you're probably asking, what is the point of this?\r\n\r\nWell, we obviously know that if one number is odd, we stop, so what if we first find the number that becomes odd first? To do so, we just do the above: divide each number until it is odd, and repeat it for all numbers. Whatever number has the least number of operations to become odd is the first number that becomes odd when operating. So, the number of operations it takes for that number to become odd is the answer.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    n = int(sys.stdin.readline())\r\n    arr = list(map(int, sys.stdin.readline().split()))\r\n\r\n    ans = float('inf') \r\n\r\n    for num in arr:\r\n        curr_operations = 0\r\n\r\n        while num % 2 == 0:\r\n            num //= 2 \r\n            curr_operations += 1\r\n\r\n        ans = min(ans, curr_operations)\r\n\r\n    print(ans)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "cpp_solution": "#include <iostream>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int n; \r\n    cin >> n;\r\n\r\n    int ans = 1e9;\r\n\r\n    for (int x=0; x < n; ++x){\r\n        int num;\r\n        cin >> num;\r\n\r\n        int curr_operations = 0;\r\n\r\n        while (num % 2 == 0){\r\n            num /= 2;\r\n            curr_operations++;\r\n        }\r\n\r\n        ans = min(ans, curr_operations);\r\n    }\r\n\r\n    cout << ans << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 14,
+  "fields": {
+    "problem": 14,
+    "explanation": "All we need to do is iterate over a range from 1 to n. For each number, we check if it is divisible by 3 and 5, then we check if it is divisible by 3, and lastly, if it is divisible by 5. (Order in which you check divisibility by 3 or 5 does not matter)\r\n\r\nYou <strong>must</strong> check if the number is divisible by 3 and 5 first. For example, if it checked whether the number was divisible by 3 and 5 last, it would fail on a number like 15, because it is divisible by 3 (or 5 if you check that first), so it would just add <code>\"Fizz\"</code> (or <code>\"Buzz\"</code> if you checked divisibility by 5 first) to the array, then move on.\r\n\r\nIn if statements, if one condition is true, that branch is executed, and the rest are completely skipped. Here, it would skip our check for whether the number is divisible by 3 and 5. So, we must check if the number is divisible by 3 and 5 first.\r\n\r\nNote that the order in which you check whether the number is divisible by 3 or 5 (not and) does not matter, since these numbers are unrelated, so we do not have to worry about accidentally executing the wrong branch.",
+    "py_solution": "class Solution(object):\r\n    def fizzBuzz(self, n):\r\n        answer = []\r\n\r\n        for i in range(1, n+1):\r\n            if i%15==0:\r\n                answer.append(\"FizzBuzz\")\r\n\r\n            elif i%5==0:\r\n                answer.append(\"Buzz\")\r\n\r\n            elif i%3==0:\r\n                answer.append(\"Fizz\")\r\n\r\n            else:\r\n                answer.append(str(i))\r\n\r\n        return answer",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    vector<string> fizzBuzz(int n) {\r\n        vector<string> v;\r\n\r\n        for (int i=1; i <= n; i++){\r\n\r\n            if (i % 15  == 0) {\r\n                v.push_back(\"FizzBuzz\");\r\n                \r\n            } else if (i % 5 == 0) {\r\n                v.push_back(\"Buzz\");\r\n\r\n            } else if (i % 3 == 0) {\r\n                v.push_back(\"Fizz\");\r\n\r\n            } else {\r\n                v.push_back(to_string(i));\r\n            }\r\n            \r\n        }\r\n\r\n        return v;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 15,
+  "fields": {
+    "problem": 15,
+    "explanation": "Given that K can be as large as 2500, we cannot use three nested for loops to find X, Y, and Z, as that would be <code>O(K<sup>3</sup>)</code> time complexity, which is too slow for these constraints.\r\n\r\nIn situations like these, we need to figure out a way to reduce the time complexity (i.e., getting rid of unnecessary operations, removing a for loop, etc.). <code>O(K<sup>2</sup>)</code> time complexity is acceptable, so maybe we can optimize our code for that?\r\n\r\nThat would mean using two for loops instead of three, which means finding only X and Y. But we don't need another for loop to find Z. Because we are looking for X + Y + Z = S, then Z is just S - X - Y. So, we can find Z just by doing some simple subtraction.\r\n\r\nHowever, we must be careful about the other constraint: X, Y, and Z can be at most K and greater than or equal to 0. Fortunately, this check is very simple. After we find Z by doing S - X - Y, all we need to do is to check if its greater than or equal to 0, and that it is less than or equal to K.\r\n\r\nIf all those conditions are held, then we have one triplet, contributing to our answer.\r\n\r\nNote for Python: You might need to submit your Python code using PyPy3 instead of Codon or CPython, since Python is a bit slow, so our solution might time out.",
+    "py_solution": "def main():\r\n    data = input().split()\r\n   \r\n    k = int(data[0])\r\n    s = int(data[1])\r\n\r\n    ans = 0\r\n\r\n    for x in range(k + 1):\r\n        for y in range(k + 1):\r\n            z = s - x - y\r\n\r\n            if 0 <= z <= k:\r\n                ans += 1\r\n\r\n    print(ans)\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "cpp_solution": "#include <iostream>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int k, s;\r\n    cin >> k >> s;\r\n\r\n    int ans = 0;\r\n\r\n    for (int x=0; x <= k; ++x){\r\n        for (int y=0; y <= k; ++y){\r\n            int z = s - x - y;\r\n\r\n            if (z >= 0 && z <= k){\r\n                ans++;\r\n            }\r\n        }\r\n    }\r\n\r\n    cout << ans << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 16,
+  "fields": {
+    "problem": 16,
+    "explanation": "For Python, you can just convert the data into a list and use <code>.count()</code> the number of ones.\r\n\r\nFor other languages that can't do that, you will probably need to use two loops.\r\n\r\nFor your outer loop, you need to loop n times, since that's how many problems the girls need to vote on. For your inner loop, you will need to read in the data and just check if it is a one. Store the count in some variable outside of this loop. \r\n\r\nAfter your inner loop is finished, you have to check if the count is greater than or equal to two. If it is, then you can add one to your answer variable.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    data = sys.stdin.read().strip().split()\r\n    t = int(data[0])\r\n    idx = 1\r\n\r\n    solutions = 0\r\n    for _ in range(t):\r\n        arr = list(data[idx:idx+3])\r\n        idx += 3\r\n\r\n        solutions += 1 if arr.count(\"1\") >= 2 else 0\r\n\r\n\r\n    print(solutions)\r\n\r\nif __name__ == \"__main__\":\r\n    main()",
+    "cpp_solution": "#include <iostream>\r\nusing namespace std;\r\n\r\nint main() {\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n    \r\n    int n; \r\n    cin >> n;\r\n\r\n    int total = 0;\r\n\r\n    while (n--){\r\n        int count = 0;\r\n\r\n        for (int i=0; i < 3; i++) {\r\n            int vote; \r\n            cin >> vote;\r\n\r\n            if (vote == 1) count++;\r\n        }\r\n\r\n        if (count >= 2) total++;\r\n    }\r\n\r\n    cout << total;\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 17,
+  "fields": {
+    "problem": 17,
+    "explanation": "The numbers are very small, so we can just brute-force by trying every possible combination of pails.\r\n\r\nWe can use two nested loops to do so. The outer loop will go through every possible number of times we can use one pail, and the inner loop will go through every possible number of times we can use the other.\r\n\r\nLet i = the number of pail X we can use\r\nLet j = the number of pail Y we can use\r\n(i and j are just our loop variables)\r\n\r\nRemember, we can't exceed M, so for our outer loop we must make it so i * X <= M; this is our stopping condition. Now, for our inner loop, we are checking all the possible number of times we can use pail Y. Because we are including pail Y now, we have to make sure i * X + j * Y <= M.\r\n\r\nNow, all we need to do is calculate our current total, which is just i * X + j * Y. We should also keep track of the maximum total we've seen so far.\r\n\r\n\r\n<strong>Why do we have to check i * X <= M for the first loop?</strong>\r\n\r\nRemember that here, we are trying all the possible number of times we can use pail X. Let's say we have X = 17, and M = 77. Then i = 4 is the maximum number of times we can use pail X, since 17 x 4 = 68, and 17 x 5 = 85 (more than 77). We have to check i * X <= M to ensure that we do not go over the limit, all while checking the possible number of times we can use pail Y. The same logic applies for the inner loop.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    sys.stdin = open('pails.in', 'r')\r\n    sys.stdout = open('pails.out', 'w')\r\n    X, Y, M = map(int, sys.stdin.read().split())\r\n\r\n    max_milk = 0\r\n\r\n    i = 0\r\n    while i * X <= M:\r\n        j = 0\r\n\r\n        while i * X + j * Y <= M:\r\n            current_total = i * X + j * Y\r\n            max_milk = max(max_milk, current_total)\r\n            j += 1\r\n\r\n        i += 1\r\n\r\n    print(max_milk)\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "cpp_solution": "#include <iostream>\r\n#include <algorithm>\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n    freopen(\"pails.in\", \"r\", stdin);\r\n    freopen(\"pails.out\", \"w\", stdout);\r\n\r\n    int X, Y, M;\r\n    cin >> X >> Y >> M;\r\n\r\n    int max_milk = 0;\r\n\r\n    for (int i = 0; i * X <= M; ++i) {\r\n        for (int j = 0; i * X + j * Y <= M; ++j) {\r\n\r\n            int current_total = i * X + j * Y;\r\n            max_milk = max(max_milk, current_total);\r\n\r\n        }\r\n    }\r\n\r\n    cout << max_milk << \"\\n\";\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 18,
+  "fields": {
+    "problem": 18,
+    "explanation": "The first step before doing any checking is to get rid of all characters that are not letters or numbers. In Python, you can use <code>character.isalnum()</code> to do so, and in C++, you can use <code>isalnum(character)</code>.\r\n\r\nWe know a palindrome reads the same forward and backward, like <code>racecar</code> or <code>level</code>. We could just store the reversed string in another variable and compare the two directly, but there is a more efficient solution.\r\n\r\nWhat if we compared the front and back simultaneously? We can have one pointer on the front and one on the back. \r\n\r\nThen, we move inward to compare the ends. If at any point the two characters are not equal, then the string is not a palindrome, so we return <code>false</code>. If we can move inward all the way, then the string is a palindrome, so we return <code>true</code>.",
+    "py_solution": "class Solution:\r\n    def isPalindrome(self, s: str) -> bool:\r\n        s = [i.lower() for i in s if i.isalnum()]\r\n\r\n        l = 0\r\n        r = len(s) - 1\r\n\r\n        while l <= r:\r\n            if s[l] != s[r]:\r\n                return False\r\n\r\n            l += 1\r\n            r -= 1\r\n\r\n        return True",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    bool isPalindrome(string s) {\r\n        string str = \"\";\r\n\r\n        for (char ch : s){\r\n            // static_cast to avoid undefined behaviour; not necessarily needed for LeetCode\r\n            if (isalnum(static_cast<unsigned char>(ch))){\r\n                str += tolower(ch);\r\n            }\r\n        }\r\n\r\n        int l = 0;\r\n        int r = str.length() - 1;\r\n\r\n        while (l <= r){\r\n            if (str[l] != str[r]){\r\n                return false;\r\n            }\r\n\r\n            l++;\r\n            r--;\r\n        }\r\n        \r\n        return true;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 19,
+  "fields": {
+    "problem": 19,
+    "explanation": "We leverage the fact that the input array is sorted to our advantage. Whenever some sort of data (like an array) is sorted, we can usually consider a two-pointer solution.\r\n\r\nIf you initialize two pointers at each end of the array, you get a sum by adding the values at those indices. If we move the left pointer, you can see that our sum increases. If we move the right pointer, you cn see that our sum decreases.\r\n\r\nWhy is this so?\r\n\r\nBecause the array is sorted, moving the left pointer will always give us a bigger value than before. Likewise, moving the right pointer will always give us a smaller value than before. \r\n\r\nEventually, we will get to our solution. You can trace out an example to see this in action.\r\n\r\nKeep in mind that this is 1-indexed, so you have to add one to your answer indices.",
+    "py_solution": "class Solution(object):\r\n    def twoSum(self, numbers: list[int], target: int) -> list[int]:\r\n        l = 0\r\n        r = len(numbers) - 1\r\n\r\n        while l <= r:\r\n            total = numbers[l] + numbers[r]\r\n            \r\n            if total == target:\r\n                return [l + 1, r + 1]\r\n\r\n            elif total < target:\r\n                l += 1\r\n\r\n            else:\r\n                r -= 1",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    vector<int> twoSum(vector<int>& numbers, int target) {\r\n        int l = 0; \r\n        int r = numbers.size() - 1;\r\n\r\n        while (l <= r){\r\n            int curr_sum = numbers[l] + numbers[r];\r\n\r\n            if (curr_sum == target){\r\n                return {l+1, r+1};\r\n                \r\n            } else if (curr_sum < target) {\r\n                l++;\r\n\r\n            } else {\r\n                r--;\r\n            };\r\n        }\r\n\r\n        return {};\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 20,
+  "fields": {
+    "problem": 20,
+    "explanation": "A clean way to solve this problem is to use a stack. \r\n\r\nThe algorithm is quite simple:\r\n\r\n<ul>\r\n<li>if you see a number, push it onto the stack</li>\r\n<li>otherwise, take the last two numbers you saw from the stack, operate on them, then push it back onto the stack</li>\r\n</ul>\r\n\r\nA couple of things to watch out for:\r\n\r\n<ul>\r\n<li>make sure to check for negative numbers (<code>isdigit()</code> will return false if the string shows a negative number like <code>-11</code>)</li>\r\n<li>you have to truncate your division down to zero, so doing standalone floor division will fail</li>\r\n<li>for languages like C++, just doing normal division works perfectly fine</li>\r\n</ul>\r\n\r\n\r\nIf you are still confused, you can trace out some short examples, and it will naturally make sense.",
+    "py_solution": "class Solution:\r\n    def evalRPN(self, tokens: list[str]) -> int:\r\n        st = []\r\n        \r\n        for ch in tokens:\r\n            if ch.isdigit() or (ch[0] == '-' and len(ch) > 1):\r\n                st.append(int(ch))\r\n            \r\n            else:\r\n                # In Python, .pop() also returns the value that was popped, so that we can store it in a variable\r\n                num2 = st.pop()\r\n                num1 = st.pop()\r\n\r\n                if ch == '+':\r\n                    st.append(num1 + num2)\r\n                \r\n                elif ch == '-':\r\n                    st.append(num1 - num2)\r\n                \r\n                elif ch == '*':\r\n                    st.append(num1 * num2)\r\n                \r\n                else:\r\n                    st.append(int(num1 / num2))\r\n        \r\n        return st[0]",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int evalRPN(vector<string>& tokens) {\r\n        stack<int> st;\r\n        \r\n        for (const string& ch : tokens) {\r\n            if (isdigit(ch[0]) || (ch[0] == '-' && ch.size() > 1)) {\r\n                st.push(stoi(ch));\r\n\r\n            } else {\r\n                int num2 = st.top(); \r\n                st.pop();\r\n\r\n                int num1 = st.top(); \r\n                st.pop();\r\n\r\n                if (ch == \"+\") {\r\n                    st.push(num1 + num2);\r\n                } \r\n                else if (ch == \"-\") {\r\n                    st.push(num1 - num2);\r\n                } \r\n                else if (ch == \"*\") {\r\n                    st.push(num1 * num2);\r\n                } \r\n                else {\r\n                    // integer division automatically truncates to 0 in C++\r\n                    st.push(num1 / num2);\r\n                }\r\n            }\r\n        }\r\n        \r\n        return st.top();\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 21,
+  "fields": {
+    "problem": 21,
+    "explanation": "There are multiple ways to solve this problem, but the cleanest solution utilizes a stack.\r\n\r\nIf you read the hints, you likely saw the hint to \"cancel\" the opposite directions out. This works perfectly with a stack: as you iterate through <code>arr</code>, you can add the current direction to the stack; before you add, you have to check if the last item in the stack is the opposite of your current direction. If it is, then you can pop that last item.\r\n\r\nAlso, you have to check if the stack is empty before you pop, since popping from an empty stack will give you an error.\r\n\r\nYou can trace a few examples to see how a stack works with this problem.",
+    "py_solution": "def dir_reduc(arr):\r\n    opposite = {\r\n        'NORTH': 'SOUTH',\r\n        'SOUTH': 'NORTH',\r\n        'WEST': 'EAST',\r\n        'EAST': 'WEST'\r\n    }\r\n    \r\n    st = []\r\n    \r\n    for direction in arr:\r\n        if st and st[-1] == opposite[direction]:\r\n            st.pop()\r\n        \r\n        else:\r\n            st.append(direction)\r\n    \r\n    return st",
+    "cpp_solution": "#include <vector>\r\n#include <string>\r\n#include <unordered_map>\r\n\r\nusing namespace std;\r\n\r\nclass DirReduction\r\n{\r\npublic:\r\n    static vector<string> dirReduc(const vector<string>& arr) {\r\n       \r\n      unordered_map<string, string> opposite = {\r\n          {\"NORTH\", \"SOUTH\"},\r\n          {\"SOUTH\", \"NORTH\"},\r\n          {\"WEST\", \"EAST\"},\r\n          {\"EAST\", \"WEST\"}\r\n      };\r\n\r\n      vector<string> st;\r\n\r\n      for (const string& direction : arr) {\r\n\r\n          if (!st.empty() && st.back() == opposite[direction]) {\r\n              st.pop_back();\r\n          } else {\r\n              st.push_back(direction);\r\n          }\r\n      }\r\n\r\n      return st;\r\n  }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 22,
+  "fields": {
+    "problem": 22,
+    "explanation": "As the problem might say, you must implement a binary search. \r\n\r\nHow to implement binary search:\r\n<ul>\r\n<li>initalize two pointers for the front and back of the array</li>\r\n<li>find the middle index by finding the average of the two pointers</li>\r\n<li>if the value at <code>mid</code> equals the target, return <code>mid</code></li>\r\n<li>if the value at <code>mid</code> is smaller than the target, search the right half by setting the left pointer to <code>mid + 1</code></li>\r\n<li>if it is too small, search the left half by setting the right pointer to <code>mid - 1</code></li>\r\n</ul>",
+    "py_solution": "class Solution(object):\r\n    def search(self, nums, target):\r\n        l, r = 0, len(nums) - 1\r\n\r\n        while l <= r:\r\n            mid = (l + r) // 2\r\n\r\n            if nums[mid] == target:\r\n                return mid\r\n\r\n            elif nums[mid] < target:\r\n                l = mid + 1\r\n\r\n            else:\r\n                r = mid - 1\r\n\r\n        return -1",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int search(vector<int>& nums, int target) {\r\n        int l = 0; \r\n        int r = nums.size() - 1;\r\n\r\n        while (l <= r) {\r\n            // if input sizes are very large, do int mid = l + (r - l) / 2;\r\n            // this is to prevent integer overflow\r\n            int mid = (l + r) / 2;\r\n\r\n            if (nums[mid] == target) {\r\n                return mid;\r\n\r\n            } else if (nums[mid] < target) {\r\n                l = mid + 1;\r\n\r\n            } else { \r\n                r = mid - 1;\r\n            }\r\n        }\r\n\r\n        return -1;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 23,
+  "fields": {
+    "problem": 23,
+    "explanation": "The problem asks us to have a solution that takes <code>O(n log n)</code> time complexity; for this problem, this tells us that we need to use binary search.\r\n\r\nHowever, this binary search will be a bit different. Instead of immediately returning the middle index as soon as it's equal to the target, we continue searching that half.\r\n\r\nFor example, if you found the middle <code>5</code> in <code>[1, 2, 4, 5, 5, 5, 8, 9]</code>, you would want to keep searching the left half of the array. But you also want to keep searching the right half of the array, since the problem requires you to find the first and last occurrence of <code>target</code>. So how would we do that?\r\n\r\nWell, you could just make two separate functions for each case, but that would be unnecessary work. Instead, we can compress everything into one function.\r\n\r\nYou should make a parameter that determines which direction you're searching in. For example, a boolean variable called <code>search_left</code> to determine if you are searching the left side (first occurrence) or the right side (last occurrence).\r\n\r\nWhen you find the target, move the left/right pointers (based on <code>search_left</code>) as if you were searching normally in that direction.",
+    "py_solution": "class Solution:\r\n    def searchRange(self, nums: list[int], target: int) -> list[int]:\r\n        def bs(nums, target, search_left):\r\n            l, r = 0, len(nums) - 1\r\n            res = -1\r\n            \r\n            while l <= r:\r\n                mid = (l + r) // 2\r\n\r\n                if nums[mid] > target:\r\n                    r = mid - 1\r\n                \r\n                elif nums[mid] < target:\r\n                    l = mid + 1\r\n                \r\n                else:\r\n                    res = mid\r\n                    \r\n                    if search_left:\r\n                        r = mid - 1\r\n                    \r\n                    else:\r\n                        l = mid + 1\r\n            \r\n            return res\r\n\r\n        return [bs(nums, target, True), bs(nums, target, False)]",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    vector<int> searchRange(vector<int>& nums, int target) {  \r\n        return {binarySearch(nums, target, true), binarySearch(nums, target, false)}; \r\n    }\r\n\r\n    int binarySearch(vector<int>& nums, int target, bool searchLeft) {\r\n        int left = 0;\r\n        int right = nums.size() - 1;\r\n        int idx = -1;\r\n        \r\n        while (left <= right) {\r\n            // find mid this way to prevent integer overflow bugs\r\n            int mid = left + (right - left) / 2;\r\n            \r\n            if (nums[mid] > target) {\r\n                right = mid - 1;\r\n\r\n            } else if (nums[mid] < target) {\r\n                left = mid + 1;\r\n\r\n            } else {\r\n                idx = mid;\r\n\r\n                if (searchLeft) {\r\n                    right = mid - 1;\r\n\r\n                } else {\r\n                    left = mid + 1;\r\n                }\r\n            }\r\n        }\r\n        \r\n        return idx;\r\n    }    \r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 24,
+  "fields": {
+    "problem": 24,
+    "explanation": "You can interpret a contiguous subarray as a window. We know that every window will have a size of <code>k</code>, so this is a fixed sliding window problem.\r\n\r\nIn most fixed sliding window problems, it's usually best to do the operation on the first window you can make. In this case, you are just summing the values of the first <code>k</code> elements in the array. \r\n\r\nYou should also keep a global maximum, meaning an answer variable where you keep track of the biggest answers you see. Because we have the first window, our global max can just be this sum, since this sum is already a contender for being the maximum.\r\n\r\nNow, we must figure out how many windows we can make. There isn't much logic here; you just need to subtract the length of the array by <code>k</code> and add one. Why add one? - If you start at the last element and count down k times, you see that we leave one window out that we should've counted.\r\n\r\nNow that we know how many windows we can make, this will be how many iterations we have. Of course, we can start from the second window, since we've already computed the first.\r\n\r\nAs we slide across the array, we will always subtract the previous element that we are leaving. In turn, we add the next element coming in. You might be a bit confused about the indices in the code solutions, but the best way to figure out how these indices work is to map out some examples, and it will naturally come to you at some point.\r\n\r\nWe always keep track of the max sum we see. At the end, we return the sum divided by k, since we want the average.",
+    "py_solution": "class Solution:\r\n    def findMaxAverage(self, nums: list[int], k: int) -> float:\r\n        curr = sum(nums[:k])\r\n        max_sum = curr\r\n\r\n        for i in range(1, len(nums) - k + 1):\r\n            curr -= nums[i - 1]\r\n            curr += nums[i + k - 1]\r\n            \r\n            max_sum = max(max_sum, curr)\r\n\r\n        return max_sum / k",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    double findMaxAverage(vector<int>& nums, int k) {\r\n        double curr = accumulate(nums.begin(), nums.begin() + k, 0.0);\r\n        double max_sum = curr;\r\n\r\n        for (int i = 1; i <= nums.size() - k; ++i) {\r\n            curr -= nums[i - 1];\r\n            curr += nums[i + k - 1];\r\n            \r\n            max_sum = max(max_sum, curr);\r\n        }\r\n\r\n        return max_sum / k;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 25,
+  "fields": {
+    "problem": 25,
+    "explanation": "We can use a sliding window approach to solve this problem. \r\n\r\nWe can define our left boundary as a left pointer that starts at the beginning of the array. Our right boundary will be defined as we iterate through the array. Essentially, every time we iterate one step forward, we grow our size by one, since we move the right boundary.\r\n\r\nBut obviously, we must move the left boundary at some point, since we will probably get duplicate characters. To track duplicate characters, we can use a hash set to efficiently check for duplicates. As we iterate, if we've seen this character in the hash set (meaning it's a duplicate), then we have to move the left boundary until we no longer have duplicates.\r\n\r\nAfter that, we can add our current character to the hash set, and take the max between our current length and our largest answer we've seen so far.\r\n\r\nSide Note: You will see that we do not have an explicit <code>if char in set</code> check. This is because it is actually unnecessary to do so, as we use a while loop, which functions as an automatic checker. If you didn't encounter a duplicate, the while loop won't execute; if you did, the while loop will execute.",
+    "py_solution": "class Solution:\r\n    def lengthOfLongestSubstring(self, s: str) -> int:\r\n        seen = set()\r\n        l = 0\r\n        ans = 0\r\n\r\n        for r in range(len(s)):\r\n            while s[r] in seen:\r\n                seen.remove(s[l])\r\n                l += 1\r\n            \r\n            seen.add(s[r])\r\n            ans = max(ans, r - l + 1)\r\n    \r\n        return ans",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int lengthOfLongestSubstring(string s) {\r\n        unordered_set<char> seen;\r\n        int l = 0;\r\n        int res = 0;\r\n\r\n        for (int r = 0; r < s.size(); r++) {\r\n            while (seen.find(s[r]) != seen.end()) {\r\n                seen.erase(s[l]);\r\n                l++;\r\n            }\r\n\r\n            seen.insert(s[r]);\r\n            res = max(res, r - l + 1);\r\n        }\r\n        return res;\r\n    }\r\n};"
+  }
+}
+]

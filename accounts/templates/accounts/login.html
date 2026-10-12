@@ -1,0 +1,61 @@
+{% extends 'accounts/base2.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="flex justify-center items-center mt-10">
+    <div class="w-full max-w-4xl flex flex-row">
+        <div class="p-5 h-auto bg-gradient-to-r from-blue-700 to-indigo-900 rounded-lg shadow-around shadow-blue-200 w-1/2">
+            <div class="relative flex flex-col items-center justify-center h-full">
+                <h1 class="text-white text-4xl font-bold">
+                        Welcome Back
+                </h1>
+                <div class="flex flex-col items-center space-y-2">
+                    <h2 class="mt-5 font-semibold text-sm text-mist-100">Don't have an account?</h2>
+                    <a href="{% url 'register' %}"
+                        class="rounded-lg py-1 px-3 bg-black text-white transition shadow-md hover:shadow-lg hover:bg-slate-700 hover:text-slate-400">
+                        Sign Up
+                    </a>
+                </div>
+                <i class="fa-solid fa-square-binary text-4xl text-slate-100 absolute top-0 left-0"></i>
+                <i class="fa-solid fa-laptop-code text-4xl text-slate-100 absolute top-0 right-0"></i>
+                <i class="fa-brands fa-github text-4xl text-slate-100 absolute bottom-0 left-0"></i>
+                <i class="fa-solid fa-file-code text-4xl text-slate-100 absolute bottom-0 right-0"></i>
+            </div>
+        </div>
+
+        <div class="w-1/2 bg-slate-100 rounded-lg py-15 px-5 space-y-5 shadow-around shadow-blue-200 h-auto">
+            <form method="POST" class="space-y-5">
+                {% csrf_token %}
+                
+                <fieldset class="space-y-5">
+                    <legend class="text-2xl font-bold text-center">Log In</legend>
+                    
+                    {% if form.non_field_errors %}
+                        <div class="bg-red-200 border-2 border-red-400 p-3 rounded-lg">
+                            {% for error in form.non_field_errors %}
+                                <p class="text-red-600 font-medium">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% for field in form %}
+                        <div>
+                            {{ field|as_crispy_field }}
+                        </div>
+                    {% endfor %}
+
+                </fieldset>
+
+
+                <button type="submit"
+                        class="bg-indigo-950 rounded-lg text-white py-1 px-2 w-full cursor-pointer font-semibold
+                               transition shadow-md hover:shadow-lg hover:text-sky-200">
+                    Sign In
+                </button>
+            </form>        
+        </div>
+    </div>
+</div>
+
+{% endblock %}

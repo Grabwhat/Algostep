@@ -1,0 +1,69 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# Django
+# ==========================================
+
+# Local SQLite database
+db.sqlite3
+backup_db.sqlite3
+db.sqlite3-journal
+
+# User-uploaded media
+# Keep default/static images outside media/
+media/*
+
+# Django collectstatic output
+staticfiles/
+
+# ==========================================
+# Environment variables and secrets
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Node.js / npm
+# ==========================================
+
+# Installed dependencies
+node_modules/
+
+# npm debug logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==========================================
+# Logs
+# ==========================================
+
+*.log
+
+# ==========================================
+# Operating system files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Editors and IDEs
+# ==========================================
+
+.idea/
+
+# VS Code settings are ignored by default.
+# Remove this rule if you want to share workspace settings.
+.vscode/

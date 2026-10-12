@@ -1,0 +1,618 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+<div class= "p-5 h-full w-full">
+    <h1 class="text-white text-2xl font-bold tracking-wider bg-orange-400 p-3 rounded-lg mb-5 italic
+               border-2 border-orange-200">
+        Skill Tree
+    </h1>
+
+    <div class="flex flex-col gap-20">
+
+        <div class="bg-zinc-600 p-3 rounded-lg space-y-7">
+            <h1 class="text-white text-2xl font-bold tracking-wider bg-yellow-600 w-fit p-3 rounded-lg italic">
+                Foundational Topics
+            </h1>
+
+            <div class="space-y-5">
+                {% for topic in level1 %}
+                    <div class="relative w-full">
+                        {% if topic.locked %}
+                            <div class="absolute z-10 top-1/2 left-[30%] -translate-x-1/4 flex flex-row">
+                                <div class="w-3/5 flex items-center justify-center p-3">
+                                    <div class="font-semibold bg-amber-200 border-3 border-amber-400 rounded-lg p-3 shadow-around space-y-3 w-5xl">
+                                        <i class="fa-solid fa-lock text-2xl text-amber-700"></i>
+                                        
+                                        <h1 class="text-amber-600">
+                                            This topic is locked! Here are the required tasks you need completed:
+                                        </h1>
+                                        
+                                        <ul class="list-disc list-inside">
+                                            {% for req in topic.requirements.all %}
+                                                <li class="text-amber-800">
+                                                    Unlock <span class="text-yellow-600">{{ req.name }}</span>
+
+                                                    {% if req.id in unlocked_topics %} 
+                                                        <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                            
+                                            {% if topic.user_level_met %}
+                                                <li class="text-amber-800">
+                                                    Level Required: {{ topic.mini_level_req }}
+                                                    
+                                                    {% if topic.mini_level_met %} 
+                                                        <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endif %}
+
+                                            <li class="text-amber-800">
+                                                User Level Required: <span class="text-red-600">{{ topic.user_level_requirement }}</span>
+
+                                                {% if topic.user_level_met %} 
+                                                    <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                {% endif %}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="w-2/5"></div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex flex-row rounded-lg overflow-hidden border-3 border-zinc-400
+                                {% if topic.locked %} blur-sm {% endif %}"
+                        style="
+                        {% if topic.locked %}
+                            user-select: none; -webkit-user-select: none; pointer-events: none;
+                        {% endif %}
+                        "
+                    >
+
+                        <div class="bg-zinc-900 w-3/5 p-3 space-y-5">
+                            <h2 class="text-white text-xl font-semibold">
+                                {{ topic.name }}
+                            </h2>
+
+                            <div data-visible="false"
+                                 class="cheat-sheet bg-sky-200 rounded-lg py-2 px-4 text-sky-700 border-2 border-sky-500
+                                        transition-colors hover:bg-sky-300 hover:text-sky-800 cursor-pointer">
+                                <h3 class="font-semibold">
+                                    Time Complexity Cheat Sheet
+                                    <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                    <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                </h3>
+
+                                <div class="hidden sheet overflow-x-auto rounded-lg border-2 border-sky-300 bg-sky-100 my-8">
+                                    {% include 'learning/'|add:topic.slug_name|add:'.html' %}
+                                </div>
+                            </div>
+
+                            <div>
+                                <div data-visible="false"
+                                     class="problems bg-amber-200 border-2 border-amber-500 rounded-lg py-2 px-4 text-amber-600
+                                            transition-colors hover:bg-amber-300 hover:text-amber-500 cursor-pointer">
+                                    <h3 class="font-semibold">
+                                        {{ topic.name }} Problems
+                                        <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                        <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                    </h3>
+
+                                    <div class="hidden problem-container">
+                                        <div class="rounded-lg overflow-hidden mt-3">
+                                            {% for problem in topic.problems.all %}
+                                                {% if forloop.counter <= 10 %}
+                                                    {% if level == problem.user_level_access and mini_level >= problem.mini_level_access or level > problem.user_level_access %}
+                                                        <div data-difficulty="{{ problem.category_difficulty }}"
+                                                            class="prob-container relative flex flex-row items-center space-x-5
+                                                                    p-2 odd:bg-sky-700 even:bg-sky-500 transition-shadow hover:shadow-around
+                                                                    hover:shadow-blue-200 hover:z-10"
+                                                        >
+                                                            <p class="text-white font-semibold">{{ problem.title }}</p>
+
+                                                            <p class="text-white bg-orange-400 py-1 px-2 rounded-lg font-medium italic">
+                                                                {{ problem.platform }}
+                                                            </p>
+
+                                                            <p class="difficulty font-semibold {{ problem.difficulty_color }}">
+                                                                {{ problem.difficulty }}
+                                                            </p>
+
+                                                            <a href="{% url 'problem-detail' slug=problem.slug %}"
+                                                            class="absolute inset-0 z-10"></a>
+                                                        </div>
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+
+                                        <a href="{% url 'problem-list' topic.slug_name %}"
+                                           class="bg-sky-800 border-2 border-sky-600 rounded-lg py-1 px-3 text-mist-100 font-semibold
+                                                  transition-colors hover:bg-sky-700 hover:text-mist-300 mt-3 block w-fit">
+                                            All Problems
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-700 w-2/5 p-3">
+                            <p class="text-sm text-mist-200">
+                                {{ topic.description|safe }}
+                            </p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <div class="bg-zinc-600 p-3 rounded-lg space-y-7">
+            <h1 class="text-white text-2xl font-bold tracking-wider bg-emerald-600 w-fit p-3 rounded-lg italic">
+                Beginner Topics
+            </h1>
+
+            <div class="space-y-5">
+                {% for topic in level2 %}
+                    <div class="relative w-full">
+                        {% if topic.locked %}
+                            <div class="absolute z-10 top-1/2 left-[30%] -translate-x-1/4 flex flex-row">
+                                <div class="w-3/5 flex items-center justify-center p-3">
+                                    <div class="font-semibold bg-emerald-200 border-3 border-emerald-400 rounded-lg p-3 shadow-around space-y-3 w-5xl">
+                                        <i class="fa-solid fa-lock text-2xl text-green-700"></i>
+                                        
+                                        <h1 class="text-emerald-600">
+                                            This topic is locked! Here are the required tasks you need completed:
+                                        </h1>
+                                        
+                                        <ul class="list-disc list-inside">
+                                            {% for req in topic.requirements.all %}
+                                                <li class="text-emerald-800">
+                                                    Unlock <span class="text-yellow-600">{{ req.name }}</span>
+                                                    
+                                                    {% if req.id in unlocked_topics %} 
+                                                        <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                            
+                                            {% if topic.user_level_met %}
+                                                <li class="text-emerald-800">
+                                                    Level Required: {{ topic.mini_level_req }}
+                                                    
+                                                    {% if topic.mini_level_met %} 
+                                                        <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endif %}
+
+                                            <li class="text-emerald-800">
+                                                User Level Required: <span class="text-red-600">{{ topic.user_level_requirement }}</span>
+
+                                                {% if topic.user_level_met %} 
+                                                    <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                {% endif %}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="w-2/5"></div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex flex-row rounded-lg overflow-hidden border-3 border-zinc-400
+                                {% if topic.locked %} blur-sm {% endif %}"
+                        style="
+                        {% if topic.locked %}
+                            user-select: none; -webkit-user-select: none; pointer-events: none;
+                        {% endif %}
+                        "
+                    >
+
+                        <div class="bg-zinc-900 w-3/5 p-3 space-y-5">
+                            <h2 class="text-white text-xl font-semibold">
+                                {{ topic.name }}
+                            </h2>
+
+                            <div data-visible="false"
+                                 class="cheat-sheet bg-sky-200 rounded-lg py-2 px-4 text-sky-700 border-2 border-sky-500
+                                        transition-colors hover:bg-sky-300 hover:text-sky-800 cursor-pointer">
+                                <h3 class="font-semibold">
+                                    Time Complexity Cheat Sheet
+                                    <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                    <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                </h3>
+
+                                <div class="hidden sheet overflow-x-auto rounded-lg border-2 border-sky-300 bg-sky-100 my-8">
+                                    {% include 'learning/'|add:topic.slug_name|add:'.html' %}
+                                </div>
+                            </div>
+
+                            <div>
+                                <div data-visible="false"
+                                     class="problems bg-amber-200 border-2 border-amber-500 rounded-lg py-2 px-4 text-amber-600
+                                            transition-colors hover:bg-amber-300 hover:text-amber-500 cursor-pointer">
+                                    <h3 class="font-semibold">
+                                        {{ topic.name }} Problems
+                                        <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                        <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                    </h3>
+
+                                    <div class="hidden problem-container">
+                                        <div class="rounded-lg overflow-hidden mt-3">
+                                            {% for problem in topic.problems.all %}
+                                                {% if forloop.counter <= 10 and level >= problem.user_level_access %}
+                                                    <div data-difficulty="{{ problem.category_difficulty }}"
+                                                         class="prob-container relative flex flex-row items-center space-x-5
+                                                                p-2 odd:bg-sky-700 even:bg-sky-500 transition-shadow hover:shadow-around
+                                                                hover:shadow-blue-200 hover:z-10"
+                                                    >
+                                                        <p class="text-white font-semibold">{{ problem.title }}</p>
+
+                                                        <p class="text-white bg-orange-400 py-1 px-2 rounded-lg font-medium italic">
+                                                            {{ problem.platform }}
+                                                        </p>
+
+                                                        <p class="difficulty font-semibold {{ problem.difficulty_color }}">
+                                                            {{ problem.difficulty }}
+                                                        </p>
+
+                                                        <a href="{% url 'problem-detail' slug=problem.slug %}"
+                                                           class="absolute inset-0 z-10"></a>
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+
+                                        <a href="{% url 'problem-list' topic.slug_name %}"
+                                           class="bg-sky-800 border-2 border-sky-600 rounded-lg py-1 px-3 text-mist-100 font-semibold
+                                                  transition-colors hover:bg-sky-700 hover:text-mist-300 mt-3 block w-fit">
+                                            All Problems
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-700 w-2/5 p-3">
+                            <p class="text-sm text-mist-200">
+                                {{ topic.description|safe }}
+                            </p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <div class="bg-zinc-600 p-3 rounded-lg space-y-7">
+            <h1 class="text-white text-2xl font-bold tracking-wider bg-sky-600 w-fit p-3 rounded-lg italic">
+                Elementary Topics
+            </h1>
+
+            <div class="space-y-5">
+                {% for topic in level3 %}
+                    <div class="relative w-full">
+                        {% if topic.locked %}
+                            <div class="absolute z-10 top-1/2 left-[30%] -translate-x-1/4 flex flex-row">
+                                <div class="w-3/5 flex items-center justify-center p-3">
+                                    <div class="font-semibold bg-sky-200 border-3 border-sky-400 rounded-lg p-3 shadow-around space-y-3 w-4xl">
+                                        <i class="fa-solid fa-lock text-2xl text-sky-700"></i>
+                                        
+                                        <h1 class="text-sky-600">
+                                            This topic is locked! Here are the required tasks you need completed:
+                                        </h1>
+                                        
+                                        <ul class="list-disc list-inside">
+                                            {% for req in topic.requirements.all %}
+                                                <li class="text-sky-800">
+                                                    Unlock <span class="text-yellow-600">{{ req.name }}</span>
+
+                                                    {% if req.id in unlocked_topics %} 
+                                                        <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                            
+                                            {% if topic.user_level_met %}
+                                                <li class="text-sky-800">
+                                                    Level Required: {{ topic.mini_level_req }}
+                                                    
+                                                    {% if topic.mini_level_met %} 
+                                                        <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endif %}
+
+                                            <li class="text-sky-800">
+                                                User Level Required: <span class="text-red-600">{{ topic.user_level_requirement }}</span>
+
+                                                {% if topic.user_level_met %} 
+                                                    <i class="fa-solid fa-square-check text-emerald-600"></i> 
+                                                {% endif %}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="w-2/5"></div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex flex-row rounded-lg overflow-hidden border-3 border-zinc-400
+                                {% if topic.locked %} blur-sm {% endif %}"
+                        style="
+                        {% if topic.locked %}
+                            user-select: none; -webkit-user-select: none; pointer-events: none;
+                        {% endif %}
+                        "
+                    >
+
+                        <div class="bg-zinc-900 w-3/5 p-3 space-y-5">
+                            <h2 class="text-white text-xl font-semibold">
+                                {{ topic.name }}
+                            </h2>
+
+                            <div data-visible="false"
+                                 class="cheat-sheet bg-sky-200 rounded-lg py-2 px-4 text-sky-700 border-2 border-sky-500
+                                        transition-colors hover:bg-sky-300 hover:text-sky-800 cursor-pointer">
+                                <h3 class="font-semibold">
+                                    Time Complexity Cheat Sheet
+                                    <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                    <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                </h3>
+
+                                <div class="hidden sheet overflow-x-auto rounded-lg border-2 border-sky-300 bg-sky-100 my-8">
+                                    {% include 'learning/'|add:topic.slug_name|add:'.html' %}
+                                </div>
+                            </div>
+
+                            <div>
+                                <div data-visible="false"
+                                     class="problems bg-amber-200 border-2 border-amber-500 rounded-lg py-2 px-4 text-amber-600
+                                            transition-colors hover:bg-amber-300 hover:text-amber-500 cursor-pointer">
+                                    <h3 class="font-semibold">
+                                        {{ topic.name }} Problems
+                                        <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                        <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                    </h3>
+
+                                    <div class="hidden problem-container">
+                                        <div class="rounded-lg overflow-hidden mt-3">
+                                            {% for problem in topic.problems.all %}
+                                                {% if forloop.counter <= 10 and level >= problem.user_level_access %}
+                                                    <div data-difficulty="{{ problem.category_difficulty }}"
+                                                         class="prob-container relative flex flex-row items-center space-x-5
+                                                                p-2 odd:bg-sky-700 even:bg-sky-500 transition-shadow hover:shadow-around
+                                                                hover:shadow-blue-200 hover:z-10"
+                                                    >
+                                                        <p class="text-white font-semibold">{{ problem.title }}</p>
+
+                                                        <p class="text-white bg-orange-400 py-1 px-2 rounded-lg font-medium italic">
+                                                            {{ problem.platform }}
+                                                        </p>
+
+                                                        <p class="difficulty font-semibold {{ problem.difficulty_color }}">
+                                                            {{ problem.difficulty }}
+                                                        </p>
+
+                                                        <a href="{% url 'problem-detail' slug=problem.slug %}"
+                                                           class="absolute inset-0 z-10"></a>
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+
+                                        <a href="{% url 'problem-list' topic.slug_name %}"
+                                           class="bg-sky-800 border-2 border-sky-600 rounded-lg py-1 px-3 text-mist-100 font-semibold
+                                                  transition-colors hover:bg-sky-700 hover:text-mist-300 mt-3 block w-fit">
+                                            All Problems
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-700 w-2/5 p-3">
+                            <p class="text-sm text-mist-200">
+                                {{ topic.description|safe }}
+                            </p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <!-- <div class="bg-zinc-600 p-3 rounded-lg space-y-7">
+            <h1 class="text-white text-2xl font-bold tracking-wider bg-purple-600 w-fit p-3 rounded-lg italic">
+                Intermediate Topics
+            </h1>
+
+            <div class="space-y-5">
+                {% for topic in level4 %}
+                    <div class="relative w-full">
+                        {% if topic.locked %}
+                            <div class="absolute z-10 top-1/2 left-[30%] -translate-x-1/4 flex flex-row"
+                            >
+                                <div class="w-3/5 flex items-center justify-center p-3">
+                                    <div class="font-semibold bg-emerald-200 border-3 border-emerald-400 rounded-lg p-3 shadow-around space-y-3 w-4xl">
+                                        <i class="fa-solid fa-lock text-2xl text-sky-700"></i>
+                                        
+                                        <h1 class="text-purple-600">
+                                            This topic is locked! Here are the required tasks you need completed:
+                                        </h1>
+                                        
+                                        <ul class="list-disc list-inside">
+                                            {% for req in topic.requirements.all %}
+                                                <li class="text-purple-800">
+                                                    Unlock <span class="text-yellow-600">{{ req.name }}</span>
+
+                                                    {% if req.id in unlocked_topics %} 
+                                                        <i class="fa-solid fa-square-check text-sky-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                            
+                                            {% if topic.user_level_met %}
+                                                <li class="text-purple-800">
+                                                    Level Required: {{ topic.mini_level_req }}
+                                                    
+                                                    {% if topic.mini_level_met %} 
+                                                        <i class="fa-solid fa-square-check text-purple-600"></i> 
+                                                    {% endif %}
+                                                </li>
+                                            {% endif %}
+
+                                            <li class="text-purple-800">
+                                                User Level Required: <span class="text-red-600">{{ topic.user_level_requirement }}</span>
+
+                                                {% if topic.user_level_met %} 
+                                                    <i class="fa-solid fa-square-check text-emerald-600"></i> 
+                                                {% endif %}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="w-2/5"></div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex flex-row rounded-lg overflow-hidden border-3 border-zinc-400
+                                {% if topic.locked %} blur-sm {% endif %}"
+                        style="
+                        {% if topic.locked %}
+                            user-select: none; -webkit-user-select: none; pointer-events: none;
+                        {% endif %}
+                        "
+                    >
+
+                        <div class="bg-zinc-900 w-3/5 p-3 space-y-5">
+                            <h2 class="text-white text-xl font-semibold">
+                                {{ topic.name }}
+                            </h2>
+
+                            <div data-visible="false"
+                                 class="cheat-sheet bg-sky-200 rounded-lg py-2 px-4 text-sky-700 border-2 border-sky-500
+                                        transition-colors hover:bg-sky-300 hover:text-sky-800 cursor-pointer">
+                                <h3 class="font-semibold">
+                                    Time Complexity Cheat Sheet
+                                    <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                    <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                </h3>
+
+                                <div class="hidden sheet overflow-x-auto rounded-lg border-2 border-sky-300 bg-sky-100 my-8">
+                                    {% include 'learning/'|add:topic.slug_name|add:'.html' %}
+                                </div>
+                            </div>
+
+                            <div>
+                                <div data-visible="false"
+                                     class="problems bg-amber-200 border-2 border-amber-500 rounded-lg py-2 px-4 text-amber-600
+                                            transition-colors hover:bg-amber-300 hover:text-amber-500 cursor-pointer">
+                                    <h3 class="font-semibold">
+                                        {{ topic.name }} Problems
+                                        <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                        <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                    </h3>
+
+                                    <div class="hidden problem-container">
+                                        <div class="rounded-lg overflow-hidden mt-3">
+                                            {% for problem in topic.problems.all %}
+                                                {% if forloop.counter <= 10 and level >= problem.user_level_access %}
+                                                    <div data-difficulty="{{ problem.category_difficulty }}"
+                                                         class="prob-container relative flex flex-row items-center space-x-5
+                                                                p-2 odd:bg-sky-700 even:bg-sky-500 transition-shadow hover:shadow-around
+                                                                hover:shadow-blue-200 hover:z-10"
+                                                    >
+                                                        <p class="text-white font-semibold">{{ problem.title }}</p>
+
+                                                        <p class="text-white bg-orange-400 py-1 px-2 rounded-lg font-medium italic">
+                                                            {{ problem.platform }}
+                                                        </p>
+
+                                                        <p class="difficulty font-semibold {{ problem.difficulty_color }}">
+                                                            {{ problem.difficulty }}
+                                                        </p>
+
+                                                        <a href="{% url 'problem-detail' slug=problem.slug %}"
+                                                           class="absolute inset-0 z-10"></a>
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+
+                                        <a href="{% url 'problem-list' topic.slug_name %}"
+                                           class="bg-sky-800 border-2 border-sky-600 rounded-lg py-1 px-3 text-mist-100 font-semibold
+                                                  transition-colors hover:bg-sky-700 hover:text-mist-300 mt-3 block w-fit">
+                                            All Problems
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-700 w-2/5 p-3">
+                            <p class="text-sm text-mist-200">
+                                {{ topic.description|safe }}
+                            </p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div> -->
+
+    </div>
+</div>
+
+<script>
+    function showMore(event, object_name, hover_color){
+        const clickedObject = event.currentTarget;
+        const down = clickedObject.querySelector('.down');
+        const up = clickedObject.querySelector('.up');
+        const object = clickedObject.querySelector(`.${object_name}`);
+        const visible = clickedObject.dataset.visible;
+
+        if (visible !== 'true'){
+            down.classList.toggle('!hidden', true);
+            up.classList.toggle('!hidden', false);
+            object.classList.toggle('hidden', false);
+
+            clickedObject.classList.toggle(`hover:bg-${hover_color}`, false);
+            clickedObject.dataset.visible = 'true';
+
+        } else{
+            down.classList.toggle('!hidden', false);
+            up.classList.toggle('!hidden', true);
+            object.classList.toggle('hidden', true);
+
+            clickedObject.classList.toggle(`hover:bg-${hover_color}`, true);
+            clickedObject.dataset.visible = 'false';
+        }
+    }
+    
+    const cheat_sheets = document.querySelectorAll('.cheat-sheet');
+    cheat_sheets.forEach(sheet => sheet.addEventListener('click', (e) => showMore(e, 'sheet', 'sky-300')));
+
+    const problems = document.querySelectorAll('.problems');
+    problems.forEach(tab => tab.addEventListener('click', (e) => showMore(e, 'problem-container', 'amber-300')));
+
+    
+    
+</script>
+
+{% endblock %}

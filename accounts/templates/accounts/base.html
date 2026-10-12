@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% if title %}
+        <title>AlgoStep - {{ title }}</title>
+
+    {% else %}
+        <title>AlgoStep</title>
+
+    {% endif %}
+    
+    <script src="https://kit.fontawesome.com/9c257c67dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'dist/output.css' %}">
+    <link rel="stylesheet" href="{% static 'css/prism.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="h-full w-full bg-gradient-to-tr from-black via-gray-600 to-black bg-fixed scrollbar">
+    <nav class="bg-gradient-to-r from-sky-950 to-sky-800 py-4 shadow-lg shadow-sky-900 w-full  border-b-3 border-sky-800">
+
+        <div class="flex flex-row items-center justify-between">
+            <div class="ml-5 space-x-5">
+                <a href="{% url 'home' %}"
+                   class="text-white font-bold tracking-wider text-lg transition hover:text-sky-200 cursor-pointer mr-15
+                          rounded-full bg-sky-900 hover:bg-sky-800 py-2 px-5">
+                    Algostep
+                </a>
+
+                <a href="{% url 'skill-tree' %}"
+                   class="text-white font-semibold transition-colors hover:text-sky-200 cursor-pointer
+                          rounded-full hover:bg-slate-500 py-1 px-3">
+                    Skill Tree <i class="fa-solid fa-tree ml-1 text-green-600"></i>
+                </a>
+
+                <a href="{% url 'problem-list' 'all' %}"
+                   class="text-white font-semibold transition-colors hover:text-sky-200 cursor-pointer
+                          rounded-full hover:bg-slate-500 py-1 px-3">
+                    Problems <i class="fa-solid fa-clipboard ml-1 text-amber-600"></i>
+                </a>
+
+                <a href="{% url 'resources' %}"
+                   class="text-white font-semibold transition-colors hover:text-sky-200 cursor-pointer
+                          rounded-full hover:bg-slate-500 py-1 px-3">
+                    Resources <i class="fa-solid fa-book ml-1 text-yellow-500"></i>
+                </a>
+            </div>
+
+            <div class="w-xl space-y-1">
+                <div class="flex flex-row justify-between">
+                    
+                    <h2 class="font-semibold text-amber-500 italic text-sm">
+                        <i class="fa-solid fa-chart-line text-emerald-400 mr-2"></i>
+                        Progress to next level: {{ user.profile.xp }}/{{ user.profile.xp_required }}
+                        <span class="text-amber-400">XP</span>
+                    </h2>
+
+                    <h2 class="font-semibold text-amber-400 text-sm">
+                        Current Level: {{ user.profile.mini_level }}
+                    </h2>
+                </div>
+
+                <div class="rounded-full border-2 border-yellow-200 h-4 overflow-hidden">
+                    <div class="bg-yellow-500 h-full" style="width: {% widthratio user.profile.xp user.profile.xp_required 100 %}%;"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-row items-center mr-5 space-x-7">
+                <div class="flex flex-row items-center space-x-2">
+                    <a href="{% url 'profile' user.username %}"
+                        class="text-white font-semibold transition-colors hover:text-sky-200 cursor-pointer">
+                        Profile
+                    </a>
+                    
+                    <img src="{% if user.profile.profile_pic %} {{ user.profile.profile_pic.url }} {% else %} {% static 'images/default.jpg' %} {% endif %}"
+                                alt="profile-pic"
+                                class="w-7 rounded-full block">
+                
+                    </div>
+
+                <form action="{% url 'logout' %}" method="POST">
+                    {% csrf_token %}
+
+                    <button type="submit" class="text-white font-semibold transition-colors hover:text-red-400 cursor-pointer">
+                        Logout <i class="fa-solid fa-right-from-bracket ml-1 text-red-400"></i>
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+        
+    </nav>
+
+    {% if calendar %}
+        <div class="flex flex-row items-center w-full h-11/12 scrollbar">
+            <div class="w-3/4 border-r-3 border-sky-800 h-full">
+                {% block content2 %}{% endblock %}
+            </div>
+
+            <div class="w-1/4 min-h-full bg-zinc-800 p-3 border-b-3 border-sky-800">
+                <h1 class="text-white text-xl">Calendar</h1>
+            </div>
+        </div>
+    {% else %}
+        <div class="h-11/12 scrollbar">
+            {% block content %}{% endblock %}
+        </div>
+
+    {% endif %}
+
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'js/prism.js' %}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            Prism.highlightAll();
+        });
+    </script>
+</body>
+</html>

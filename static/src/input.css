@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@source "../**/templates/**/*.html";
+@source "../**/static/**/*.js";
+
+@theme{
+  --shadow-around: 0 0 15px 7px rgba(0, 0, 0, 0.1);
+}
+
+.code-snippet, code:not(.language-cpp, .language-py, .language-java){
+  background-color: #322D31;
+  color: #C5C6D0;
+
+  padding: 2px;
+  border-radius: 5px;
+  border: 1px solid #41424C;
+}
+
+.scrollbar {
+  @apply scrollbar-auto scrollbar-track-slate-950 scrollbar-thumb-gray-400;
+}
+
+ul {
+  @apply list-inside list-disc;
+}

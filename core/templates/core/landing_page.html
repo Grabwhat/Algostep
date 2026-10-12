@@ -1,0 +1,173 @@
+{% extends 'accounts/base2.html' %}
+
+{% block content %}
+
+<div class="w-full min-h-screen">
+
+    <div class="flex flex-col justify-center items-center w-full h-full">
+        <div class="flex flex-col justify-center items-center py-8 space-y-10 w-full h-1/4 bg-gradient-to-r from-gray-950 to-gray-700 min-h-fit shrink-0">
+
+            <div class="flex flex-row justify-between w-3/4">
+                <i class="fa-solid fa-code text-orange-500 text-9xl"></i>
+                <i class="fa-brands fa-leetcode text-amber-400 text-9xl"></i>
+                <i class="fa-brands fa-hackerrank text-emerald-400 text-9xl"></i>
+            </div>
+            
+
+            <div class="flex flex-row justify-between items-center w-2/3 space-x-8">
+                <img
+                    src="media/USACO_Cow.png"
+                    alt="Cartoon Cow"
+                    class="w-56"
+                >
+
+                <div class="flex flex-col items-center space-y-5">
+                    <h1 class="text-white text-5xl font-bold text-center tracking-widest">Competitive Programming is hard</h1>
+                    <span class="text-xl text-slate-400 font-semibold tracking-wider">Learning it shouldn't be</span>
+                </div>
+
+                <img 
+                    src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png" 
+                    alt="Python Logo"
+                    class="w-36"
+                >
+            </div>
+
+            <div class="flex flex-row justify-between items-center w-3/4">
+                <img 
+                    src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/960px-ISO_C%2B%2B_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20170928190710" 
+                    alt="C++ Logo"
+                    class="w-36"
+                >
+
+                <svg width="100" height="100" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" class="inline mb-2 ml-1">
+                    <title>Codeforces</title>
+                    <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3z" fill="#3B5998"/>
+                    <path d="M13.5 3c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3z" fill="#EA4335"/>
+                    <path d="M22.5 10.5c.828 0 1.5.672 1.5 1.5v7.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V12c0-.828.672-1.5 1.5-1.5h3z" fill="#FBBC05"/>
+                </svg>
+
+                <i class="fa-brands fa-java text-orange-400 text-9xl"></i>
+
+            </div>
+        </div>
+
+
+        <div class="flex flex-col items-center justify-start bg-gradient-to-b from-gray-800 to-gray-500 h-3/4 w-full space-y-10">
+            <hr class="w-full border-t-3 border-white">
+
+            <div class="flex flex-col items-center space-y-10 w-fit mb-10">
+                <div class="flex flex-col items-center space-y-5">
+                    <h1 class="text-4xl font-bold text-sky-300 tracking-wider">
+                        <span class="text-5xl text-sky-400">Algostep</span> will be at every step of your <span class="text-5xl text-sky-400">Journey</span>
+                    </h1>
+
+                    <p class="text-mist-200 italic tracking-wide text-xl">
+                        Competitive Programming shouldn't be done alone
+                    </p>
+                </div>
+
+                <div class="flex flex-row justify-center space-x-3 w-3/4">
+                    <a href="{% url 'register' %}"
+                       class="rounded-full py-2 px-4 bg-gradient-to-tr from-purple-400 to-purple-200 border-2 border-purple-300 transition
+                              text-purple-50 font-semibold tracking-wide text-xl shadow-sm shadow-purple-200 hover:shadow-md hover:-translate-y-1"
+                    >
+                        Start Journey
+                    </a>
+
+                    <a href="{% url 'login' %}"
+                       class="rounded-full py-2 px-4 bg-gradient-to-tr from-sky-400 to-sky-200 border-2 border-sky-300 transition
+                              text-sky-50 font-semibold tracking-wide text-xl shadow-sm shadow-sky-200 hover:shadow-md hover:-translate-y-1"
+                    >
+                        Already have an account?
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center space-y-8 mt-10">
+                    <h1 class="text-white font-semibold text-3xl">
+                        And it's all beginner-friendly
+                    </h1>
+
+                    <div class="flex flex-row space-x-7">
+                        <div class="border-3 border-sky-600 bg-sky-300 py-5 px-4 rounded-lg space-y-3 transition hover:-translate-y-2">
+                            <h1 class="text-sky-700 font-semibold text-xl">Skill Tree <i class="fa-solid fa-tree text-green-700"></i></h1>
+                            <p>Time complexity cheat sheets and problems for every topic</p>
+                        </div>
+
+                        <div class="border-3 border-yellow-600 bg-yellow-200 py-5 px-4 rounded-lg space-y-3 transition hover:-translate-y-2">
+                            <h1 class="text-yellow-700 font-semibold text-xl">Problems, problems, problems <i class="fa-solid fa-bug text-red-800"></i></h1>
+                            <p>An ever growing pool of problems for every topic</p>
+                        </div>
+
+                        <div class="border-3 border-emerald-600 bg-emerald-300 py-5 px-4 rounded-lg space-y-3 transition hover:-translate-y-2">
+                            <h1 class="text-emerald-700 font-semibold text-xl">Hints and Editorials <i class="fa-solid fa-lightbulb text-yellow-200"></i></h1>
+                            <p>Self-curated, straightforward hints and editorials</p>
+                        </div>
+                    </div>
+
+                    <h1 class="text-white font-semibold text-4xl mt-12">
+                        Don't stress, and climb the algorithm stairs with Algostep
+                    </h1>
+                </div>
+            </div>
+            
+            <hr class="border-3 border-white w-full blur-xl mt-14">
+
+            <div class="flex flex-col items-center w-full p-5 bg-slate-700">
+                <div class="flex flex-row justify-between text-8xl w-full mt-10">
+                    <i class="fa-solid fa-network-wired text-yellow-500"></i>
+                    <i class="fa-solid fa-code-fork text-green-500"></i>
+                    <i class="fa-solid fa-terminal text-orange-500"></i>
+                    <i class="fa-solid fa-sitemap text-sky-500"></i>
+                    <i class="fa-solid fa-hexagon-nodes text-pink-700"></i>
+                </div>
+
+                <div class="flex flex-row justify-between text-8xl w-4/5 mt-10">
+                    <i class="fa-solid fa-diagram-project text-cyan-500"></i>
+                    <i class="fa-solid fa-laptop-code text-amber-500"></i>
+                    <i class="fa-solid fa-hexagon-nodes-bolt text-purple-600"></i>
+                    <i class="fa-solid fa-file text-red-400"></i>
+                </div>
+            </div>
+
+            <hr class="border-3 border-white w-full blur-xl mb-14">
+
+            <div class="flex flex-col items-center space-y-8 px-5 my-8">
+                <h1 class="text-white font-semibold text-4xl tracking-wider">
+                    Frequently Asked Questions
+                </h1>
+                
+                <div class="flex flex-row space-x-7">
+                    <div class="border-3 border-yellow-600 bg-yellow-200 py-5 px-4 rounded-lg space-y-3 transition hover:-translate-y-2">
+                        <h1 class="text-yellow-700 font-semibold text-xl">What is Competitive Programming?</h1>
+                        <p>
+                            Instead of building functional projects or apps, you solve problems.
+                            It requires logical, algorithmic, and sometimes mathematical thinking, but Algostep will help you with that.
+                            The goal is to not only solve problems, but solve them fast and efficiently.
+                        </p>
+                    </div>
+
+                    <div class="border-3 border-violet-400 bg-violet-200 py-5 px-4 rounded-lg space-y-3 transition hover:-translate-y-2">
+                        <h1 class="text-violet-500 font-semibold text-xl">Where can I practice Competitive Programming problems?</h1>
+                        <p>
+                            There are various websites to practice, but the main ones are Codeforces, LeetCode, HackerRank, AtCoder,
+                            and the official USA Computing Olympiad (USACO). Every source is different, and you are not limited to just these websites.
+                        </p>
+                    </div>
+
+                    <div class="border-3 border-orange-400 bg-orange-200 py-5 px-4 rounded-lg space-y-3 transition hover:-translate-y-2">
+                        <h1 class="text-orange-500 font-semibold text-xl">What language is best for Competitive Programming?</h1>
+                        <p>
+                            This is entirely up to your preference, as many programming languages can be used for Competitive Programming.
+                            However, the most prominent three languages that are used are C++, Java, and Python. Out of the three, C++ is the most
+                            widely used, for its incredibly fast execution speed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

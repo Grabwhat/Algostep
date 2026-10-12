@@ -1,0 +1,305 @@
+ALGOSTEP - Competitive Programming Trainer Website
+
+FEATURES
+
+1. User Level
+    - user picks the level they're at (e.g new, beginner, intermediate)
+    - for now, nothing above intermediate, since I'm not those levels yet
+    - level determines difficulty
+        a. new/beginner = LC easy, CF 800-900, maybe USACO Bronze
+        b. intermediate = LC easy/medium/easy hards, CF 1000-1600, USACO Bronze/Silver
+
+
+2. Problem Recommender
+    - not some fancy machine learning stuff (at least for now)
+    - based on user level
+    - user will select problem (topic) tags
+    - user just changes status of problem to 'complete'
+        a. different statuses
+        b. complete, in progress, not started
+        c. be able to bookmark a problem
+    
+    - The Problems
+        a. will not have in-browser IDE; too complicated
+        b. hint system, like LeetCode/NeetCode
+            -> might include NeetCode videos
+            -> maybe make my own videos
+        
+        c. provide my own in-depth solutions 
+            -> priority to make it very clear and easy to follow, but doesn't bore the user
+            -> brute force vs optimized solutions
+            -> for now, code will be in Python and C++
+        
+        d. user has to wait >= 5 mins to get the first hint
+            -> user has to wait >= 2 mins to get next hints after the first
+
+
+3. Skill Tree
+    - user has to 'unlock' certain topics in order to learn another
+        a. e.g. you need to unlock 2 pointers in order to learn sliding window
+        b. you need bfs/dfs in order to learn graphs
+    
+    - user can level up by solving enough problems
+        a. users get XP from solving problems
+        b. getting enough XP = next level
+        c. levels = more topics that can be unlocked
+            -> you can get a topic that can be unlocked, but you don't get it until you actually unlock it
+            -> ex: at level 3, you can unlock sliding window, but you don't get it until you've unlocked 2 pointers
+        
+        d. different from user levels
+            -> there are multiple smaller levels between the user levels
+            -> ex: NEW -> lvl 1 -> lvl 2 -> lvl 3 -> lvl 4 -> lvl 5 -> BEGINNER -> lvl 1 -> lvl 2 -> lvl 3 -> etc..
+        
+        e. the higher the levels (and user level), the more XP required to level up
+            -> but harder problems give more XP
+            -> you unlock harder problems as you level up
+        
+        f. if the user can solve 3 problems in a row without hints, they get bonus XP 
+            -> try not to make it the focus, as hints are still very important in learning
+    
+    - leveling up to the next user level (e.g. NEW to BEGINNER; BEGINNER to INTERMEDIATE)
+        a. user has to level up all the way until they reach the next user level
+        b. before advancing, the user has to complete a test on topics and do a mini-contest (30 mins - 1 hr)
+
+
+4. Retention + Gamification
+    - a simple calendar like LeetCode with daily problems
+        a. like LeetCode, but instead of a month, it's only a week
+        b. user gets bonus XP for solving all daily problems in the week 
+            -> using hints is fine
+            -> but they do get bonus XP from solving problems in a row without hints
+        
+    - make virtual contests from 3-4 problems that the user hasn't solved yet
+        a. user gets bonus XP from solving problems
+            -> 1 problem = some XP
+            -> 2 problems = more XP
+            -> 3 problems = even more XP
+            -> 4 problems = a lot of XP
+        
+        b. no hints will be provided in the virtual contest
+            -> problems still have hints outside of contest
+        
+    - Badges + Achievements
+        a. achievements from # of problems solved, reaching new levels, etc.
+        b. badges from week calendar completion, problems solved on different days (like LeetCode 50 days badge), etc. 
+
+    - User Profiles
+        a. similar to LeetCode/Codeforces profile
+        b. display # of problems solved
+        c. acceptance rate
+        d. current level, user level, and XP to next level
+        e. see their most recent solved problems
+        f. see badges + achievements
+    
+    - send users email reminding them about keeping their streak or solving daily problem
+
+    - review system
+        a. user will get review from topics they've learned after about a week or two ago so they don't forget
+
+
+5. Guide for people new to CP
+    - a short simple guide on what CP is, how it's different from regular programming
+        a. attach some video guides
+        b. maybe make my own video about it
+    
+    - everything the user should already know + what they need 
+        a. user should be somewhat comfortable with a language already
+    
+    - attach sources like LC, CF, USACO, CP Youtubers, etc.
+        a. attach language syntax guides as well
+            -> like cppreference or cpplearning
+
+        b. USACO Guide can be good too
+        c. maybe some sources about math
+        d. teach users about time and space complexity
+    
+    - tips for improvement + how to stay motivated
+
+------------------------------------------------------------------------------------------------------------
+
+APPS
+
+1. accounts
+    
+    - Models:
+        a. Custom User - Django Auth
+            -> username
+            -> email
+            -> (optional) github, leetcode/codeforces username
+
+        b. Profile - Store CP-Specific user info
+            -> username
+            -> current user level, current level, xp to next level
+            -> (optional) leetcode/codeforces username
+            -> current streak, longest streak
+            -> date joined
+    
+    - Views:
+        a. RegisterView
+        b. (built-in) LoginView, LogoutView
+        c. ProfileView
+        d. EditProfileView
+    
+    - Forms:
+        a. RegisterForm
+        b. ProfileForm
+
+
+2. learning
+
+    - Models:
+        a. Topic - CP Topic (Arrays, Trees, etc.)
+            -> name of CP algorithm
+            -> description
+            -> difficulty
+            -> topic requirements
+            -> mini level requirement
+            -> user level requirement
+        
+        b. UserTopic - Track user progress through skill-tree
+            -> user
+            -> topic
+            -> unlocked
+            -> completed
+            -> mastery
+    
+    - Views:
+        a. skill_tree
+
+
+3. problems
+
+    - Models:
+        a. Problem - Problem from CP websites (LC, CF, USACO, etc.)
+            -> title, platform, problem_id
+            -> url
+            -> difficulty, rating
+            -> topic
+            -> hints
+            -> editorial
+        
+        b. Hint
+            -> problem
+            -> order
+            -> text
+        
+        c. Editorial
+            -> problem
+            -> explanation; brute force, optimized
+            -> python/c++ solution
+        
+        d. RecommendationRule (later)
+            -> user level
+            -> topic
+            -> weight
+    
+    - Views:
+        a. problem_list
+        b. ProblemDetailView
+        
+
+4. progress
+    
+    - Models:
+        a. ProblemAttempt - Every attempt at solving a problem
+            -> user
+            -> problem
+            -> start/end time, solve time
+            -> solved
+            -> hint count
+        
+        b. XPTransaction - Every XP gain
+            -> user
+            -> amount
+            -> reason
+            -> date
+        
+        c. Achievements - Achievement definition
+            -> name
+            -> description
+            -> icon
+        
+        d. UserAchievement - Which badges a user earned
+            -> user
+            -> badge
+            -> date
+
+        e. DailyChallenge - Daily problem
+            -> problem
+            -> date
+
+        f. WeeklyProgress - Track progress on weekly calendar
+            -> user
+            -> week
+            -> completed
+        
+    - Views:
+        a. DashboardView
+
+
+5. contests
+
+    - Models:
+        a. Contest - Virtual contest (more like an assessment, since there's no competition)
+            -> name
+            -> duration
+        
+        b. ContestProblem - Problem tailored to contest format
+            -> contest
+            -> problem
+            -> order
+        
+        c. UserContest - Store user's contest results
+            -> contest
+            -> user
+            -> score
+            -> finished
+        
+    - Views:
+        a. ContestListView
+        b. ContestView
+        c. ContestResultsView
+
+6. core
+    - not really any models since these are just going to be pages of general info
+
+    - Views:
+        a. LandingPageView
+        b. AboutView
+        c. FAQView
+        d. ContactView
+        e. ResourcesView
+
+
+DEVELOPMENT ORDER
+
+1. accounts
+2. problems
+3. progress
+4. learning
+5. contests
+6. core
+7. polish up everything
+
+
+Minimum Viable Product (MVP) 
+
+Landing Page -> Register/Login -> 
+                Choose User Level -> Skill Tree -> 
+                                    Choose Topic -> Get Problems
+                                                    -> Mark Solved -> Gain XP -> Profile
+
+Topics: Arrays & Hashing, Two Pointers, Stack, Binary Search, Sliding window
+Problem Count: 5 problems per topic, 25 total, each with hints and editorials
+
+
+Order of CP Topics:
+
+LEVEL 1
+Arrays & Hashing - Complete Search - Simulation
+
+LEVEL 2
+Two Pointers -  Stack 
+
+LEVEL 3
+Sliding Window - Binary Search - Basic Number Theory + Math

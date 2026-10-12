@@ -1,0 +1,49 @@
+<p class="text-sky-500 p-3">There are no definitive simulation algorithms, since it entirely depends on the problem you are solving. But here are some recommended time complexities for different input sizes:  </p>
+
+<table class="w-full border-collapse text-left">
+    <thead class="border-b border-sky-300">
+        <tr>
+            <th scope="col" class="px-6 py-10 font-semibold tracking-wider text-sky-600">Input Size</th>
+            <th scope="col" class="px-6 py-10 font-semibold tracking-wider text-sky-600">Max Time Complexity Allowed</th>
+            <th scope="col" class="px-6 py-10 font-semibold tracking-wider text-sky-600">Simulation Pattern Allowed</th>
+        </tr>
+    </thead>
+
+    <tbody class="divide-y divide-sky-300">
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">N ≤ 100</td>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n<sup>3</sup>) or O(n<sup>4</sup>)</td>
+            <td class="px-6 py-8 font-medium text-sky-500">A lot of brute force/nested checks </td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">N ≤ 500</th>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n<sup>3</sup>)</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Triple nested loops; checking all combinations of 3 elements</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">N ≤ 1000 or N ≤ 10<sup>4</sup></th>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n<sup>2</sup>)</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Double nested loops; simulating/comparing every pair</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">N ≤ 2 x 10<sup>5</sup></th>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n log n)</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Sorting; simulating for trees; a loop using a logarithmic operation</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">N ≤ 10<sup>7</sup></th>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n)</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Single pass simulations; two-pointers, sliding windows, single-pass frequency tracking</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">N > 10<sup>8</sup></th>
+            <td class="px-6 py-8 font-medium text-sky-500">O(log n) or O(1)</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Math formulas, bitwise simulations; You can't do a linear loop, only math formulas, bitwise tricks, or binary exponentiation</td>
+        </tr>
+    </tbody>
+</table>

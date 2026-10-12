@@ -1,0 +1,108 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+<div class="bg-zinc-900 h-full w-full">
+    <h1 class="text-center text-white font-bold tracking-wider text-2xl bg-orange-400 py-3 shadow-lg shadow-orange-300 italic">
+        {{ topic }}
+    </h1>
+
+    <div id="problem-container" class="p-3 space-y-10">
+        <div class="rounded-lg overflow-hidden">
+            {% for problem in unlocked_problems %}
+                <div data-difficulty="{{ problem.category_difficulty }}"
+                     class="prob-container relative flex flex-row items-center justify-between py-2 px-3
+                            transition hover:z-10 hover:shadow-around hover:shadow-zinc-600 even:bg-zinc-800 odd:bg-zinc-700">
+
+                    <div class="flex flex-row items-center space-x-5">
+                        <p class="text-mist-100 font-semibold">{{ forloop.counter }}.</p>
+            
+                        <h1 class="text-white font-semibold">
+                            {{ problem.title }}
+                        </h1>
+
+                        <h1 class="text-white text-sm italic font-medium bg-amber-600 rounded-lg py-1 px-3">
+                            {{ problem.platform }}
+                        </h1>
+                    </div>
+            
+                    <div class="flex flex-row items-center space-x-5 mr-7">
+                        <span class="difficulty font-semibold {{ problem.difficulty_color }}">
+                            {{ problem.difficulty }}
+                        </span>
+                        
+                        {% if user.is_authenticated %}
+                            {% if problem.user_status == 'COMPLETED' %}
+                                <i class="fa-solid fa-check text-green-600"></i>
+            
+                            {% elif problem.user_status == 'IN_PROGRESS' %}
+                                <i class="fa-solid fa-chart-simple text-yellow-500"></i>
+
+                            {% else %}
+                                <i class="fa-regular fa-circle text-slate-300"></i>
+
+                            {% endif %}
+            
+
+                            {% if problem.user_starred %}
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+
+                            {% else %}
+                                <i class="fa-regular fa-star text-gray-500"></i>
+
+                            {% endif %}
+                        {% endif %}
+                    </div>
+
+                    <a href="{% url 'problem-detail' slug=problem.slug %}" class="absolute inset-0 z-10"></a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="relative rounded-lg overflow-hidden">
+
+            {% if locked_problems %}
+                <div class="absolute inset-0 z-10 flex flex-col items-center justify-center space-y-2 pointer-events-none">
+                    <i class="fa-solid fa-lock text-2xl text-yellow-400"></i>
+
+                    <h1 class="text-yellow-600 font-semibold bg-amber-200 border-2 border-amber-400 rounded-lg py-1 px-2 shadow-around">
+                        Your level is not high enough to access these problems!
+                    </h1>
+                </div>
+            {% endif %}
+
+            {% for problem in locked_problems %}
+
+                <div data-difficulty="{{ problem.category_difficulty }}" 
+                     class="prob-container relative flex flex-row items-center justify-between py-2 px-3 blur-xs even:bg-zinc-800 odd:bg-zinc-700"
+                     style="user-select: none; -webkit-user-select: none; pointer-events: none;"
+                >
+
+                    <div class="flex flex-row items-center space-x-5">
+                        <p class="text-mist-100 font-semibold">{{ forloop.counter }}.</p>
+            
+                        <h1 class="text-white font-semibold">
+                            {{ problem.title }}
+                        </h1>
+
+                        <h1 class="text-white text-sm italic font-medium bg-amber-600 rounded-lg py-1 px-3">
+                            {{ problem.platform }}
+                        </h1>
+                    </div>
+            
+                    <div class="flex flex-row items-center space-x-5 mr-7">
+                        <span class="difficulty font-semibold {{ problem.difficulty_color }}">
+                            {{ problem.difficulty }}
+                        </span>
+                       
+                        <i class="fa-regular fa-circle text-slate-300"></i>
+                        <i class="fa-regular fa-star text-gray-500"></i>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -63,7 +63,10 @@ desktop.ini
 # ==========================================
 
 .idea/
-
-# VS Code settings are ignored by default.
-# Remove this rule if you want to share workspace settings.
 .vscode/
+
+
+# ==========================================
+# Other
+# ==========================================
+goals.txt

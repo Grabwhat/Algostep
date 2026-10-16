@@ -75,7 +75,7 @@
                         Profile
                     </a>
                     
-                    <img src="{% if user.profile.profile_pic %} {{ user.profile.profile_pic.url }} {% else %} {% static 'images/default.jpg' %} {% endif %}"
+                    <img src="{{ user.profile.image_url }}"
                                 alt="profile-pic"
                                 class="w-7 rounded-full block">
                 

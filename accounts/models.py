@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.db.models import F
+from django.db.models import F, Q
 
 level_2_num = {
     'NEW': 0,
@@ -49,7 +49,13 @@ class AlgoUser(AbstractUser):
         if new_user:
             from learning.models import CPTopic, UserTopic
 
-            unlocked = CPTopic.objects.filter(user_level_req__lte=level_2_num[self.user_level], mini_level_req__lte=self.profile.mini_level)
+            user_lvl = level_2_num[self.user_level]
+            mini_lvl = self.profile.mini_level
+
+            unlocked = CPTopic.objects.filter(
+                Q(user_level_req__lt=user_lvl) | 
+                (Q(user_level_req=user_lvl) & Q(mini_level_req__lte=mini_lvl))
+            )
 
             for topic in unlocked:
                 UserTopic.objects.get_or_create(
@@ -73,6 +79,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s Profile"
+
+    @property
+    def image_url(self):
+        if self.profile_pic and hasattr(self.profile_pic, 'url'):
+            return self.profile_pic.url
+
+        return '/static/images/default.jpg'
 
     def add_xp(self, points):
         if points > 0:

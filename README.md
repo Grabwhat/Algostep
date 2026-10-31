@@ -6,6 +6,9 @@ AlgoStep is a competitive programming learning platform designed to help student
 
 Instead of jumping straight into difficult problems, learners can build their foundations, practice specific topics, and track their progress as they improve.
 
+**Congressional App Challenge Submission Note:**
+The Git tag "v1.0-cac-submission" is the version of this project submitted for the Congressional App Challenge. This can also be found in the main branch. Ongoing development will proceed on the "production-deployment" branch.
+
 ## Features
 
 - **Structured Learning Path**: Explore competitive programming topics in an organized progression.

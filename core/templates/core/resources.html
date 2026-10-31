@@ -1,4 +1,5 @@
 {% extends base_template %}
+{% load static %}
 
 {% block content %}
 
@@ -8,83 +9,350 @@
         <div class="w-full h-1/2 bg-slate-700 p-5 space-y-10">
             <h1 class="text-white text-5xl font-semibold italic mt-5">Questions</h1>
 
-            <div class="grid grid-cols-2 space-x-5">
-                <div class="bg-slate-800 border-2 border-slate-600 rounded-lg p-5 space-y-5">
-                    <h1 class="text-white text-2xl font-semibold">What is Competitive Programming?</h1>
+            <div class="flex flex-col space-y-5">
+                <div class="flex flex-row space-x-5">
+                    <div class="bg-slate-800 border-2 border-slate-600 rounded-lg p-5 space-y-5 w-1/2">
 
-                    <p class="text-gray-400">
-                        As the name might imply, Competitive Programming is a sport, but not a physical sport.
-                        Instead of building projects and creating apps, you are given a list of problems and a time limit,
-                        and you try to solve as many problems as you can. Difficulties can range from easy to extremely difficult,
-                        but all problems require some level of algorithmic and logical thinking. 
-                    </p>
+                        <h1 class="text-white text-2xl font-semibold">What is Competitive Programming?</h1>
+                        
+                        <p class="text-gray-400">
+                            As the name might imply, Competitive Programming is a sport, but not a physical sport.
+                            Instead of building projects and creating apps, you are given a list of problems and a time limit,
+                            and you try to solve as many problems as you can. Difficulties can range from easy to extremely difficult,
+                            but all problems require some level of algorithmic and logical thinking.
+                        </p>
 
-                    <hr class="border-t-2 border-emerald-400">
-                    <h4 class="text-yellow-600 font-semibold">Key Parts of a Contest</h4>
+                        <hr class="border-t-2 border-emerald-400">
 
-                    <ul class="list-inside list-disc text-white space-y-5">
-                        <li class="text-sky-300">
-                            The Problems: 
-                            <span class="text-gray-300">
-                                for each problem, you are given some kind of scenario (like a word problem in math),
-                                then you are given inputs, and the expected output for each input. 
-                            </span>
-                        </li>
+                        <h4 class="text-yellow-600 font-semibold">Key Parts of a Contest</h4>
 
-                        <li class="text-red-300">
-                            The Constraints:
-                            <span class="text-gray-300">
-                                Every problem has constraints, or the maximum and minimum the input will take. This is
-                                crucial because it dictates how efficient your code must be. If your code is too slow, then
-                                it will not past the test cases.
-                            </span>
-                        </li>
+                        <ul class="list-inside list-disc text-white space-y-5">
+                            <li class="text-sky-300">
+                                The Problems:
+                                <span class="text-gray-300">
+                                    for each problem, you are given some kind of scenario (like a word problem in math),
+                                    then you are given inputs, and the expected output for each input.
+                                </span>
+                            </li>
 
-                        <li class="text-yellow-300">
-                            Evaluation:
-                            <span class="text-gray-300">
-                                When you submit your code, an automated grading system (called an online judge) will test your code
-                                on various inputs to see if your outputs are correct and fit within the time and memory limits. 
-                                In a live contest, you are usually not able to see some of the test cases to ensure that you can't cheat.
-                                In a practice settings (casually solving problems), you are usually able to see all test cases.
-                            </span>
-                        </li>
+                            <li class="text-red-300">
+                                The Constraints:
+                                <span class="text-gray-300">
+                                    Every problem has constraints, or the maximum and minimum the input will take. This is
+                                    crucial because it dictates how efficient your code must be. If your code is too slow, then
+                                    it will not past the test cases.
+                                </span>
+                            </li>
 
-                        <li class="text-emerald-300">
-                            Scoring:
-                            <span class="text-gray-300">
-                                Usually determined by how many problems you are solved, and how fast you solved each problem compared
-                                to other people. Depending on which platform you take the contest on, you may receive a penalty for wrong
-                                submissions (e.g. 10 minute penalty, -50 score, etc). 
-                            </span>
-                        </li>
-                    </ul>
+                            <li class="text-yellow-300">
+                                Evaluation:
+                                <span class="text-gray-300">
+                                    When you submit your code, an automated grading system (called an online judge) will test your code
+                                    on various inputs to see if your outputs are correct and fit within the time and memory limits.
+                                    In a live contest, you are usually not able to see some of the test cases to ensure that you can't cheat.
+                                    In a practice settings (casually solving problems), you are usually able to see all test cases.
+                                </span>
+                            </li>
+
+                            <li class="text-emerald-300">
+                                Scoring:
+                                <span class="text-gray-300">
+                                    Usually determined by how many problems you are solved, and how fast you solved each problem compared
+                                    to other people. Depending on which platform you take the contest on, you may receive a penalty for wrong
+                                    submissions (e.g. 10 minute penalty, -50 score, etc).
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800 border-2 border-slate-600 rounded-lg p-5 space-y-5 w-1/2">
+                        <h1 class="text-white text-2xl font-semibold">Why was Algostep created?</h1>
+
+                        <p class="text-gray-400">
+                            If you did not know yet, Algostep was created by just one person (Me). I'm not some kind of
+                            programming wizard who was recruited by Google or some other big tech company, if that's what
+                            you expected the creator of Algostep to be like. In fact, I'm still struggling to solve problems to this day.
+                            So, some people who are using this website might actually be even better than I am at Competitive Programming.
+                        </p>
+
+                        <p class="text-gray-400">
+                            Every time you get stuck on a problem, you usually go to the editorial for some help, which is completely
+                            reasonable. But I found often times that some editorials are written by some of the best competitive programmers,
+                            meaning they assume you know a lot of topics, when, in reality, you don't. As a result, the editorial
+                            might sound really abstract and confusing; some are just a few sentences long only (most notoriously, Codeforces). 
+                            This kills motivation extremely fast, and it did for me. 
+                        </p>
+
+                        <p class="text-gray-400 mb-10">
+                            I knew that some people were quitting Competitive Programming because of these poorly-written editorials, so
+                            I built Algostep to aim to solve this problem: every problem will get well-crafted hints, and beginner-friendly
+                            editorials. The goal is to make every solution to a problem clear and straightforward, never assuming
+                            people know difficult or abstract topics.
+                        </p>
+
+                        <div class="flex flex-col justify-center items-center space-y-10 mb-5">
+                            <h2 class="text-yellow-400 font-semibold text-3xl">
+                                Competitive Programming is hard.
+                            </h2>
+
+                            <h2 class="text-yellow-500 font-semibold text-3xl italic">
+                                Learning it shouldn't be.
+                            </h2>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-slate-800 border-2 border-slate-600 rounded-lg p-5 space-y-5">
-                    <h1 class="text-white text-2xl font-semibold">Why was Algostep created?</h1>
+                <div class="flex flex-row space-x-5">
+                    <div class="bg-slate-800 border-2 border-slate-600 rounded-lg p-5 space-y-5 w-1/2">
+                        <h1 class="text-white text-2xl font-semibold">How does Algostep work?</h1>
 
-                    <p class="text-gray-400">
-                        If you did not know yet, Algostep was created by just one person (Me). I'm not some kind of
-                        programming wizard who was recruited by Google or some other big tech company, if that's what
-                        you expected the creator of Algostep to be like. So, some people who are using this website might
-                        actually be even better than I am at Competitive Programming.
-                    </p>
+                        <p class="text-gray-400">
+                            Algostep's primary goal is to significantly assist programmers who are on their Competitive Programming journey.
+                            Whether you are completely new or have experience, Algostep is meant to provide insights that will help.
+                        </p>
 
-                    <p class="text-gray-400">
-                        Every time you get stuck on a problem, you usually go to the editorial for some help, which is completely
-                        reasonable. But I found often times that some editorials are written by some of the best competitive programmers,
-                        meaning they assume you know a lot of topics, when, in reality, you don't. As a result, the editorial
-                        might sound really abstract and confusing; some are just a few sentences long only. This kills motivation
-                        extremely fast.
-                    </p>
+                        <hr class="border-t-2 border-sky-400">
 
-                    <p class="text-gray-400">
-                        Algostep aims to solve that problem; every problem will get well-crafted hints, and beginner-friendly
-                        editorials. The goal is to make every solution to a problem clear and straightforward, never assuming
-                        people know difficult or abstract topics.
-                    </p>
+                        <ul class="text-white space-y-5">
+                            <li class="text-orange-400">
+                                What specific features does Algostep have?
+
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>A skill-tree containing various topics ranging from Beginner to Intermediate level</li>
+                                    <li>Many Competitive Programming problems taken from various Competitive Programming websites</li>
+                                    <li>A leveling system that locks certain topics and problems behind progression</li>
+                                    <li>Profile statistics (e.g. number of problems solved, problems in progress, etc.)</li>
+                                </ul>
+                            </li>
+
+                            <li class="text-emerald-300">
+                                How do the problems work?
+
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>Problems are taken from various websites (e.g. LeetCode, Codeforces, USACO, etc.)</li>
+                                    <li>Each problem has the problem statement, 2-3 Hints, an Editorial, and coded solutions</li>
+                                    <li>Able to change the status of a problem (Not Solved, In Progress, Completed) and star a problem</li>
+                                    <li class="font-bold">Solving a problem gives XP (experience points) based on the difficulty of the problem</li>
+                                    <li class="font-bold">Problems are categorized as Easy, Medium, or Hard</li>
+                                    <li>Traffic light scheme of Green, Yellow, and Red for the difficulties</li>
+                                </ul>
+                            </li>
+
+                            <li class="text-sky-300">
+                                How do you progress in Algostep?
+                                
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>There are three User Levels: New, Beginner, and Intermediate</li>
+                                    <li>Within each User Level are 3 Mini Levels</li>
+                                    <li>You progress through each level by obtaining XP</li>
+                                    <li>The harder the problem, the more XP you gain when solving it</li>
+                                    <li>The XP required for each level increases as you level up more</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="flex justify-center items-center w-full">
+                            <img
+                                src="{% static 'images/Algostep_Logo.jpg' %}"
+                                alt="Algostep Logo"
+                                class="rounded-lg block w-[70%]"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 border-2 border-slate-600 rounded-lg p-5 space-y-5 w-1/2">
+                        <h1 class="text-white text-2xl font-semibold">How do you get good at Competitive Programming?</h1>
+
+                        <p class="text-gray-400">
+                            Pretty generic question, but nonetheless an important one.
+                            Simple Answer: <strong class="text-yellow-500">Solve a lot of problems.</strong>
+                            However, I'm sure you've heard this answer at least a thousand times, so let's break it down.
+                        </p>
+
+                        <hr class="border-t-2 border-yellow-400">
+
+                        <ul class="text-white space-y-5">
+                            <li class="font-semibold text-red-400">
+                                Discipline > Motivation.
+                                
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>It's much better to solve 1 problem a day for a week then solve 15 problems in one day for 1 month</li>
+                                    <li>You don't go on a 5-hour problem-solving sprint every day in order to "get good"</li>
+                                    <li>Too much practice in a day leads to quick burnout</li>
+                                    <li>Form a habit of sitting down and trying to solve a problem daily</li>
+                                    <li>Competitive Programming requires immense dedication; do not expect to become a master within a week or even a couple of months</li>
+                                </ul>
+                            </li>
+
+                            <li class="font-semibold text-emerald-400">
+                                The Comfort Zone is not your friend
+
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>Solving problems that you already know you can easily solve is a waste of time</li>
+                                    <li>Think about it: if you can solve a problem easily, then you don't learn anything out of it</li>
+                                    <li>Always solve problems that are slightly out of your comfort zone</li>
+                                    <li>Solving 1 hard problem in 3 hours is better than solving 10 easy problems in the same amount of time</li>
+                                    <li>That said, do not try to solve a problem that is obviously way too hard (leads to burnout)</li>
+                                </ul>
+                            </li>
+
+                            <li class="font-semibold text-yellow-400">
+                                Know when to raise the white flag
+
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>Knowing when to give up and look at the solution is extremely crucial</li>
+                                    <li>There are two general methods: look at the solution as soon as you're stuck, or spend 30-45 minutes trying different methods first</li>
+                                    <li>For new competitive programmers, it's recommended to look at the solution immediately, since you don't know any concepts yet; staring at a problem isn't a good thing</li>
+                                    <li>For more experienced people, you should spend around 30-45 minutes of trying before giving up, as doing this builds crucial problem-solving intuition</li>
+                                </ul>
+                            </li>
+                    
+                            <li class="font-semibold text-violet-400">
+                                Use an editorial wisely
+
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>If available, look at the hints first before the full solution</li>
+                                    <li>Otherwise, try to read only the first couple of sentences of the solution</li>
+                                    <li>If you find something new, try to implement it</li>
+                                    <li>Sometimes, you might have to look at the full solution, which is completely fine</li>
+                                    <li>Never memorize the code or how to do the problem; learn how to recognize the pattern</li>
+                                    <li>Don't copy and paste the code over; manually type it to build a sense of familiarity</li>
+                                    <li>If you can solve the problem 2-3 days later, then you've learned something</li>
+                                </ul>
+                            </li>
+
+                            <li class="font-semibold text-teal-600">
+                                Have fun.
+
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>Not having fun while solving problems will lead to burnout fast</li>
+                                    <li>You don't necessarily have to have fun 24/7; burnout can happen even when you have fun</li>
+                                    <li>I understand if you're doing something like USACO only for college applications, but without passion, it's going to be hard to get far</li>
+                                    <li>Even if your parents are forcing you to do programming, passion is still extremely important</li>
+                                    <li>If you are burnt out, then take a break; doing more will only exacerbate burnout</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <hr class="border-t-2 border-yellow-400">
+
+                        <p class="text-gray-400">
+                            <span class="text-white font-semibold">One final note:</span>
+                            Artificial Intelligence (AI) will be your best friend on your Competitive Programming journey.
+                            AI is very good at teaching you programming concepts, especially beginner-level ones. Asking ChatGPT or Gemini
+                            can help you understand the problem and the solution better, but it is important that you never
+                            blindly copy-and-paste their code, as you will not learn anything from that. Use AI as a tool, not a cheating device.
+                        </p>
+                    </div>
                 </div>
+
+                <div class="bg-slate-800 border-2 border-slate-600 rounded-lg p-12 space-y-5">
+                    <div class="flex flex-col space-y-1">
+                        <h1 class="text-white text-2xl font-semibold">What's the ideal roadmap of progression?</h1>
+                        <p class="text-gray-300 italic text-sm">(Up to USACO Bronze)</p>
+                    </div>
+
+                    <p class="text-gray-400">
+                        There isn't a single, strict roadmap that you should follow for Competitive Programming.
+                        So, the one that I will provide is the one that I personally went through. Please note that
+                        this is not strictly linear; you will often jump back and forth between different stages.
+                        Also, this is just a rough roadmap, so I don't go too much in detail for the different stages,
+                        since it entirely depends on your preferences. 
+                    </p>
+                    
+                    <hr class="border-t-2 border-violet-400">
+
+                    <div class="flex flex-row spaec-x-5">
+                        <ul class="text-white space-y-5">
+                            <li class="text-red-400">
+                                Beginner Stages
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>Learn a programming language and get very comfortable with its syntax</li>
+                                    <li>Language depends on your preference, but C++, Python, or Java are good options</li>
+                                    <li>
+                                        Go to
+                                        <a href="https://www.codewars.com/" target="_blank" rel="noopener noreferrer"
+                                            class="text-red-400 font-semibold transition hover:text-red-200">
+                                            Codewars
+                                        </a>
+                                        to practice beginner-friendly problems to train logical thinking and get comfortable with syntax.
+                                    </li>
+                                    <li>If stuck, you can ask AI for help (make sure to actually learn what it explains)</li>
+                                    <li>This stage is <strong class="text-mist-100">very important</strong>; you need to lock down the fundamentals before attempting harder problems</li>
+                                </ul>
+                            </li>
+                            <li class="text-emerald-300">
+                                Elementary Stages
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>Start learning Data Structures and Algorithms (DSA)</li>
+                                    <li>
+                                        Go to
+                                        <a href="https://www.leetcode.com/" target="_blank" rel="noopener noreferrer"
+                                            class="text-orange-400 font-semibold transition hover:text-orange-300">
+                                            LeetCode
+                                        </a>
+                                        to practice problems covering DSA
+                                    </li>
+                                    <li>
+                                        Follow
+                                        <a href="https://neetcode.io/roadmap" target="_blank" rel="noopener noreferrer"
+                                            class="text-slate-400 font-semibold transition hover:text-mist-300">
+                                            NeetCode's Roadmap
+                                        </a>
+                                        to learn DSA
+                                    </li>
+                                    <li>NeetCode has excellent solutions and insights to LeetCode problems</li>
+                                    <li>
+                                        Core topics to learn:
+                                        <strong>Arrays & Hashing, Two Pointers, Stack, Binary Search, Sliding Window</strong>
+                                    </li>
+                                    <li>Learn about Time Complexity and how to use problem constraints</li>
+                                    <li><strong class="text-mist-100">Imporant:</strong> Never do random problems, always practice problems in certain topics you are learning</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="text-white space-y-5">
+                            <li class="text-yellow-300">
+                                Intermediate Stages
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>
+                                        Go to
+                                        <a href="https://codeforces.com/problemset" target="_blank" rel="noopener noreferrer"
+                                            class="text-sky-400 font-semibold transition hover:text-sky-300">
+                                            Codeforces
+                                        </a>
+                                        to solve harder problems that are more focused on Competitive Programming
+                                    </li>
+                                    <li>Filter problems rated from 800 to 900 (eventually, you can up the difficulty)</li>
+                                    <li>Try to participate in some contests (Div. 4 or Div. 3)</li>
+                                    <li>Stay consistent in problem solving, and be prepared to be demotivated at times</li>
+                                    <li>Doing Codewars and LeetCode is still good</li>
+                                </ul>
+                            </li>
+                            <li class="text-violet-400">
+                                Advanced Stages
+                                <ul class="pl-5 text-sm space-y-2 text-gray-300">
+                                    <li>By now, you can most likely do some USACO Bronze problems</li>
+                                    <li>
+                                        Go to
+                                        <a href="https://usaco.guide/dashboard" target="_blank" rel="noopener noreferrer"
+                                            class="text-indigo-400 font-semibold transition hover:text-indigo-300">
+                                            USACO Guide
+                                        </a>
+                                        to learn more concepts for USACO
+                                    </li>
+                                    <li>Read through and do the starred problems for the Bronze section</li>
+                                    <li>Do not feel obligated to solve the Hard or Very Hard problems; you can solve them later</li>
+                                    <li><strong class="text-mist-100">Important:</strong> Solve a lot of problems (a lot)</li>
+                                    <li>Keep a notebook log of any problems that you particularly struggled with</li>
+                                    <li>Review your notebook every couple of days or weeks</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </div>
 

@@ -1,8 +1,8 @@
-# AlgoStep ⚡</>
+# Algostep ⚡</>
 
 **Build your problem-solving skills, one step at a time.**
 
-AlgoStep is a competitive programming learning platform designed to help students develop their problem-solving and algorithmic thinking skills through structured practice, progressive difficulty levels, and guided learning resources.
+Algostep is a competitive programming learning platform designed to help students develop their problem-solving and algorithmic thinking skills through structured practice, progressive difficulty levels, and guided learning resources.
 
 Instead of jumping straight into difficult problems, learners can build their foundations, practice specific topics, and track their progress as they improve.
 
@@ -28,7 +28,7 @@ Instead of jumping straight into difficult problems, learners can build their fo
 
 ## Topics
 
-AlgoStep's curriculum focuses on foundational competitive programming techniques, including:
+Algostep's curriculum focuses on foundational competitive programming techniques, including:
 
 - Arrays and Hashing
 - Two Pointers
@@ -51,7 +51,7 @@ The goal is to help learners build a strong foundation before progressing to mor
 
 ## Getting Started
 
-Follow these steps to run AlgoStep locally:
+Follow these steps to run Algostep locally:
 
 ### Prerequisites
 
@@ -127,7 +127,7 @@ npm install
 
 ### 6. Build Tailwind CSS
 
-AlgoStep uses Tailwind CSS to style its interface.
+Algostep uses Tailwind CSS to style its interface.
 
 **For development:** Start the Tailwind watcher to automatically rebuild the CSS when changes are detected.
 

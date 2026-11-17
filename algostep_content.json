@@ -1,341 +1,5 @@
 [
 {
-  "model": "learning.cptopic",
-  "pk": 1,
-  "fields": {
-    "name": "Arrays & Hashing",
-    "slug_name": "arrays-hashing",
-    "description": "Arrays and hashing are some basic data structures that help in storing and managing data effectively. An array is defined as a sequence of values that are stored adjacent to one another in memory, and therefore you can find any particular value in the array if you know its index. But it will take a long time to find out a particular value in unsorted arrays and also insertion and deletion operations in arrays will take much time since you need to do operations on all the elements of the array. On the other hand, hashing will allow you to overcome the searching operation in an array. It maps data to an index with the help of a hash function, making access to that data incredibly fast.",
-    "topic_level": 1,
-    "mini_level_req": 1,
-    "user_level_req": 0,
-    "requirements": []
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 2,
-  "fields": {
-    "name": "Two Pointers",
-    "slug_name": "two-pointers",
-    "description": "Two Pointers is an algorithmic technique in which two reference variables (you can think of them as indices) are maintained to point to distinct indices within the same array or string to solve problems effectively. This algorithm does not make use of any nested loops that are too slow, as it operates with a time complexity of <code>O(n)</code>. However, it makes use of traversing the data structure in two different directions or at two different speeds to solve the problem in an efficient manner. The common techniques include the two-sum problem (using pointers starting from two different ends and moving towards the center of the sorted array) and the fast and slow pointer problem (to check for cycles in linked lists).",
-    "topic_level": 2,
-    "mini_level_req": 1,
-    "user_level_req": 1,
-    "requirements": [
-      5,
-      6
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 3,
-  "fields": {
-    "name": "Stack",
-    "slug_name": "stack",
-    "description": "Stacks are linear data structures, characterized by the Last-In, First-Out (LIFO) nature of the structure. This means that the last item to be inserted into the stack will be the first to leave it. It can be visualized as a physical stack of plates at the cafeteria. In this case, one may insert an item only on the top, and also remove the top item first, before any other items below it can be reached. The stack has two main operations; the push operation that pushes an item on the top of the stack and the pop operation that pops off the topmost item.",
-    "topic_level": 2,
-    "mini_level_req": 1,
-    "user_level_req": 1,
-    "requirements": [
-      5,
-      6
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 4,
-  "fields": {
-    "name": "Binary Search",
-    "slug_name": "binary-search",
-    "description": "Binary Search is a very efficient divide-and-conquer searching algorithm that determines the index position of a particular target value in a sorted array. Rather than going through each element sequentially from start to finish, this algorithm first determines the midpoint element in the array. If they do not match, the algorithm determines whether the target value is greater or less than the midpoint value. In case the target value is smaller, the entire right side of the array can be safely ignored; if it is bigger, the left side is completely ignored. This algorithm divides the array in half each time, hence the name \"binary search.\" By dividing the available information into two halves each time, it has a very efficient time complexity of <code>O(n log n)</code>, enabling it to determine a particular value among billions of other values within a matter of dozens of steps.",
-    "topic_level": 3,
-    "mini_level_req": 1,
-    "user_level_req": 2,
-    "requirements": [
-      2
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 5,
-  "fields": {
-    "name": "Complete Search",
-    "slug_name": "complete-search",
-    "description": "Complete Search is one of the basics in Competitive Programming. In Complete Search, all possible solutions in the search space of a particular problem must be traversed to find all feasible solutions or even an optimal solution. The idea behind this algorithm is based on the blazing-fast speed of modern computers. That is, using loops or even recursion, like backtracking, we must visit all possible combinations, like generating all subsets, all permutations, and so on. The time complexity of complete search is always exponential or factorial (like <code>O(2<sup>n</sup>)</code> or <code>O(n!)</code>). Thus, it can only be applied when constraints (<code>N</code>) of the problem are very low, like (<code>N</code> ≤ 20). In contests, it is a great idea for obtaining partial points or even as a stress-testing tool.",
-    "topic_level": 1,
-    "mini_level_req": 3,
-    "user_level_req": 0,
-    "requirements": [
-      1
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 6,
-  "fields": {
-    "name": "Simulation",
-    "slug_name": "simulation",
-    "description": "Simulation competitive programming is where one solves a particular problem by writing code that simulates a real-world procedure, game, or a sequence of actions as it is stated in the problem itself. This type of problem-solving does not involve searching for complicated formulas or sophisticated data structures. In most cases, this kind of problem solving requires accurate tracking and updating of the system's \"state\" through the use of loops, arrays, or simple conditional statements.",
-    "topic_level": 1,
-    "mini_level_req": 2,
-    "user_level_req": 0,
-    "requirements": [
-      1
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 7,
-  "fields": {
-    "name": "Sliding Window",
-    "slug_name": "sliding-window",
-    "description": "The Sliding Window is an optimization strategy that helps to solve the problem of processing sequential data structures such as arrays or strings. Unlike using multiple loops that check every possible overlap of elements in a data structure, resulting in inefficient performance due to its quadratic time complexity (<code>O(n<sup>2</sup>)</code>), it utilizes two pointers to maintain a continuous \"window\" of elements in a data set. To calculate the result incrementally, the window adds a single new element at the start of the sliding window and subtracts the element from the end of the sliding window while shifting it from left to right throughout the entire data structure. Such an approach allows significantly decreasing the runtime to a much faster linear time complexity (<code>O(n)</code>). The sliding window could be fixed or dynamic depending on the task, for instance, finding the shortest/longest subarray that meets some condition.",
-    "topic_level": 3,
-    "mini_level_req": 1,
-    "user_level_req": 2,
-    "requirements": [
-      2
-    ]
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 1,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "topic": 1,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 2,
-  "fields": {
-    "user": [
-      "TestUser@company.com"
-    ],
-    "topic": 1,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 3,
-  "fields": {
-    "user": [
-      "NU3@company.com"
-    ],
-    "topic": 1,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 4,
-  "fields": {
-    "user": [
-      "NU2@company.com"
-    ],
-    "topic": 1,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 5,
-  "fields": {
-    "user": [
-      "TU2@company.com"
-    ],
-    "topic": 1,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 8,
-  "fields": {
-    "user": [
-      "NU67@company.com"
-    ],
-    "topic": 1,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 9,
-  "fields": {
-    "user": [
-      "NU67@company.com"
-    ],
-    "topic": 2,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 10,
-  "fields": {
-    "user": [
-      "NU67@company.com"
-    ],
-    "topic": 3,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 11,
-  "fields": {
-    "user": [
-      "NU67@company.com"
-    ],
-    "topic": 4,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 12,
-  "fields": {
-    "user": [
-      "NU67@company.com"
-    ],
-    "topic": 5,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 13,
-  "fields": {
-    "user": [
-      "NU67@company.com"
-    ],
-    "topic": 6,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 14,
-  "fields": {
-    "user": [
-      "NU67@company.com"
-    ],
-    "topic": 7,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 15,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "topic": 6,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 16,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "topic": 5,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 17,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "topic": 2,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 18,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "topic": 3,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 19,
-  "fields": {
-    "user": [
-      "TU2@company.com"
-    ],
-    "topic": 5,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 20,
-  "fields": {
-    "user": [
-      "NU2@company.com"
-    ],
-    "topic": 5,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 21,
-  "fields": {
-    "user": [
-      "NU2@company.com"
-    ],
-    "topic": 6,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 22,
-  "fields": {
-    "user": [
-      "NU2@company.com"
-    ],
-    "topic": 3,
-    "status": "UNLOCKED"
-  }
-},
-{
-  "model": "learning.usertopic",
-  "pk": 23,
-  "fields": {
-    "user": [
-      "NU2@company.com"
-    ],
-    "topic": 2,
-    "status": "UNLOCKED"
-  }
-},
-{
   "model": "problems.problem",
   "pk": 2,
   "fields": {
@@ -706,13 +370,13 @@
     "slug": "directions-reductions",
     "external_id": "550f22f4d758534c1100025a",
     "difficulty": "5kyu",
-    "category_difficulty": "EASY",
+    "category_difficulty": "MEDIUM",
     "description": "Once upon a time, on a way through the old wild mountainous west,…\r\n… a man was given directions to go from one point to another. The directions were \"NORTH\", \"SOUTH\", \"WEST\", \"EAST\". Clearly \"NORTH\" and \"SOUTH\" are opposite, \"WEST\" and \"EAST\" too.\r\n\r\nGoing to one direction and coming back the opposite direction right away is a needless effort. Since this is the wild west, with dreadful weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!\r\n\r\nHow I crossed a mountainous desert the smart way.\r\nThe directions given to the man are, for example, the following (depending on the language):\r\n\r\n[\"NORTH\", \"SOUTH\", \"SOUTH\", \"EAST\", \"WEST\", \"NORTH\", \"WEST\"].\r\nor\r\n{ \"NORTH\", \"SOUTH\", \"SOUTH\", \"EAST\", \"WEST\", \"NORTH\", \"WEST\" };\r\nor\r\n[North, South, South, East, West, North, West]\r\nYou can immediately see that going \"NORTH\" and immediately \"SOUTH\" is not reasonable, better stay to the same place! So the task is to give to the man a simplified version of the plan. A better plan in this case is simply:\r\n\r\n[\"WEST\"]\r\nor\r\n{ \"WEST\" }\r\nor\r\n[West]\r\nOther examples:\r\nIn [\"NORTH\", \"SOUTH\", \"EAST\", \"WEST\"], the direction \"NORTH\" + \"SOUTH\" is going north and coming back right away.\r\n\r\nThe path becomes [\"EAST\", \"WEST\"], now \"EAST\" and \"WEST\" annihilate each other, therefore, the final result is [] (nil in Clojure).\r\n\r\nIn [\"NORTH\", \"EAST\", \"WEST\", \"SOUTH\", \"WEST\", \"WEST\"], \"NORTH\" and \"SOUTH\" are not directly opposite but they become directly opposite after the reduction of \"EAST\" and \"WEST\" so the whole path is reducible to [\"WEST\", \"WEST\"].\r\n\r\nTask\r\nWrite a function dirReduc which will take an array of strings and returns an array of strings with the needless directions removed (W<->E or S<->N side by side).\r\n\r\nNotes\r\n<ul>\r\n<li>Not all paths can be made simpler. The path [\"NORTH\", \"WEST\", \"SOUTH\", \"EAST\"] is not reducible. \"NORTH\" and \"WEST\", \"WEST\" and \"SOUTH\", \"SOUTH\" and \"EAST\" are not directly opposite of each other and can't become such. Hence the result path is itself : [\"NORTH\", \"WEST\", \"SOUTH\", \"EAST\"].</li>\r\n</ul>",
     "topic": "stack",
     "topic_relation": 3,
     "user_level_access": 1,
     "mini_level_access": 1,
-    "difficulty_color": "text-green-500"
+    "difficulty_color": "text-yellow-500"
   }
 },
 {
@@ -792,250 +456,288 @@
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 4,
+  "model": "problems.problem",
+  "pk": 26,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 4,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
+    "title": "Maximum Distance",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/gym/102951/problem/A",
+    "slug": "maximum-distance",
+    "external_id": "102951A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "You are given N (3 ≤ N ≤ 5000) integer points on the coordinate plane. Find the square of the maximum Euclidean distance (aka length of the straight line) between any two of the points.\r\n\r\nInput\r\nThe first line contains an integer N. The second line contains N integers, the x-coordinates of the points: x<sub>1</sub>,x<sub>2</sub>,…,x<sub>N</sub> (−1000 ≤ x<sub>i</sub> ≤1000). The third line contains N integers, the y-coordinates of the points: y<sub>1</sub>,y<sub>2</sub>,…,y<sub>N</sub> (−1000 ≤ y<sub>i</sub> ≤ 1000).\r\n\r\nOutput\r\nPrint one integer, the square of the maximum Euclidean distance between any two of the points\r\n\r\nExample\r\ninput\r\n3\r\n321 -15 -525\r\n404 373 990\r\noutput\r\n1059112",
+    "topic": "complete-search",
+    "topic_relation": 5,
+    "user_level_access": 0,
+    "mini_level_access": 3,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 5,
+  "model": "problems.problem",
+  "pk": 27,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 5,
-    "status": "COMPLETED",
-    "starred": true,
-    "earned_xp": true
+    "title": "Apple Division",
+    "platform": "CSES",
+    "url": "https://cses.fi/problemset/task/1623/",
+    "slug": "apple-division",
+    "external_id": "1623",
+    "difficulty": "Easy",
+    "category_difficulty": "MEDIUM",
+    "description": "There are n apples with known weights. Your task is to divide the apples into two groups so that the difference between the weights of the groups is minimal.\r\n\r\nInput\r\nThe first input line has an integer n: the number of apples.\r\nThe next line has <code>n</code> integers p<sub>1</sub>,p<sub>2</sub>, ... ,p<sub>n</sub>: the weight of each apple.\r\n\r\nOutput\r\nPrint one integer: the minimum difference between the weights of the groups.\r\n\r\nConstraints\r\n<ul><li><code>1 ≤ n ≤ 20</code></li>\r\n<li><code>1 ≤ p<sub>i</sub> ≤ 10<sup>9</sup></code></li></ul>\r\n\r\nExample\r\n\r\nInput:\r\n5\r\n3 2 7 4 1\r\n\r\nOutput:\r\n1\r\n\r\nExplanation: Group 1 has weights 2, 3 and 4 (total weight 9), and group 2 has weights 1 and 7 (total weight 8).",
+    "topic": "complete-search",
+    "topic_relation": 5,
+    "user_level_access": 0,
+    "mini_level_access": 3,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 6,
+  "model": "problems.problem",
+  "pk": 28,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 6,
-    "status": "NOT_STARTED",
-    "starred": false,
-    "earned_xp": false
+    "title": "Sereja and Dima",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/381/A",
+    "slug": "sereja-and-dima",
+    "external_id": "381A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "Sereja and Dima play a game. The rules of the game are very simple. The players have <code>n</code> cards in a row. Each card contains a number, all numbers on the cards are distinct. The players take turns, Sereja moves first. During his turn a player can take one card: either the leftmost card in a row, or the rightmost one. The game ends when there is no more cards. The player who has the maximum sum of numbers on his cards by the end of the game, wins.\r\n\r\nSereja and Dima are being greedy. Each of them chooses the card with the larger number during his move.\r\n\r\nInna is a friend of Sereja and Dima. She knows which strategy the guys are using, so she wants to determine the final score, given the initial state of the game. Help her.\r\n\r\nInput\r\nThe first line contains integer <code>n</code> <code>(1 ≤ n ≤ 1000)</code> — the number of cards on the table. The second line contains space-separated numbers on the cards from left to right. The numbers on the cards are distinct integers from 1 to 1000.\r\n\r\nOutput\r\nOn a single line, print two integers. The first number is the number of Sereja's points at the end of the game, the second number is the number of Dima's points at the end of the game.\r\n\r\nExamples\r\n\r\ninput\r\n4\r\n4 1 2 10\r\noutput\r\n12 5\r\n\r\ninput 7\r\n1 2 3 4 5 6 7\r\noutput\r\n16 12",
+    "topic": "two-pointers",
+    "topic_relation": 2,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 8,
+  "model": "problems.problem",
+  "pk": 29,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 8,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
+    "title": "Container With Most Water",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/container-with-most-water/description/",
+    "slug": "container-with-most-water",
+    "external_id": "11",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>You are given an integer array height of length <code>n</code>. There are <code>n</code> vertical lines drawn such that the two endpoints of the i<sup>th</sup> line are <code>(i, 0)</code> and <code>(i, height[i])</code>.</p>\r\n<p>Find two lines that together with the x-axis form a container, such that the container contains the most water.</p>\r\n<p>Return <em>the maximum amount of water a container can store</em>.</p>\r\n<p><strong>Notice</strong> that you may not slant the container.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg\" style=\"width:600px;height:287px\"/>\r\n<pre><strong>Input:</strong> height = [1,8,6,2,5,4,8,3,7]\r\n<strong>Output:</strong> 49\r\n</pre>\r\n<strong>Explanation:</strong> The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> height = [1,1]\r\n<strong>Output:</strong> 1\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>n == height.length</code></li>\r\n<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>\r\n<li><code>0 &lt;= height[i] &lt;= 10<sup>4</sup></code></li>\r\n</ul>",
+    "topic": "two-pointers",
+    "topic_relation": 2,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 9,
+  "model": "problems.problem",
+  "pk": 30,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 9,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
+    "title": "Favorite Sequence",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/1462/A",
+    "slug": "favorite-sequence",
+    "external_id": "1462A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "Polycarp has a favorite sequence a[1…n] consisting of n integers. He wrote it out on the whiteboard as follows:\r\n<ul>\r\n<li>he wrote the number a<sub>1</sub> to the left side (at the beginning of the whiteboard);</li>\r\n<li>he wrote the number a<sub>2</sub> to the right side (at the end of the whiteboard);</li>\r\n<li>then as far to the left as possible (but to the right from a<sub>1</sub>), he wrote the number a<sub>3</sub>;</li>\r\n<li>then as far to the right as possible (but to the left from a<sub>2</sub>), he wrote the number a<sub>4</sub>;</li>\r\n<li>Polycarp continued to act as well, until he wrote out the entire sequence on the whiteboard.</li>\r\n</ul>\r\n<img src=\"https://espresso.codeforces.com/09d364313ed093967e3ce6d2ebeda9cf8aa87d19.png\" alt=\"a1, a3 ...      ...  a4, a2\">\r\nThe beginning of the result looks like this (of course, if n ≥ 4).\r\nFor example, if n = 7 and a = [3,1,4,1,5,9,2], then Polycarp will write a sequence on the whiteboard [3,4,5,2,9,1,1].\r\n\r\nYou saw the sequence written on the whiteboard and now you want to restore Polycarp's favorite sequence.\r\n\r\nInput\r\nThe first line contains a single positive integer t (1 ≤ t ≤300) — the number of test cases in the test. Then t test cases follow.\r\n\r\nThe first line of each test case contains an integer n (1 ≤ n ≤300) — the length of the sequence written on the whiteboard.\r\n\r\nThe next line contains n integers b<sub>1</sub> ,b<sub>2</sub> ,…,b<sub>n</sub> (1≤ b<sub>i</sub> ≤ 10<sup>9</sup>) — the sequence written on the whiteboard.\r\n\r\nOutput\r\nOutput t answers to the test cases. Each answer — is a sequence a that Polycarp wrote out on the whiteboard.\r\n\r\nExample\r\ninput\r\n6\r\n7\r\n3 4 5 2 9 1 1\r\n4\r\n9 2 7 1\r\n11\r\n8 4 3 1 2 7 8 7 9 4 2\r\n1\r\n42\r\n2\r\n11 7\r\n8\r\n1 1 1 1 1 1 1 1\r\noutput\r\n3 1 4 1 5 9 2 \r\n9 1 2 7 \r\n8 2 4 4 3 9 1 7 2 8 7 \r\n42 \r\n11 7 \r\n1 1 1 1 1 1 1 1 \r\n\r\nNote\r\nIn the first test case, the sequence a matches the sequence from the statement. The whiteboard states after each step look like this:\r\n\r\n[3] ⇒ [3,1] ⇒ [3,4,1] ⇒ [3,4,1,1] ⇒ [3,4,5,1,1] ⇒ [3,4,5,9,1,1] ⇒ [3,4,5,2,9,1,1].",
+    "topic": "two-pointers",
+    "topic_relation": 2,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 10,
+  "model": "problems.problem",
+  "pk": 31,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 7,
-    "status": "COMPLETED",
-    "starred": true,
-    "earned_xp": true
+    "title": "Prepend and Append",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/1791/C",
+    "slug": "prepend-and-append",
+    "external_id": "1791C",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "Timur initially had a binary string† s (possibly of length 0). He performed the following operation several (possibly zero) times:\r\n\r\n<ul><li>Add 0 to one end of the string and 1 to the other end of the string. For example, starting from the string 1011, you can obtain either 010111 or 110110.</li></ul>\r\n\r\nYou are given Timur's final string. What is the length of the shortest possible string he could have started with?\r\n\r\n† A binary string is a string (possibly the empty string) whose characters are either 0 or 1.\r\n\r\nInput\r\nThe first line of the input contains an integer t (1 ≤ t ≤ 100) — the number of testcases.\r\n\r\nThe first line of each test case contains an integer n (1 ≤ n ≤ 2000) — the length of Timur's final string.\r\n\r\nThe second line of each test case contains a string s of length n consisting of characters 0 or 1, denoting the final string.\r\n\r\nOutput\r\nFor each test case, output a single nonnegative integer — the shortest possible length of Timur's original string. Note that Timur's original string could have been empty, in which case you should output 0.\r\n\r\nExample\r\ninput\r\n9\r\n3\r\n100\r\n4\r\n0111\r\n5\r\n10101\r\n6\r\n101010\r\n7\r\n1010110\r\n1\r\n1\r\n2\r\n10\r\n2\r\n11\r\n10\r\n1011011010\r\noutput\r\n1\r\n2\r\n5\r\n0\r\n3\r\n1\r\n0\r\n2\r\n4\r\n\r\nNote\r\nIn the first test case, the shortest possible string Timur started with is 0, and he performed the following operation: 0 → 100.\r\n\r\nIn the second test case, the shortest possible string Timur started with is 11, and he performed the following operation: 11 → 0111.\r\n\r\nIn the third test case, the shortest possible string Timur started with is 10101, and he didn't perform any operations.\r\n\r\nIn the fourth test case, the shortest possible string Timur started with is the empty string (which we denote by ε), and he performed the following operations: ε → 10 → 0101 → 101010.\r\n\r\nIn the fifth test case, the shortest possible string Timur started with is 101, and he performed the following operations: 101 → 01011 → 1010110.",
+    "topic": "two-pointers",
+    "topic_relation": 2,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 11,
+  "model": "problems.problem",
+  "pk": 32,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 10,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
+    "title": "Baseball Game",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/baseball-game/description/",
+    "slug": "baseball-game",
+    "external_id": "682",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>You are given a list of strings <code>operations</code>, where <code>operations[i]</code> is the <code>i<sup>th</sup></code> operation you must apply to the record and is one of the following:</p>\r\n<ul><li>An integer <code>x</code>.\r\n<ul><li>Record a new score of <code>x</code>.</li></ul>\r\n</li>\r\n<li><code>&#x27;+&#x27;</code>.\r\n<ul><li>Record a new score that is the sum of the previous two scores.</li></ul>\r\n</li>\r\n<li><code>&#x27;D&#x27;</code>.\r\n<ul><li>Record a new score that is the double of the previous score.</li></ul>\r\n</li>\r\n<li><code>&#x27;C&#x27;</code>.\r\n<ul><li>Invalidate the previous score, removing it from the record.</li></ul>\r\n</li>\r\n</ul>\r\n<p>Return <em>the sum of all the scores on the record after applying all the operations</em>.</p>\r\n<p>The test cases are generated such that the answer and all intermediate calculations fit in a <strong>32-bit</strong> integer and that all operations are valid.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> ops = [&quot;5&quot;,&quot;2&quot;,&quot;C&quot;,&quot;D&quot;,&quot;+&quot;]\r\n<strong>Output:</strong> 30\r\n<strong>Explanation:</strong>\r\n&quot;5&quot; - Add 5 to the record, record is now [5].\r\n&quot;2&quot; - Add 2 to the record, record is now [5, 2].\r\n&quot;C&quot; - Invalidate and remove the previous score, record is now [5].\r\n&quot;D&quot; - Add 2 * 5 = 10 to the record, record is now [5, 10].\r\n&quot;+&quot; - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].\r\nThe total sum is 5 + 10 + 15 = 30.\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> ops = [&quot;5&quot;,&quot;-2&quot;,&quot;4&quot;,&quot;C&quot;,&quot;D&quot;,&quot;9&quot;,&quot;+&quot;,&quot;+&quot;]\r\n<strong>Output:</strong> 27\r\n<strong>Explanation:</strong>\r\n&quot;5&quot; - Add 5 to the record, record is now [5].\r\n&quot;-2&quot; - Add -2 to the record, record is now [5, -2].\r\n&quot;4&quot; - Add 4 to the record, record is now [5, -2, 4].\r\n&quot;C&quot; - Invalidate and remove the previous score, record is now [5, -2].\r\n&quot;D&quot; - Add 2 * -2 = -4 to the record, record is now [5, -2, -4].\r\n&quot;9&quot; - Add 9 to the record, record is now [5, -2, -4, 9].\r\n&quot;+&quot; - Add -4 + 9 = 5 to the record, record is now [5, -2, -4, 9, 5].\r\n&quot;+&quot; - Add 9 + 5 = 14 to the record, record is now [5, -2, -4, 9, 5, 14].\r\nThe total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> ops = [&quot;1&quot;,&quot;C&quot;]\r\n<strong>Output:</strong> 0\r\n<strong>Explanation:</strong>\r\n&quot;1&quot; - Add 1 to the record, record is now [1].\r\n&quot;C&quot; - Invalidate and remove the previous score, record is now [].\r\nSince the record is empty, the total sum is 0.\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= operations.length &lt;= 1000</code></li>\r\n<li><code>operations[i]</code> is <code>&quot;C&quot;</code>, <code>&quot;D&quot;</code>, <code>&quot;+&quot;</code>, or a string representing an integer in the range <code>[-3 * 10<sup>4</sup>, 3 * 10<sup>4</sup>]</code>.</li>\r\n<li>For operation <code>&quot;+&quot;</code>, there will always be at least two previous scores on the record.</li>\r\n<li>For operations <code>&quot;C&quot;</code> and <code>&quot;D&quot;</code>, there will always be at least one previous score on the record.</li>\r\n</ul>",
+    "topic": "stack",
+    "topic_relation": 3,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 12,
+  "model": "problems.problem",
+  "pk": 33,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 11,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
+    "title": "Remove All Adjacent Duplicates In String",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/",
+    "slug": "remove-all-adjacent-duplicates-in-string",
+    "external_id": "1047",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>You are given a string <code>s</code> consisting of lowercase English letters. A <strong>duplicate removal</strong> consists of choosing two <strong>adjacent</strong> and <strong>equal</strong> letters and removing them.</p>\r\n<p>We repeatedly make <strong>duplicate removals</strong> on <code>s</code> until we no longer can.</p>\r\n<p>Return <em>the final string after all such duplicate removals have been made</em>. It can be proven that the answer is <strong>unique</strong>.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<p><strong>Input:</strong> s = &quot;abbaca&quot;\r\n<strong>Output:</strong> &quot;ca&quot;\r\n<strong>Explanation:</strong> \r\nFor example, in &quot;abbaca&quot; we could remove &quot;bb&quot; since the letters are adjacent and equal, and this is the only possible move.  The result of this move is that the string is &quot;aaca&quot;, of which only &quot;aa&quot; is possible, so the final string is &quot;ca&quot;.\r\n</p>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> s = &quot;azxxzy&quot;\r\n<strong>Output:</strong> &quot;ay&quot;\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\r\n<li><code>s</code> consists of lowercase English letters.</li>\r\n</ul>",
+    "topic": "stack",
+    "topic_relation": 3,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 13,
+  "model": "problems.problem",
+  "pk": 34,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 12,
-    "status": "COMPLETED",
-    "starred": true,
-    "earned_xp": true
+    "title": "Daily Temperatures",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/daily-temperatures/description/",
+    "slug": "daily-temperatures",
+    "external_id": "739",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>Given an array of integers <code>temperatures</code> represents the daily temperatures, return <em>an array <code>answer</code> such that <code>answer[i]</code> is the number of days you have to wait after the <code>i<sup>th</sup></code> day to get a warmer temperature.</em> If there is no future day for which this is possible, keep <code>answer[i] == 0</code> instead.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> temperatures = [73,74,75,71,69,72,76,73]\r\n<strong>Output:</strong> [1,1,4,2,1,1,0,0]\r\n</pre><p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> temperatures = [30,40,50,60]\r\n<strong>Output:</strong> [1,1,1,0]\r\n</pre><p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> temperatures = [30,60,90]\r\n<strong>Output:</strong> [1,1,0]\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= temperatures.length &lt;= 10<sup>5</sup></code></li>\r\n<li><code>30 &lt;= temperatures[i] &lt;= 100</code></li>\r\n</ul>",
+    "topic": "stack",
+    "topic_relation": 3,
+    "user_level_access": 1,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 14,
+  "model": "problems.problem",
+  "pk": 35,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 13,
-    "status": "COMPLETED",
-    "starred": true,
-    "earned_xp": true
+    "title": "Search Insert Position",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/search-insert-position/description/",
+    "slug": "search-insert-position",
+    "external_id": "35",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>\r\n<p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> nums = [1,3,5,6], target = 5\r\n<strong>Output:</strong> 2\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> nums = [1,3,5,6], target = 2\r\n<strong>Output:</strong> 1\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> nums = [1,3,5,6], target = 7\r\n<strong>Output:</strong> 4\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\r\n<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\r\n<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>\r\n<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\r\n</ul>",
+    "topic": "binary-search",
+    "topic_relation": 4,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 15,
+  "model": "problems.problem",
+  "pk": 36,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 14,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
+    "title": "Sqrt(x)",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/sqrtx/",
+    "slug": "sqrtx",
+    "external_id": "69",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "<p>Given a non-negative integer <code>x</code>, return <em>the square root of <code>x</code> rounded down to the nearest integer</em>. The returned integer should be <strong>non-negative</strong> as well.</p>\r\n<p>You <strong>must not use</strong> any built-in exponent function or operator.</p>\r\n<ul><li>For example, do not use <code>pow(x, 0.5)</code> in C++ or <code>x ** 0.5</code> in Python.</li></ul>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> x = 4\r\n<strong>Output:</strong> 2\r\n<strong>Explanation:</strong> The square root of 4 is 2, so we return 2.\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<p><strong>Input:</strong> x = 8\r\n<strong>Output:</strong> 2\r\n<strong>Explanation:</strong> The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.\r\n</p>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>0 &lt;= x &lt;= 2<sup>31</sup> - 1</code></li></ul>",
+    "topic": "binary-search",
+    "topic_relation": 4,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 16,
+  "model": "problems.problem",
+  "pk": 37,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 15,
-    "status": "IN_PROGRESS",
-    "starred": false,
-    "earned_xp": true
+    "title": "Koko Eating Bananas",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/koko-eating-bananas/description/",
+    "slug": "koko-eating-bananas",
+    "external_id": "875",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>Koko loves to eat bananas. There are <code>n</code> piles of bananas, the <code>i<sup>th</sup></code> pile has <code>piles[i]</code> bananas. The guards have gone and will come back in <code>h</code> hours.</p>\r\n<p>Koko can decide her bananas-per-hour eating speed of <code>k</code>. Each hour, she chooses some pile of bananas and eats <code>k</code> bananas from that pile. If the pile has less than <code>k</code> bananas, she eats all of them instead and will not eat any more bananas during this hour.</p>\r\n<p>Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.</p>\r\n<p>Return the <strong>minimum</strong> integer <code>k</code> such that she can eat all the bananas <strong>within</strong> <code>h</code> hours.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<div class=\"example-block\">\r\n<p><strong>Input:</strong> <span class=\"example-io\">piles = [3,6,7,11], h = 8</span></p>\r\n<p><strong>Output:</strong> <span class=\"example-io\">4</span></p>\r\n<p><strong>Explanation:</strong></p>\r\n<p>At a speed of 4 bananas per hour, Koko takes 1, 2, 2, and 3 hours to finish the respective piles, totaling 8 hours.</p>\r\n</div>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<div class=\"example-block\">\r\n<p><strong>Input:</strong> <span class=\"example-io\">piles = [30,11,23,4,20], h = 5</span></p>\r\n<p><strong>Output:</strong> <span class=\"example-io\">30</span></p>\r\n<p><strong>Explanation:</strong></p>\r\n<p>Koko must finish each pile in exactly 1 hour, so her minimum eating speed must be 30 bananas per hour.</p>\r\n</div>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<div class=\"example-block\">\r\n<p><strong>Input:</strong> <span class=\"example-io\">piles = [30,11,23,4,20], h = 6</span></p>\r\n<p><strong>Output:</strong> <span class=\"example-io\">23</span></p>\r\n<p><strong>Explanation:</strong></p>\r\n<p>At a speed of 23 bananas per hour, Koko takes 2 hours for the first pile and 1 hour for each remaining pile, totaling 6 hours.</p>\r\n</div>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= piles.length &lt;= 10<sup>4</sup></code></li>\r\n<li><code>piles.length &lt;= h &lt;= 10<sup>9</sup></code></li>\r\n<li><code>1 &lt;= piles[i] &lt;= 10<sup>9</sup></code></li>\r\n</ul>",
+    "topic": "binary-search",
+    "topic_relation": 4,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 17,
+  "model": "problems.problem",
+  "pk": 38,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 16,
-    "status": "IN_PROGRESS",
-    "starred": false,
-    "earned_xp": false
+    "title": "Sliding Window Sum",
+    "platform": "CSES",
+    "url": "https://cses.fi/problemset/task/3220/",
+    "slug": "sliding-window-sum",
+    "external_id": "3220",
+    "difficulty": "Easy",
+    "category_difficulty": "EASY",
+    "description": "You are given an array of <code>n</code> integers. Your task is to calculate the sum of each window of k elements, from left to right.\r\n\r\nIn this problem the input data is large and it is created using a generator.\r\n\r\nInput\r\nThe first line contains two integers <code>n</code> and <code>k</code>: the number of elements and the size of the window.\r\nThe next line contains four integers <code>x</code>, <code>a</code>, <code>b</code> and <code>c</code>: the input generator parameters. The input is generated as follows:\r\n\r\nx<sub>1</sub> = x\r\nx<sub>i</sub> = (ax<sub>i-1</sub> + b) mod c for i=2,3, ... ,n\r\n\r\nOutput\r\nPrint the xor of all window sums.\r\nConstraints\r\n\r\n1 ≤ k ≤ n ≤ 10<sup>7</sup>\r\n0 ≤ x, a, b ≤ 10<sup>9</sup>\r\n1 ≤ c ≤ 10<sup>9</sup>\r\n\r\nExample\r\nInput:\r\n8 5\r\n3 7 1 11\r\n\r\nOutput:\r\n12\r\n\r\nExplanation: The input array is [3,0,1,8,2,4,7,6]. The windows are [3,0,1,8,2], [0,1,8,2,4], [1,8,2,4,7] and [8,2,4,7,6], and their sums are 14, 15, 22 and 27. Thus, the answer is 14 ⊕ 15 ⊕ 22 ⊕ 27 = 12.",
+    "topic": "sliding-window",
+    "topic_relation": 7,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 18,
+  "model": "problems.problem",
+  "pk": 39,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 19,
-    "status": "IN_PROGRESS",
-    "starred": false,
-    "earned_xp": false
+    "title": "Books",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/279/B",
+    "slug": "books",
+    "external_id": "279B",
+    "difficulty": "1400",
+    "category_difficulty": "MEDIUM",
+    "description": "When Valera has got some free time, he goes to the library to read some books. Today he's got <code>t</code> free minutes to read. That's why Valera took <code>n</code> books in the library and for each book he estimated the time he is going to need to read it. Let's number the books by integers from <code>1</code> to <code>n</code>. Valera needs <code>a<sub>i</sub></code> minutes to read the <code>i</code>-th book.\r\n\r\nValera decided to choose an arbitrary book with number <code>i</code> and read the books one by one, starting from this book. In other words, he will first read book number <code>i</code>, then book number <code>i + 1</code>, then book number <code>i + 2</code> and so on. He continues the process until he either runs out of the free time or finishes reading the <code>n</code>-th book. Valera reads each book up to the end, that is, he doesn't start reading the book if he doesn't have enough free time to finish reading it.\r\n\r\nPrint the maximum number of books Valera can read.\r\n\r\nInput\r\nThe first line contains two integers n and t (1 ≤ n ≤ 10<sup>5</sup>; 1 ≤ t ≤ 10<sup>9</sup>) — the number of books and the number of free minutes Valera's got. The second line contains a sequence of n integers a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub> (1 ≤ a<sub>i</sub> ≤ 10<sup>4</sup>), where number a<sub>i</sub> shows the number of minutes that the boy needs to read the i-th book.\r\n\r\nOutput\r\nPrint a single integer — the maximum number of books Valera can read.\r\n\r\nExamples\r\ninput\r\n4 5\r\n3 1 2 1\r\nOuput\r\n3\r\n\r\ninput\r\n3 3\r\n2 2 3\r\noutput\r\n1",
+    "topic": "sliding-window",
+    "topic_relation": 7,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
   }
 },
 {
-  "model": "problems.problemstatus",
-  "pk": 19,
+  "model": "problems.problem",
+  "pk": 40,
   "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 20,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
-  }
-},
-{
-  "model": "problems.problemstatus",
-  "pk": 20,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 24,
-    "status": "COMPLETED",
-    "starred": true,
-    "earned_xp": true
-  }
-},
-{
-  "model": "problems.problemstatus",
-  "pk": 21,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 23,
-    "status": "COMPLETED",
-    "starred": false,
-    "earned_xp": true
-  }
-},
-{
-  "model": "problems.problemstatus",
-  "pk": 22,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 2,
-    "status": "COMPLETED",
-    "starred": true,
-    "earned_xp": true
-  }
-},
-{
-  "model": "problems.problemstatus",
-  "pk": 23,
-  "fields": {
-    "user": [
-      "winstonw0711@gmail.com"
-    ],
-    "problem": 3,
-    "status": "COMPLETED",
-    "starred": true,
-    "earned_xp": true
+    "title": "Minimum Size Subarray Sum",
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/problems/minimum-size-subarray-sum/description/",
+    "slug": "minimum-size-subarray-sum",
+    "external_id": "209",
+    "difficulty": "Medium",
+    "category_difficulty": "MEDIUM",
+    "description": "<p>Given an array of positive integers <code>nums</code> and a positive integer <code>target</code>, return the <em><strong>minimal length</strong> of a subarray whose sum is greater than or equal to <code>target</code></em>. If there is no such subarray, return <code>0</code> instead.</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> target = 7, nums = [2,3,1,2,4,3]\r\n<strong>Output:</strong> 2\r\n<strong>Explanation:</strong> The subarray [4,3] has the minimal length under the problem constraint.\r\n</pre>\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> target = 4, nums = [1,4,4]\r\n<strong>Output:</strong> 1\r\n</pre>\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> target = 11, nums = [1,1,1,1,1,1,1,1]\r\n<strong>Output:</strong> 0\r\n</pre>\r\n<p><strong>Constraints:</strong></p>\r\n<ul><li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>\r\n<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\r\n<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\r\n</ul>",
+    "topic": "sliding-window",
+    "topic_relation": 7,
+    "user_level_access": 2,
+    "mini_level_access": 1,
+    "difficulty_color": "text-yellow-500"
   }
 },
 {
@@ -1044,7 +746,7 @@
   "fields": {
     "problem": 2,
     "order": 1,
-    "text": "Duplicate values don't matter, nor does the order of the elements."
+    "text": "What if the array was something like <code>[0, 1, 2, 3, 4, 5]</code>? The MEX is <code>6</code>. Okay, but what if you had something like <code>[2, 3, 4, 5, 6, 7]</code>? Well, we can subtract <code>2</code> from every number, then it becomes <code>[0, 1, 2, 3, 4, 5]</code>, where the answer is <code>6</code>. But do you notice something? We can technically turn every consecutive sequence of numbers into a sequence that goes <code>0, 1, 2, 3,... </code>, but do we really need to?"
   }
 },
 {
@@ -1053,7 +755,7 @@
   "fields": {
     "problem": 2,
     "order": 2,
-    "text": "Let's consider the inverse problem, where we have an array that is equal to [0, 1, 2, ..., k-1] and we can add x to each value in the array. No matter which value of x we choose, the values in a are consecutive."
+    "text": "After reading the first hint, it should be important to know that duplicate numbers don't help us in any way, since they break our consecutive sequences."
   }
 },
 {
@@ -1624,13 +1326,391 @@
   }
 },
 {
+  "model": "problems.hint",
+  "pk": 69,
+  "fields": {
+    "problem": 2,
+    "order": 3,
+    "text": "How do we even check for a consecutive sequence? There are a couple of clever ways, but sorting the array is the easiest."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 70,
+  "fields": {
+    "problem": 26,
+    "order": 1,
+    "text": "You should probably store all the x-coordinates in one array and all the y-coordinates in another array. We know that we each have <code>N</code> x-coordinates and <code>N</code> y-coordinates. So, if we index each array in the same place, we can get a coordinate pair. For example, let's store the x-coordinates in an array called <code>x_coords</code> and all the y-coordinates in an array called <code>y_coords</code>. Doing <code>x_coords[i]</code> and <code>y_coords[i]</code> gives us <code>(x<sub>1</sub>, y<sub>1</sub>)</code>. But how do we use this to find the distance between a point?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 71,
+  "fields": {
+    "problem": 26,
+    "order": 2,
+    "text": "Don't be scared by the fancy term \"Euclidean Distance\". Euclidean distance is literally just your standard distance formula between two points (<code>√(x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y<sub>1</sub> - y<sub>2</sub>)<sup>2</sup></code>). Remember that the problem asks for the square distance, so we square this formula (essentially getting rid of the square root). So now, if we have two coordinate points (recall the indexing from the previous hint), all you need to do is find the difference in their x and y-coordinates, square those differences, and add them. But now the question is: \"How do we find the maximum distance?\" What if we just went through every possible pair of coordinate points?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 72,
+  "fields": {
+    "problem": 26,
+    "order": 3,
+    "text": "N is small enough that we can find the distance between every possible pair of points. We can do so by using a nested for-loop. One loop variable will be the index for one coordinate point, and the other loop variable will be the index for another coordinate point. Find the square distance, and keep track of the longest distance you've seen."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 73,
+  "fields": {
+    "problem": 27,
+    "order": 1,
+    "text": "The input size is very small (only up to 20). This usually means that we can brute-force this problem. However, if you try using nested for-loops, things will get messy pretty quickly. But there is another option: recursion. If you think about it, for each apple, we can either put the apple in one group or the other group. You can think of everything as a big tree, where each node has two branches. Each side represents whether you put an apple in one group or the other group. This is a good time to use recursion. If you are unfamiliar with recursion, continue with the hints."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 74,
+  "fields": {
+    "problem": 27,
+    "order": 2,
+    "text": "Recursion means a function calling itself, and we usually use recursion to help us solve smaller parts of a certain problem. We need a base case to return; otherwise, the function will call itself indefinitely, leading to a stack overflow error. Before we figure out the base case, we need to figure out the general approach to this problem. We can go through each apple and determine whether we should put it in group 1 or group 2; if you continue with this process, determining all the possible ways to split the apples into two groups, you will get a messy tree with multiple paths (but that's why we're using recursion). The base case here is simple enough: when we get to the end of the apples (index = n), we return our answer, since we have no more apples to see other paths."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 75,
+  "fields": {
+    "problem": 27,
+    "order": 3,
+    "text": "For each apple, we need to simulate putting it into group 1 or group 2. After that, we simulate more apples after that, and so on. But if we simply call the function, it will handle all of that for us (because it will go through every possible branch that can be made, since the function is designed to make a decision at every step). However, we need to start somewhere, preferably at the very first apple. We'll split everything into two groups (or two branches), each representing the left and right side of this big tree we've been talking about. Branch 1 means we start everything by putting the first apple in group 1, and branch 2 means we start everything by putting the first apple in group 2. Then, the answer will be the minimum of these two branches, since we're looking for the minimum difference."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 76,
+  "fields": {
+    "problem": 28,
+    "order": 1,
+    "text": "Sereja and Dima can only take cards from the end of the array. This sounds like a good time to use a two-pointer approach. Set a left pointer at the start of the array and a right pointer at the end. Follow the problem statement to determine how you move these pointers."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 77,
+  "fields": {
+    "problem": 28,
+    "order": 2,
+    "text": "When it is a player's turn, compare the left value to the right value. Add the larger value to the player's score, and move the pointer from that side (since the player takes the card, we can't use it anymore)."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 78,
+  "fields": {
+    "problem": 29,
+    "order": 1,
+    "text": "Let's first figure out how to get the area of a container. The width is simple enough: it is just the distance between the two indices of the heights. So, for a height at index <code>i</code> and another at index <code>j</code>, the width is <code>j - i</code>, assuming <code>j > i</code>. Now we need to find the height. Well, the water can only fill up to the smaller of the two heights; otherwise, it would overflow. So, the height of the water is the minimum of the two heights."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 79,
+  "fields": {
+    "problem": 29,
+    "order": 2,
+    "text": "If you look at the constraints, <code>n</code> would be too large to do a brute-force <code>O(n<sup>2</sup>)</code> solution. So, we need to optimize. One thing we can try is a two-pointer approach. Let's have two pointers at the ends of the arrays. Remember, we want to maximize the area. It's not hard to see that the heights do the most heavy lifting when it comes to the value of the area, so let's try to maximize the heights."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 80,
+  "fields": {
+    "problem": 29,
+    "order": 3,
+    "text": "We should always try for a taller height, so we need to move the pointer that has the shorter height. As you move the pointers, keep track of the maximum area you see."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 81,
+  "fields": {
+    "problem": 30,
+    "order": 1,
+    "text": "Let's first think about an algorithm. We know the given sequence is what Polycarp wrote on the whiteboard, and we need to restore the original sequence. One thing we can do is target the ends of the array. The original sequence will start with the leftmost element, then the rightmost, and then we target the next elements at the end of the array, where the next elements in the original sequence will be the left element and the right element. Sounds like a two-pointer problem."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 82,
+  "fields": {
+    "problem": 30,
+    "order": 2,
+    "text": "If the first hint was a little confusing, here's an example. For this example, let's say the original sequence was <code>[1, 2, 3, 4, 5]</code>. If we have <code>[1, 3, 5, 4, 2]</code>, the ends of the array would be <code>1</code> and <code>2</code>, so the first two elements in the original sequence are <code>[1, 2]</code>. Move the pointers in, and now the ends are <code>3</code> and <code>4</code>. Continue this process, and you should have the algorithm."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 83,
+  "fields": {
+    "problem": 30,
+    "order": 3,
+    "text": "The implementation of the algorithm can be a bit tricky, but you do not need to do a standard <code>while (left <= right)</code> to move the pointers. You need a for-loop to build the original sequence, but it involves using the left and right pointers. Think about translating the given sequence to the original sequence. It's something along the lines of: <code>[left, right, left, right, left, ...]</code>."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 84,
+  "fields": {
+    "problem": 31,
+    "order": 1,
+    "text": "Timur can never add two <code>0</code>'s or two <code>1</code>'s at the end of the string. If we can somehow find where he did that, then the answer is the remaining length of the string."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 85,
+  "fields": {
+    "problem": 31,
+    "order": 2,
+    "text": "We should start at the ends of the string and work our way in. If at any point the ends are equal to each other, then we should stop moving and print out the remaining length of the string. If you didn't already figure it out, this is a two-pointers problem."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 86,
+  "fields": {
+    "problem": 32,
+    "order": 1,
+    "text": "(Note that this problem is very similar to Evaluate Reverse Polish Notation) \r\nTry to translate the example explanations into code."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 87,
+  "fields": {
+    "problem": 32,
+    "order": 2,
+    "text": "You should see that this is a stack problem, since the operations are based on the last elements we've seen. For each operation in <code>ops</code>, break the operation down into several cases."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 88,
+  "fields": {
+    "problem": 32,
+    "order": 3,
+    "text": "If an element is a <code>'+'</code>, push the sum of the last two elements on the stack; if it is a <code>'D'</code>, push double the last element on the stack; if it is a <code>'C'</code>, pop the last element from the stack; otherwise (if it is a number), simply push it onto the stack. At the end of all the operations, sum up everything in the stack."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 89,
+  "fields": {
+    "problem": 33,
+    "order": 1,
+    "text": "It will probably be too slow to brute-force remove all the duplicate letters. Also, don't get too tangled up in trying to handle specific edge cases where it might go <code>\"abba\"</code>, and you have to loop twice to get rid of everything. Instead, think in terms of \"canceling out\": whenever you see a letter, if the last letter is the same as this one, then you can get rid of both of these letters. Does a data structure for this sound familiar?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 90,
+  "fields": {
+    "problem": 33,
+    "order": 2,
+    "text": "We can use a stack data structure to solve this problem. If the last element in the stack is the same as the current letter, then pop that letter from the stack; otherwise, push this character onto the stack. Make sure that the stack isn't empty before trying to access the last element; otherwise, you will get an error."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 91,
+  "fields": {
+    "problem": 34,
+    "order": 1,
+    "text": "A brute-force approach trying to scan every pair of days will be too slow for the given constraints of this problem. How about we try to use a stack data structure? Though this stack will be a bit different to a standard stack you may be used to."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 92,
+  "fields": {
+    "problem": 34,
+    "order": 2,
+    "text": "You might be tempted to store the actual temperatures in the stack, but that would make us do extra work. Why? - Because we are finding the number of days that pass until a warmer day, so just having the temperatures alone won't tell us how many days have passed. Instead, store the indices of the temperatures in the stack (you can still get the temperature by doing <code>temperature[index]</code>)."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 93,
+  "fields": {
+    "problem": 34,
+    "order": 3,
+    "text": "Picture the stack as a waiting room: the days in the stack are waiting for a warmer day. So, for each day in <code>temperatures</code>, check the top of the stack to see if this temperature is warmer than the current temperature we are on; if it is, then you've found an answer for that temperature. But just because we've found an answer for the temperature in the stack doesn't mean our current temperature can't be an answer for more temperatures in the stack, so keep going through the top of the stack until you can't find an answer for a temperature."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 94,
+  "fields": {
+    "problem": 35,
+    "order": 1,
+    "text": "Yes, you can technically just iterate through <code>nums</code> until you find the index where <code>target</code> is supposed to be, but that would give us <code>O(n)</code> time complexity; the problem asks for <code>O(log n)</code> time complexity. What algorithm most famously uses that time complexity? Does the fact that <code>nums</code> is sorted help us?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 95,
+  "fields": {
+    "problem": 35,
+    "order": 2,
+    "text": "We can use binary search to find the position of <code>target</code>. If <code>target</code> is already in <code>nums</code>, that's perfect, since binary search will normally give us the index for that. But what if <code>target</code> isn't in <code>nums</code>? Think about where the pointers end up after searching."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 96,
+  "fields": {
+    "problem": 36,
+    "order": 1,
+    "text": "We can brute-force this problem by checking every possible number up to <code>sqrt(x)</code>. This can be done with a while loop: <code>while(i * i <= n)</code>. This solution has a time complexity of <code>O(√n)</code>; can you think of a faster solution? The recommended time complexity is <code>O(log n)</code>."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 97,
+  "fields": {
+    "problem": 36,
+    "order": 2,
+    "text": "We can use a binary search to find the answer. Our left pointer will be set to <code>1</code>, and the right pointer will be set to <code>floor(x / 2)</code> (or <code>x // 2</code>)."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 98,
+  "fields": {
+    "problem": 36,
+    "order": 3,
+    "text": "If you are still confused, look at the explanation for LeetCode Problem 35. Search Insert Position (found on Algostep), as the binary search is very similar to the one here."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 99,
+  "fields": {
+    "problem": 37,
+    "order": 1,
+    "text": "Let's try to find the smallest and largest values of <code>k</code> first (ignoring <code>h</code> for now). <code>k</code> can technically be as large as possible, but it's easier to say the largest value of <code>k</code> is the largest value in <code>piles</code>, since that means Koko can eat every pile in 1 hour. The smallest value of <code>k</code> is simply <code>1</code> (hopefully self-explanatory). How can we <em>search</em> for the answer now?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 100,
+  "fields": {
+    "problem": 37,
+    "order": 2,
+    "text": "It is tempting to just search every possible value of <code>k</code> within the range, but that would actually be too slow, taking at most <code>10<sup>13</sup></code> operations. Instead, we can use a binary search. How? Well, we have our upper and lower bounds for <code>k</code>, so we can easily find our middle point. Can you figure out how to move the pointers?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 101,
+  "fields": {
+    "problem": 37,
+    "order": 3,
+    "text": "First, we need to calculate the total time it would take for Koko to eat all the bananas using <code>mid</code> as our eating speed. After that, we need to check if it is less than or equal to <code>h</code>. If it is, then we can move our right pointer like in a normal binary search; we should also keep track of this eating speed in a variable that we return as our answer. If it isn't, then move the left pointer like in a normal binary search."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 102,
+  "fields": {
+    "problem": 38,
+    "order": 1,
+    "text": "Disclaimer for this problem: the algorithm for this problem is very straightforward, but the implementation is a little inconvenient. First, build the array using the formula the problem gave you (<code>ax<sub>i-1</sub> + b mod c</code>). Assign the first element in the array to be <code>x</code>. Then, use a loop to build the rest of the array."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 103,
+  "fields": {
+    "problem": 38,
+    "order": 2,
+    "text": "This is a fixed-size sliding window problem. So, imagine you are sliding a block across the array; whatever is inside it is part of your current window sum. Every time you slide the window, you subtract the previous element that leaves the window (at index <code>i - k</code>) and add the new one that comes in (at index <code>i</code>)."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 104,
+  "fields": {
+    "problem": 38,
+    "order": 3,
+    "text": "Keep an answer variable; after you calculate your current window sum, you can directly add the XOR by doing <code>ans ^= curr_sum</code>. Do not worry too much about what XOR is yet, since it's mostly a way to reduce the number sizes in this problem and is not crucial to the functionality of the algorithm."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 105,
+  "fields": {
+    "problem": 39,
+    "order": 1,
+    "text": "The problem is asking for the longest subarray possible such that the sum of the numbers in it is less than or equal to <code>t</code>."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 106,
+  "fields": {
+    "problem": 39,
+    "order": 2,
+    "text": "We can use a sliding window algorithm to solve this problem. Define a lower bound and an upper bound for the window. You should only move the lower bound when the current sum of the subarray is greater than <code>t</code>."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 107,
+  "fields": {
+    "problem": 39,
+    "order": 3,
+    "text": "Move the lower bound with a while loop, and move the upper bound with a for loop. Keep track of the longest subarray length you've seen."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 108,
+  "fields": {
+    "problem": 40,
+    "order": 1,
+    "text": "While you don't have to, it is recommended that you solve the Codeforces problem Books (explanation on Algostep), as it is very similar to this problem."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 109,
+  "fields": {
+    "problem": 40,
+    "order": 2,
+    "text": "The general dynamic sliding window algorithm (growing the window while the window is valid) works the same way here, but instead of maximizing the length of the subarray, you are trying to minimize it. The condition for shrinking the window should still be <code>while (curr_sum >= target)</code>. Can you think of a way to get the minimum length of a subarray this way?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 110,
+  "fields": {
+    "problem": 40,
+    "order": 3,
+    "text": "While you shrink the window, repeatedly keep track of the minimum length of the window you've seen so far."
+  }
+},
+{
   "model": "problems.editorial",
   "pk": 2,
   "fields": {
     "problem": 2,
     "explanation": "Find the longest consecutive subarray.\r\n\r\nWe already know that if an array has MEX of n, then 0, 1, 2, 3…, n-1 is in the array (after the operation). Notice how this is a subarray, and also that each element differs by 1 (so they are consecutive numbers).\r\n\r\nSo how can we actually get this subarray of 0, 1, 2, … n-1? \r\nWell, actually, we don’t need to perform the operation to get this.\r\n\r\nFirst, we need to remove the duplicates, then sort the list. \r\nThen, we can keep a global max and a current max to get the longest consecutive subarray.\r\n\r\nWhy don’t we need to perform the operation? Because when we perform the operation (adding x to every element), the values change, but the differences between those values do not. So, we can simply find a consecutive subarray without performing the operation.\r\n\r\n0, 1, 2, 3 is a subarray, just like 5, 6, 7, 8.",
     "py_solution": "import sys\r\n\r\ndef main():\r\n    data = sys.stdin.read().strip().split()\r\n    \r\n    t = int(data[0])\r\n    idx = 1\r\n    \r\n    for _ in range(t):\r\n        n = int(data[idx])\r\n        idx += 1\r\n\r\n        arr = sorted(list(set(map(int, data[idx:idx+n]))))\r\n        idx += n\r\n\r\n        largest = 0\r\n        current = 0\r\n\r\n        for i in range(len(arr)):\r\n            if i == 0 or (arr[i] != arr[i-1] + 1):\r\n                current = 0\r\n\r\n            current += 1\r\n            largest = max(largest, current)\r\n\r\n        print(largest)\r\n\r\nif __name__ == \"__main__\":\r\n    main()",
-    "cpp_solution": "#include <bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main() {\r\n    int t;\r\n    cin >> t;\r\n\r\n    while (t--) {\r\n        int n;\r\n        cin >> n;\r\n\r\n        vector<int> vec(n); \r\n        for (auto &x: vec) cin >> x;\r\n\r\n        sort(vec.begin(), vec.end());\r\n        // Remove duplicates\r\n        vec.erase(unique(vec.begin(), vec.end()), vec.end());\r\n        n = vec.size();\r\n        int best = 0;\r\n        int current = 0;\r\n        for (int i = 0; i < n; i++) {\r\n            if (i == 0 || vec[i] != vec[i-1]+1) {\r\n                current = 0;\r\n            }\r\n            current++;\r\n            best = max(best, current);\r\n        }\r\n        cout << best << \"\\n\";\r\n    }\r\n}"
+    "cpp_solution": "#include <bits/stdc++.h>\r\nusing namespace std;\r\n\r\nvoid solve(){\r\n    int n;\r\n    cin >> n;\r\n\r\n    vector<int> v(n);\r\n    for (int x=0; x < n; ++x) cin >> v[x];\r\n\r\n    sort(v.begin(), v.end());\r\n    v.erase(unique(v.begin(), v.end()), v.end());\r\n  \r\n    int ans = 0;\r\n    int curr = 0;\r\n    \r\n    for (int x=0; x < v.size(); ++x){\r\n        if (x == 0 || v[x] != v[x-1] + 1){\r\n            curr = 0;\r\n        }\r\n\r\n        curr++;\r\n        ans = max(ans, curr);\r\n    }\r\n\r\n    cout << ans << '\\n';\r\n}\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int t;\r\n    cin >> t;\r\n\r\n    while (t--){\r\n        solve();\r\n    }\r\n\r\n    return 0;\r\n}"
   }
 },
 {
@@ -1861,6 +1941,261 @@
     "explanation": "We can use a sliding window approach to solve this problem. \r\n\r\nWe can define our left boundary as a left pointer that starts at the beginning of the array. Our right boundary will be defined as we iterate through the array. Essentially, every time we iterate one step forward, we grow our size by one, since we move the right boundary.\r\n\r\nBut obviously, we must move the left boundary at some point, since we will probably get duplicate characters. To track duplicate characters, we can use a hash set to efficiently check for duplicates. As we iterate, if we've seen this character in the hash set (meaning it's a duplicate), then we have to move the left boundary until we no longer have duplicates.\r\n\r\nAfter that, we can add our current character to the hash set, and take the max between our current length and our largest answer we've seen so far.\r\n\r\nSide Note: You will see that we do not have an explicit <code>if char in set</code> check. This is because it is actually unnecessary to do so, as we use a while loop, which functions as an automatic checker. If you didn't encounter a duplicate, the while loop won't execute; if you did, the while loop will execute.",
     "py_solution": "class Solution:\r\n    def lengthOfLongestSubstring(self, s: str) -> int:\r\n        seen = set()\r\n        l = 0\r\n        ans = 0\r\n\r\n        for r in range(len(s)):\r\n            while s[r] in seen:\r\n                seen.remove(s[l])\r\n                l += 1\r\n            \r\n            seen.add(s[r])\r\n            ans = max(ans, r - l + 1)\r\n    \r\n        return ans",
     "cpp_solution": "class Solution {\r\npublic:\r\n    int lengthOfLongestSubstring(string s) {\r\n        unordered_set<char> seen;\r\n        int l = 0;\r\n        int res = 0;\r\n\r\n        for (int r = 0; r < s.size(); r++) {\r\n            while (seen.find(s[r]) != seen.end()) {\r\n                seen.erase(s[l]);\r\n                l++;\r\n            }\r\n\r\n            seen.insert(s[r]);\r\n            res = max(res, r - l + 1);\r\n        }\r\n        return res;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 26,
+  "fields": {
+    "problem": 26,
+    "explanation": "You are encouraged to read all the hints first, because then this editorial will make more sense.\r\n\r\nThe \"Euclidean Distance\" between two points is a fancy way of saying the distance formula. We should all know the distance formula at this point, but in case you forgot, it's <code>√(x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y<sub>1</sub> - y<sub>2</sub>)<sup>2</sup></code>.\r\n\r\nPay attention to the problem statement: it asks for the squared distance. So, we just need to square this formula, basically getting rid of the square root.\r\n\r\nNow that we know how to find the distance, we need to find the maximum possible distance. \r\n\r\n\r\nWe should store all the x-coordinates and y-coordinates in separate arrays, so we can access them at a single index to get a coordinate point. Now, we need to find all the distances between every pair of coordinate points. The easiest way to do that is to use nested loops. \r\n\r\nAs we find the distance between each pair of points, we should keep track of the biggest one we've seen.",
+    "py_solution": "import sys\r\n\r\ndef solve():\r\n    input = sys.stdin.read\r\n    data = input().split()\r\n\r\n    n = int(data[0])\r\n   \r\n    # if you are confused about the ranges, remember that we have to\r\n    # index from data, which you can think of as a big list.\r\n    x = [int(data[i]) for i in range(1, n + 1)]\r\n    y = [int(data[i]) for i in range(n + 1, 2 * n + 1)] \r\n\r\n    max_dist = 0\r\n\r\n    for i in range(n):\r\n        for j in range(i + 1, n):\r\n            x_diff = x[i] - x[j]\r\n            y_diff = y[i] - y[j]\r\n\r\n            distance = x_diff * x_diff + y_diff * y_diff\r\n            max_dist = max(max_dist, distance)\r\n\r\n    print(max_dist)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    solve()",
+    "cpp_solution": "#include <iostream>\r\n#include <vector>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int n;\r\n    cin >> n;\r\n\r\n    vector<int> x_coords(n), y_coords(n);\r\n\r\n    for (int x=0; x < n; ++x){\r\n        cin >> x_coords[x];\r\n    }\r\n\r\n    for (int x=0; x < n; ++x){\r\n        cin >> y_coords[x];\r\n    }\r\n\r\n    int max_dist = 0;\r\n\r\n    for (int x=0; x < n; ++x){\r\n        for (int y=x+1; y < n; ++y){\r\n            int x_diff = x_coords[x] - x_coords[y];\r\n            int y_diff = y_coords[x] - y_coords[y];\r\n\r\n            int distance = x_diff * x_diff + y_diff * y_diff;\r\n            max_dist = max(max_dist, distance);\r\n        }\r\n    }\r\n\r\n    cout << max_dist << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 27,
+  "fields": {
+    "problem": 27,
+    "explanation": "Reading through the hints will give you a much better understanding of this editorial and how to solve this problem.\r\n\r\nUsing recursion is the same thing as searching through all the possibilities. \r\n\r\nFor each apple, we need to decide whether to put it in one group or the other. After making this decision, we move on to the next apple, deciding which group to put it in. But what if we put the initial apple in a different group? Well, then that's a completely different path. Actually, every decision gives birth to another path, and eventually you will get a big tree.\r\n\r\nWhen a situation gets like this, recursion is usually able to solve it, since each function call is simulating a decision at every point, which means it will go through every single branch in the tree.\r\n\r\n\r\nThe base case is simple enough: return the difference when we get to the end of the apples. Note that this is just a general difference, not the ultimate answer we are looking for. At the beginning, we split the decisions into two branches, then call the function to handle the branches.\r\n\r\nAt the end, we return the minimum of these two branches, since these branches represent the very first choice we make, meaning they will have different answers, and because we're looking for the minimum difference.",
+    "py_solution": "import sys\r\n\r\ndef solve():\r\n    input = sys.stdin.read\r\n    data = input().split()\r\n\r\n    n = int(data[0])\r\n    weights = [int(x) for x in data[1:]]\r\n   \r\n    def helper(index, sum1, sum2):\r\n        if index == n:\r\n            return abs(sum1 - sum2)\r\n        \r\n        choice1 = helper(index + 1, sum1 + weights[index], sum2)\r\n        choice2 = helper(index + 1, sum1, sum2 + weights[index])\r\n        \r\n        return min(choice1, choice2)\r\n\r\n    print(helper(0, 0, 0))\r\n\r\nif __name__ == '__main__':\r\n    solve()",
+    "cpp_solution": "#include <iostream>\r\n#include <vector>\r\n#include <algorithm>\r\nusing ll = long long;\r\nusing namespace std;\r\n\r\nint n;\r\nvector<ll> v;\r\n\r\nll helper(int idx, ll sum1, ll sum2){\r\n    if (idx == n){\r\n        return abs(sum1 - sum2);\r\n    }\r\n\r\n    ll choice1 = helper(idx + 1, sum1 + v[idx], sum2);\r\n    ll choice2 = helper(idx + 1, sum1, sum2 + v[idx]);\r\n\r\n    return min(choice1, choice2);\r\n}\r\n\r\nint main() {\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    cin >> n;\r\n\r\n    // same as doing vector<ll> v(n), but n and v are global now,\r\n    // so we have to do it this way\r\n    v.resize(n);\r\n\r\n    for (int x=0; x < n; ++x) {\r\n        cin >> v[x];\r\n    }\r\n\r\n    cout << helper(0, 0, 0) << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 28,
+  "fields": {
+    "problem": 28,
+    "explanation": "The problem has already mapped out the algorithm for us: for a player's turn, choose the larger value of the cards at the ends of the array, and add it to their score.\r\n\r\nFor example, if it were Sereja's turn and the leftmost card had a value of 15, while the rightmost had a value of 18, we would want to add the rightmost card's value to Sereja's score, since it is larger.\r\n\r\nAfter you add the value, you might be tempted to move both pointers, but that would be wrong. Since the players are taking just one card, we only move the pointer from that card's side; the other side's card could still be picked by the other player, so we can't move that pointer.",
+    "py_solution": "n = int(input())\r\ncards = list(map(int, input().split()))\r\n\r\nsereja = 0\r\ndima = 0\r\nturn = 0 \r\n\r\nl = 0\r\nr = n - 1\r\n\r\nwhile l <= r:\r\n  if cards[l] > cards[r]:\r\n    picked = cards[l]\r\n    l += 1\r\n  else:\r\n    picked = cards[r]\r\n    r -= 1\r\n\r\n  if turn % 2 == 0:\r\n    sereja += picked\r\n  else:\r\n    dima += picked\r\n\r\n  turn += 1\r\n\r\nprint(sereja, dima)",
+    "cpp_solution": "#include <iostream>\r\n#include <vector>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int n;\r\n    cin >> n;\r\n\r\n    vector<int> v(n);\r\n    for (int x=0; x < n; ++x){\r\n        cin >> v[x];\r\n    }\r\n\r\n    int sereja = 0, dima = 0;\r\n    int l = 0, r = n - 1;\r\n    int turn = 1;\r\n\r\n    while (l <= r){\r\n        int picked;\r\n\r\n        if (v[l] > v[r]){\r\n            picked = v[l];\r\n            l++;\r\n\r\n        } else{\r\n            picked = v[r];\r\n            r--;\r\n        }\r\n\r\n        if (turn % 2 != 0){\r\n            sereja += picked;\r\n\r\n        } else{\r\n            dima += picked;\r\n        }\r\n\r\n        turn++;\r\n    }\r\n\r\n    cout << sereja << ' ' << dima << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 29,
+  "fields": {
+    "problem": 29,
+    "explanation": "We need to first figure out how to even find the area of a container. Finding the width is straightforward enough: subtract the indices of the two heights.\r\n\r\nSo, for a height at index <code>i</code> and another height at index <code>j</code>, the width would be <code>j - i</code>, but <code>j > i</code>, of course.\r\n\r\nNow what about the heights? Well, the height for the container has to be the smaller of the two heights, since if we use the taller height, the water would overflow.\r\n\r\nSo the area of a container is <code>min(h<sub>1</sub>, h<sub>2</sub>) * (j - i)</code>.\r\n\r\n\r\nNow for the hard part: we need to find the largest area.\r\n\r\nUnfortunately, <code>n</code> is too big for an <code>O(n<sup>2</sup>)</code> solution. However, we can try a two-pointer approach. It might not immediately jump out to you, but it will make more sense after you learn the algorithm.\r\n\r\nWe can kind of see that the height of the container contributes more to the area, so we need to maximize the heights. This is where two pointers can be particularly useful.\r\n\r\nFor each iteration, compare the two heights that the pointers hold. Because we are trying to maximize the heights, move the pointer with the smaller height. While this does not guarantee that the next area will be larger, it will possibly find a larger area.\r\n\r\nNote: While this algorithm sounds straightforward enough, proving it is actually pretty tough. You can search it up if you want. But Proof by AC (Proof by Accepted) is a somewhat valid way to prove this algorithm.",
+    "py_solution": "class Solution:\r\n    def maxArea(self, height: List[int]) -> int:\r\n        largest_area = 0\r\n        l, r = 0, len(height) - 1\r\n        \r\n        while l < r:\r\n            curr_area = min(height[l], height[r]) * (r - l)\r\n            \r\n            if height[l] <= height[r]:\r\n                l += 1\r\n            else:\r\n                r -= 1\r\n            \r\n            largest_area = max(largest_area, curr_area)\r\n\r\n        return largest_area",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int maxArea(vector<int>& height) {\r\n        int largest_area = 0;\r\n        int l = 0, r = height.size() - 1;\r\n\r\n        while (l < r){\r\n            int curr_area = min(height[l], height[r]) * (r-l);\r\n\r\n            if (height[l] <= height[r]){\r\n                l++;\r\n\r\n            } else{\r\n                r--;\r\n            }\r\n\r\n            largest_area = max(largest_area, curr_area);\r\n        }\r\n\r\n        return largest_area;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 30,
+  "fields": {
+    "problem": 30,
+    "explanation": "If you read the hints, you know that this problem can be solved using a two pointers algorithm. \r\n\r\nHow? - Because think about how Polycarp writes the numbers on the whiteboard: he alternates between writing a number at the start of the whiteboard and at the end of the whiteboard.\r\n\r\nIf we try to reverse this process, we need to look at the ends of the array and work our way in. For example, for <code>[1, 3, 5, 4, 2]</code>, we look at the ends of the array. The first two elements of the original sequence are <code>[1, 2]</code>, because they are at the ends of the array. The next two would be <code>[3, 4]</code>, because we move in, and now these are the ends of the array. \r\n\r\nWhy does a two-pointer algorithm work here? \r\nBecause by doing it this way, we literally reverse the process of how Polycarp writes the numbers on the whiteboard, since we start from the ends of the given sequence and build the start of the original sequence, whereas Polycarp starts with the original sequence and builds the ends of the whiteboard sequence.\r\n\r\nThere are a couple of ways to implement this, but the solutions provided are the most straightforward.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    data = sys.stdin.read().strip().split()\r\n    t = int(data[0])\r\n    idx = 1\r\n\r\n    for _ in range(t): \r\n        n = int(data[idx])\r\n        idx += 1\r\n        \r\n        whiteboard = list(map(int, data[idx:idx+n]))\r\n        idx += n\r\n\r\n        l = 0\r\n        r = n - 1\r\n        ans = []\r\n\r\n        for i in range(n):\r\n            if i % 2 == 0:\r\n                ans.append(whiteboard[l])\r\n                l += 1\r\n            \r\n            else:\r\n                ans.append(whiteboard[r])\r\n                r -= 1\r\n        \r\n        # array unpacking\r\n        print(*ans)\r\n\r\nif __name__ == \"__main__\":\r\n    main()",
+    "cpp_solution": "#include <iostream>\r\n#include <vector>\r\nusing namespace std;\r\n\r\nvoid solve(){\r\n    int n; \r\n    cin >> n;\r\n\r\n    vector<int> whiteboard(n);\r\n    \r\n    for (int x=0; x < n; ++x){\r\n        cin >> whiteboard[x];\r\n    }\r\n    \r\n    vector<int> ans(n);\r\n    int l = 0, r = n - 1;\r\n    \r\n    for (int x=0; x < n; ++x){\r\n        if (x % 2 == 0){\r\n            ans[x] = whiteboard[l];\r\n            l++;\r\n\r\n        } else{\r\n            ans[x] = whiteboard[r];\r\n            r--;\r\n        }\r\n    }\r\n\r\n    // range-based for-loop\r\n    for (int x : ans){\r\n        cout << x << ' ';\r\n    }\r\n\r\n    cout << '\\n';\r\n}\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int t; \r\n    cin >> t;\r\n\r\n    while (t--){\r\n        solve();\r\n    }\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 31,
+  "fields": {
+    "problem": 31,
+    "explanation": "We know that Timur can never add two <code>0</code>'s or two <code>1</code>'s at the end of the array. So, if we can find where Timur has made this operation, then that is the string that Timur started with. If Timur never made the operation, then the answer is simply <code>0</code>, since he had to have started with an empty string.\r\n\r\nBut how do we find the illegal move?\r\nWe can use two pointers at the ends of the string and move the pointers inward. If at any point the values at the pointers are equal (like <code>0</code> and <code>0</code> or <code>1</code> and <code>1</code>), then that's the string Timur must have started with, and we print out the length of that string (which is just <code>right - left + 1</code>).\r\n\r\nWhy don't we start from the middle and move outwards?\r\nThe reason we can't do this is that, at some point, the pointers having equal value doesn't necessarily mean that this had to be the string that Timur started with.\r\n\r\nFor example, for <code>1010100</code>, we would immediately stop when we get to <code>101</code>, but the acutal string Timur started with would be <code>01010</code>.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    data = sys.stdin.read().strip().split()\r\n    t = int(data[0])\r\n    idx = 1\r\n\r\n    for _ in range(t): \r\n        n = int(data[idx])\r\n        idx += 1\r\n        \r\n        s = data[idx]\r\n        idx += 1\r\n\r\n        l = 0\r\n        r = n - 1\r\n\r\n        while l <= r and s[l] != s[r]:\r\n            l += 1\r\n            r -= 1\r\n\r\n        print(r - l + 1)\r\n        \r\n\r\nif __name__ == \"__main__\":\r\n    main()",
+    "cpp_solution": "#include <bits/stdc++.h>\r\nusing namespace std;\r\n\r\nvoid solve(){\r\n    int n;\r\n    string s;\r\n    cin >> n >> s;\r\n\r\n    int l = 0, r = n - 1;\r\n    while (l <= r && s[l] != s[r]){\r\n        l++;\r\n        r--;\r\n    }\r\n\r\n    cout << r - l + 1 << '\\n';\r\n}\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int t; \r\n    cin >> t;\r\n    \r\n    while (t--) {\r\n        solve();\r\n    }\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 32,
+  "fields": {
+    "problem": 32,
+    "explanation": "The explanations of the example test cases should be sufficient to map out a solution, but the underlying data structure should be explained here.\r\n\r\nTo best solve this problem, you should use a stack data structure. You know you can use it here because the operations depend on the last elements you've seen so far, so you need some way to keep track of those elements, and a stack is perfect for that.\r\n\r\nWhen we loop through <code>ops</code>, we should break down each operation into these cases:\r\n<ul>\r\n<li><code>'+'</code>: push the sum of the last two elements on the stack</li>\r\n<li><code>'D'</code>: push double the last element on the stack</li>\r\n<li><code>'C'</code>: pop off the last element from the stack</li>\r\n<li>Otherwise, push this on the stack (because it will just be a regular number, not an operation)</li>\r\n</ul>\r\n\r\n<strong>A couple of notes for the code implementation:</strong>\r\n\r\n<code>isdigit()</code> will not work if you want to use it to check if an operation is a number, since the numbers could be negative. <code>-3</code> would give <code>false</code>, but it obviously is a number.\r\n\r\nFor C++:\r\nYou may notice the weird things we have to do when we encounter a <code>'+'</code>, but that's because we can't index a stack like in Python. So, we have to save the last element, pop it, then get the next element (which would be the second-to-last element).\r\n\r\nThen, we have to push the original last element that we popped off (because we still need it), and we need to push the sum of the two stored elements.\r\n\r\nAlso for C++:\r\nIn the last part of the code, we have to manually loop through the stack and pop elements, since, as said before, we cannot index like we can in Python. You may see that we use <code>sum()</code> for Python, and C++ has an equivalent called <code>accumulate()</code>, but we can't use it on a stack in C++, so we still have to loop manually.",
+    "py_solution": "class Solution:\r\n    def calPoints(self, operations: list[str]) -> int:\r\n        st = []\r\n\r\n        for op in operations:\r\n            if op == '+':\r\n                st.append(st[-2] + st[-1])\r\n            \r\n            elif op == 'D':\r\n                st.append(st[-1] * 2)\r\n            \r\n            elif op == 'C':\r\n                st.pop()\r\n\r\n            else:\r\n                st.append(int(op))\r\n        \r\n        return sum(st)",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int calPoints(vector<string>& operations) {\r\n        stack<int> st;\r\n\r\n        for (const string& op : operations){\r\n            if (op == \"+\"){\r\n                int last = st.top();\r\n                st.pop();\r\n\r\n                int second_last = st.top();\r\n\r\n                st.push(last);\r\n                st.push(last + second_last);\r\n\r\n            } else if (op == \"D\"){\r\n                st.push(st.top() * 2);\r\n\r\n            } else if (op == \"C\"){\r\n                st.pop();\r\n\r\n            } else{\r\n                st.push(stoi(op));\r\n            }\r\n        }\r\n\r\n        int ans = 0;\r\n\r\n        while (st.size() != 0){\r\n            ans += st.top();\r\n            st.pop();\r\n        }\r\n\r\n        return ans;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 33,
+  "fields": {
+    "problem": 33,
+    "explanation": "The first thing you should do in this problem is to stop trying to complicate it. Meaning, don't think too far ahead or try to handle specific edge cases based on the letter order.\r\n\r\nTake <code>\"abba\"</code>, for example. \r\n\r\nYou might be tempted to handle this exact case where there are duplicate characters in the middle and duplicate characters at the end. But what if it were <code>\"babbab\"</code>? Do you now check for a specific six-letter scenario? No!\r\n\r\nCasework is very useful in competitive programming, but if it is too specific like here, then you probably shouldn't use it.\r\n\r\n\r\nFor this problem, we can use a stack data structure. Instead of thinking about what characters are coming in the future, we should only care about the characters we've already seen.\r\n\r\nWe want to \"cancel out\" duplicates. Going back to <code>\"abba\"</code>, we can cancel out the 2 <code>b</code>'s because in the second <code>b</code>, the previous character was also a <code>b</code>, so we can cancel them out.\r\n\r\nOf course, now our remaining string is <code>\"aa\"</code>, but does that mean we have to do another loop on the string? Nope.\r\n\r\nThe nice thing about a stack here is that when we cancel out duplicate letters, the previous letters we tracked so far are now at the front. So, if we tracked the <code>a</code>, then our stack would have <code>a</code> as our last character, and we can cancel it out.\r\n\r\n\r\nThat might sound confusing, so you should trace out some examples. But here is a general algorithm:\r\n<ul>\r\n<li>If the current character is the same as the last character on the stack, then pop the last character on the stack</li>\r\n<li>Otherwise, push this character onto the stack</li>\r\n<li>At the very end, whatever is left in our stack is our answer, since those characters didn't get canceled out</li>\r\n</ul>",
+    "py_solution": "class Solution:\r\n    def removeDuplicates(self, s: str) -> str:\r\n        st = []\r\n\r\n        for ch in s:\r\n            if st and st[-1] == ch:\r\n                st.pop()\r\n\r\n            else:\r\n                st.append(ch)\r\n        \r\n        return \"\".join(st)",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    string removeDuplicates(string s) {\r\n        string st = \"\";\r\n\r\n        for (const char& ch : s){\r\n            if (!st.empty() && st.back() == ch){\r\n                st.pop_back();\r\n\r\n            } else{\r\n                st += ch;\r\n            }\r\n        }\r\n\r\n        return st;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 34,
+  "fields": {
+    "problem": 34,
+    "explanation": "We can use a stack to solve this problem, but it will be a special kind of stack, called a Monotonic Stack. However, do not worry about this term until after the explanation.\r\n\r\nThis is not a traditional stack in the sense that you process items in a random order and you perform operations pretty much right away. Some good example problems for a regular stack would be Baseball Game and Remove All Adjacent Duplicates In String (both problems explained on Algostep).\r\n\r\n\r\nIt is quite tempting to put the temperatures directly onto the stack, but that wouldn't do us any particular favor. This is because we are looking for the number of days that have passed until a warmer temperature; just having the temperatures wouldn't tell us how many days have passed.\r\n\r\nSo, we need to store the indices; then we can loop through the array and subtract the indices from the stack from the current index we're on to find how many days have passed.\r\n\r\nTo best understand the stack here, think of the stack as a waiting room. Each index in the waiting room is waiting for a warmer day. If we go through each of the temperatures, we can check the top of the stack (next in line in the waiting room) to see if that temperature is colder than our current temperature; if it is, then we've found an answer for the temperature in the stack (the temperature next in line).\r\n\r\nBut there is one small catch. If the stack had temperatures <code>[78, 75]</code>, and our current temperature is <code>80</code>, then we would only get an answer for the temperature of <code>75</code>. But <code>78</code> should also be solved. <em>(Keep in mind that the stack here had the actual temperature values instead of the indices for the sake of this example; the stack should contain the indices of the temperatures.)</em>\r\n\r\nSo, simply, we need to repeatedly check the top of the stack and solve as many temperatures as we can. We can achieve this through a while loop.\r\n\r\nLastly, we need to push our current index onto the stack, meaning we put our current index next in line in the waiting room to be solved.\r\n\r\n\r\n<strong>Code Implementation Notes/Details:</strong>\r\n\r\nIn Python, you might notice we do something a bit weird: <code>[0] * n</code> (<code>n</code> is the length of <code>temperatures</code>).\r\n\r\nThe reason why we do this instead of just appending is that we don't solve the temperatures in order. For example, if the stack had indices <code>[0, 1]</code>, we would solve for index 1 first, then index 0 later. However, if we just appended, then our answer would be out of order. So, we do this clever trick by prefilling an array with <code>0's</code>; that way, we can set a value for a specific index in the array. <strong>This trick is extremely common, so do not glance over it.</strong>\r\n\r\nIn C++, it is the same as in Python, but C++ has a better feature where we can define a size for the vector, which automatically prefills the vector with zeros.\r\n\r\n\r\n<strong>What is a Monotonic Stack?</strong>\r\n\r\nTo put it briefly, a monotonic stack is just a stack that is either always increasing in value or always decreasing in value. Here, we use a Monotonic Decreasing Stack, meaning all the values in the stack are decreasing.\r\n\r\nIt is a Monotonic Decreasing Stack because the temperatures towards the top are always colder than the ones towards the bottom. That's why we can check the top of the stack safely without disregarding a previous day. <em>(Yes, the stack is supposed to hold the indices, but keep in mind that you index <code>temperatures</code> to get the actual temperature on that day, so we are effectively storing the temperatures too)</em>. \r\n\r\nThe pattern with the while loop combined with the for loop is <em>incredibly common</em> in Monotonic Stack problems, so <strong>do not glance over it.</strong>",
+    "py_solution": "class Solution:\r\n    def dailyTemperatures(self, temperatures: list[int]) -> list[int]:\r\n        n = len(temperatures)\r\n        ans = [0] * n\r\n        st = []\r\n\r\n        for i in range(n):\r\n            while st and temperatures[st[-1]] < temperatures[i]:\r\n                idx = st.pop()\r\n                ans[idx] = i - idx\r\n            \r\n            st.append(i)\r\n        \r\n        return ans",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    vector<int> dailyTemperatures(vector<int>& temperatures) {\r\n        int n = temperatures.size();\r\n        vector<int> ans(n);\r\n        stack<int> st;\r\n\r\n        for (int i=0; i < n; ++i){\r\n            while (!st.empty() && temperatures[st.top()] < temperatures[i]){\r\n                int idx = st.top();\r\n                st.pop();\r\n\r\n                ans[idx] = i - idx;\r\n            }\r\n\r\n            st.push(i);\r\n        }\r\n\r\n        return ans;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 35,
+  "fields": {
+    "problem": 35,
+    "explanation": "The key thing to notice in this problem is that <code>nums</code> is already sorted. Usually, when you know an array is already sorted and you have to find something in the array, you should use binary search. The problem asks for <code>O(log n)</code> time complexity, so you know you have to use binary search.\r\n\r\nThere are two simple cases:\r\n<ul>\r\n<li><code>target</code> is in <code>nums</code></li>\r\n<li><code>target</code> is not in <code>nums</code></li>\r\n</ul>\r\n\r\nIf <code>target</code> is in <code>nums</code>, then this problem is just a normal binary search. Otherwise, we have to do one small extra step.\r\n\r\nLet's think about where the left and right pointers end up after a binary search (if it couldn't find the target value).\r\n\r\nWe use this condition for the while loop: <code>while (left <= right)</code>. This means that the loop will run as long as <code>left <= right</code>. So, the loop will break whenever <code>left > right</code>. \r\n\r\nEventually, if the search didn't find the target, <code>left == right == mid</code>. This is because of how the window of the pointers shrinks and the fact that we use integer division to get the middle index. \r\n\r\n\r\nNow, there are two scenarios (which lead to the same result):\r\n<ul>\r\n<li><code>nums[mid] < target</code>: the code will do <code>left = mid + 1</code></li>\r\n<li><code>nums[mid] > target</code>: the code will do <code>right = mid - 1</code></li>\r\n</ul>\r\n\r\nNo matter which case, the left pointer will end up in the spot where the target element is supposed to be. Or, more simply, the left pointer will always end up at the first element larger than <code>target</code>.\r\n\r\nSo, the insertion should happen there (if you think about it, inserting <code>target</code> here will \"shift\" every element ahead of it). We shouldn't have the insertion happen at <code>right</code>, because <code>right</code> will always be at the element less than <code>target</code>.  We also shouldn't have the insertion happen at <code>mid</code>, since that is just a temporary position from the last iteration, and it could be off by one.\r\n\r\nSo after the binary search, return the left pointer. Yes, this solution sounds complicated, but 90% of this solution is more of a proof that the left pointer will end up at the first element greater than <code>target</code>. Once you get this concept once, you just need to apply it.",
+    "py_solution": "class Solution:\r\n    def searchInsert(self, nums: List[int], target: int) -> int:\r\n        l, r = 0, len(nums) - 1\r\n\r\n        while l <= r:\r\n            mid = (l + r) // 2\r\n\r\n            if nums[mid] == target:\r\n                return mid\r\n\r\n            elif nums[mid] < target:\r\n                l = mid + 1\r\n\r\n            else:\r\n                r = mid - 1\r\n            \r\n        return l",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int searchInsert(vector<int>& nums, int target) {\r\n        int l = 0, r = nums.size() - 1;\r\n\r\n        while (l <= r){\r\n            // use l + (r - l) / 2 if numbers are super big (to prevent overflow)\r\n            // in this problem, the numbers are small\r\n            int mid  = (l + r) / 2;\r\n\r\n            if (nums[mid] == target){\r\n                return mid;\r\n\r\n            } else if (nums[mid] < target){\r\n                l = mid + 1;\r\n\r\n            } else{\r\n                r = mid - 1;\r\n            }\r\n        }\r\n\r\n        return l;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 36,
+  "fields": {
+    "problem": 36,
+    "explanation": "<strong>Approach 1: Brute-Force</strong>\r\n\r\nWe can just try every number up to <code>floor(sqrt(x))</code>. It seems counterintuitive since we're not allowed to use any built-in square root functions, but we actually don't need to. It's because we can just use a while loop: <code>while (num * num <= x)</code>, which is the same as <code>while (num <= sqrt(x))</code>.\r\n\r\nThis gives us a time complexity of <code>O(√n)</code>. However, we can do better.\r\n\r\n\r\n<strong>Approach 2: Binary Search</strong>\r\n\r\nBinary search might not immediately jump out as a solution, since we're not dealing with sorted arrays or anything like that. However, because of monotonicity (explained at the very end), it is perfectly applicable. But for now, simply imagine the possible answers as an array from <code>0</code> to <code>x</code>, which is technically a sorted array.\r\n\r\nBut now the question is how to implement a binary search here. Before we implement that, we should do a quick edge-case check to check if <code>x < 2</code>. If it is, then the square root of it is just x. Why? - Because if <code>x < 2</code>, it can only be <code>0</code> or <code>1</code>, and the square root of those is just <code>0</code> and <code>1</code>. We do this so our binary search is easier to implement, and so we can save a tiny bit of time.\r\n\r\n\r\nOur left pointer should be initialized to <code>1</code>, since it is the lowest possible answer right now (<code>√2</code> rounds to <code>1</code>). \r\n\r\nOur right pointer should be <code>x // 2</code> (<code>floor(x / 2)</code>). This is because <code>(x / 2) ≥ √x</code> for <code>x ≥ 2</code>, so <code>(x // 2)<sup>2</sup></code> should be around <code>x</code>. You can also set the right pointer to <code>x</code> (it will give the same answer anyway since pretty much anything greater than <code>x // 2</code> squared is greater than <code>x</code>), but it will give us one extra iteration.\r\n\r\nThe binary search itself is pretty straightforward. All you have to do is check how the middle of the left and right pointers squared (<code>mid<sup>2</sup></code>) compares to <code>x</code>.\r\n\r\nAt the end, we return the right pointer. This is if <code>x</code> isn't a perfect square, and we instead need to return the square root rounded down. We return the right pointer because after the while loop, the right pointer will be at the last value that is valid, since the left pointer is at a value too big. For a more in-depth explanation of this, look at the explanation for LeetCode 35. Search Insert Position on Algostep.\r\n\r\n\r\n<strong>Monotonicity</strong>\r\n\r\nThe reason why binary search even works in the first place is that the answers are monotonic (in the same direction). Think about it:\r\n\r\nSay <code>x = 11</code>. Here's a list of values that work and don't work (marked as True or False)\r\n\r\nvalue:      0  1  2  3  4  5  6\r\nworks? :    T  T  T  T  F  F  F\r\n\r\nNow say <code>x = 26</code>.\r\n\r\nvalue:     0  1  2  3  4  5  6  7\r\nworks? :   T  T  T  T  T  T  F  F\r\n\r\nYou can see that once a value doesn't work, no value after it will either. This is exactly what binary search does. Binary search discards portions of the search space because they don't work; when a value doesn't work, values greater than it also won't, so we cut them out.",
+    "py_solution": "class Solution:\r\n    def mySqrt(self, x: int) -> int:\r\n        if x < 2:\r\n            return x\r\n\r\n        l, r = 1, x // 2\r\n\r\n        while l <= r:\r\n            # calculate mid like this to prevent integer overflow\r\n            mid = l + (r - l) // 2\r\n            square = mid * mid\r\n\r\n            if square == x:\r\n                return mid\r\n            \r\n            elif square < x:\r\n                l = mid + 1\r\n            \r\n            else:\r\n                r = mid - 1\r\n\r\n        return r",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int mySqrt(int x) {\r\n        if (x < 2){\r\n            return x;\r\n        }\r\n\r\n        long long l = 0, r = x / 2;\r\n\r\n        while (l <= r){\r\n            // calculate mid like this to prevent integer overflow\r\n            // technically a long long handles this, but in case you want to use an int\r\n            long long mid = l + (r - l) / 2;\r\n            long long square = mid * mid;\r\n\r\n            if (square == x){\r\n                return mid;\r\n\r\n            } else if (square < x){\r\n                l = mid + 1;\r\n\r\n            } else{\r\n                r = mid - 1;\r\n            }\r\n        }\r\n\r\n        return r;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 37,
+  "fields": {
+    "problem": 37,
+    "explanation": "The smallest possible value of <code>k</code> is <code>1</code> (ignoring <code>h</code> for now), which should be self-explanatory. We'll say the largest possible value of <code>k</code> is the maximum element in <code>piles</code>, because that means Koko can eat each pile in 1 hour. Technically, <code>k</code> can be as large as infinity, but it's simpler to say it's the maximum element in <code>piles</code>.\r\n\r\nWhy do we need to know this?\r\n\r\nWell, we have a lower bound, and we have an upper bound, so we can now binary search for the answer. We can binary search because of monotonicity, which should be a familiar concept now. If not, read through LeetCode 69. Sqrt(x) (on Algostep). \r\n\r\nHow is the search space monotonic?\r\n\r\nIf a certain eating speed is too slow, then obviously any eating speed slower than that would also be too slow. So, we can cut out those slower speeds in search of ones that work (exactly what binary search does in a nutshell). Do not feel like you need to master this concept of recognizing monotonicity; this is more of a proof that binary search can work here.\r\n\r\n\r\nOkay, how do we implement the search here? \r\n\r\nThe important thing to keep in mind here is that we are searching for an eating speed, not an array index in normal binary search problems. So, a higher eating speed means less time to eat all the piles, and a lower eating speed means more time to eat all the piles; do not get confused about this.\r\n\r\nAfter we get the middle index, we need to calculate how long it would take for Koko to eat all the piles using this eating speed. To do that, we have to go through <code>piles</code> and take the ceiling of <code>pile size / mid</code>. We have to take the ceiling because Koko needs to eat all the bananas in the pile, and she cannot go to another pile to eat in the same hour. For example, if a pile had <code>7</code> bananas and <code>k=6</code>, Koko could only eat the entire pile in <code>2</code> hours.\r\n\r\nNow, we need to compare the total number of hours taken to <code>h</code>. If <code>total ≤ h</code>, then this eating speed is valid. So, we update <code>r = mid - 1</code> (like a normal binary search). To avoid confusion, think of this as reducing our search space to slower eating speeds.\r\n\r\nOtherwise, we update <code>l = mid + 1</code> (again, like a normal binary search). Think of this as reducing our search space to faster eating speeds, since the one we have right now is too slow.\r\n\r\nWe should also keep track of the eating speeds that work. We can store it in a variable called <code>ans</code>. So, whenever <code>total ≤ h</code>, set <code>ans = mid</code>. \r\n\r\n\r\nWhy don't we do <code>ans = min(ans, mid)</code>?\r\n\r\nTechnically, we can, but it is unnecessary. Whenever we find an eating speed that works, it is guaranteed to be slower than the previous working speed we found, since we cut our search space for slower and slower eating speeds if <code>total ≤ h</code>.\r\n\r\n\r\nWhy can't we do a linear search from the lower bound to the upper bound?\r\n\r\nValidating if <code>k</code> works takes at most <code>10<sup>4</sup></code> operations, and searching from <code>1</code> to <code>max(piles)</code> takes at most <code>10<sup>9</sup></code> operations, totaling <code>10<sup>13</sup></code> operations (since we have to scan <code>piles</code> on every iteration in the eating speed range, so <code>10<sup>4</sup> * 10<sup>9</sup> = 10<sup>13</sup></code>), which is way too slow. Where did these numbers come from? - The problem constraints.",
+    "py_solution": "class Solution:\r\n    def minEatingSpeed(self, piles: list[int], h: int) -> int:\r\n        l, r = 1, max(piles)\r\n        ans = r\r\n\r\n        while l <= r:\r\n            mid = (l + r) // 2\r\n            total = 0\r\n\r\n            for num in piles:\r\n                # formula for taking the ceiling\r\n                total += (num + mid - 1) // mid\r\n\r\n            if total <= h:\r\n                ans = mid\r\n                r = mid - 1\r\n            \r\n            else:\r\n                l = mid + 1\r\n        \r\n        return ans",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int minEatingSpeed(vector<int>& piles, int h) {\r\n        int l = 1, r = *max_element(piles.begin(), piles.end());\r\n        int ans = r;\r\n\r\n        while (l <= r){\r\n            int mid = l + (r - l) / 2;\r\n            long long total = 0;\r\n\r\n            for (const long long pile : piles){\r\n                // formula for taking the ceiling\r\n                total += (pile + mid - 1) / mid;\r\n            }\r\n\r\n            if (total <= h){\r\n                ans = mid;\r\n                r = mid - 1;\r\n\r\n            } else{\r\n                l = mid + 1;\r\n            }\r\n        }\r\n\r\n        return ans;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 38,
+  "fields": {
+    "problem": 38,
+    "explanation": "The heart of this problem is the fixed-size sliding window algorithm (which you can see in the second sentence of the problem description).\r\n\r\nImagine a big block that's taking numbers in a queuing line. When it reaches maximum capacity (holding <code>k</code> numbers), if it wants to take another number in, it has to discard the the first number in the queue, then add the number it wants at the end of the queue.\r\n\r\nSo, for an array <code>[1, 2, 3, 4, 5, 6]</code>, and <code>k = 3</code>, the first \"block\" would be <code>[1, 2, 3]</code>. Slide it over by one number, then it becomes <code>[2, 3, 4]</code>. Slide it over again, and now it's <code>[3, 4, 5]</code>.\r\n\r\nThe problem asks for the sum of subarrays, and we can use this algorithm to compute it easily. It is important that you do not constantly compute the sum of the window, since you would have to iterate through the window every time, which takes too long. Instead, just notice that all we need to do is to subtract the first number in the block, and add in the new one.\r\n\r\nIf we're taking in a new number at index <code>i</code>, we subtract <code>arr[i - k]</code>, since the window size is <code>k</code> (we have to go <code>k</code> numbers back to get to the first number), and we add <code>arr[i]</code>.\r\n\r\n\r\nHowever, there is one thing you should do first before \"sliding\" the window. You should compute the sum of the first window. That way, we have somewhere to start when we slide (it's just easier to implement).",
+    "py_solution": "import sys\r\n\r\ndef solve():\r\n    input = sys.stdin.read().split()\r\n    \r\n    n = int(input[0])\r\n    k = int(input[1])\r\n    x = int(input[2])\r\n    a = int(input[3])\r\n    b = int(input[4])\r\n    c = int(input[5])\r\n\r\n    arr = [0] * n\r\n    arr[0] = x\r\n    for i in range(1, n):\r\n        arr[i] = (a * arr[i - 1] + b) % c\r\n\r\n    curr_sum = sum(arr[:k])\r\n    ans = curr_sum\r\n\r\n    for i in range(k, n):\r\n        curr_sum -= arr[i - k]\r\n        curr_sum += arr[i]\r\n\r\n        ans ^= curr_sum\r\n\r\n    print(ans)\r\n\r\n\r\nif __name__ == '__main__':\r\n    solve()",
+    "cpp_solution": "#include <bits/stdc++.h>\r\nusing ll = long long;\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int n, k;\r\n    cin >> n >> k;\r\n\r\n    ll x, a, b, c;\r\n    cin >> x >> a >> b >> c;\r\n\r\n\r\n    vector<ll> v(n);\r\n    v[0] = x;\r\n\r\n    for (int i=1; i < n; ++i){\r\n        v[i] = (a * v[i-1] + b) % c;\r\n    }\r\n\r\n    ll curr_sum = 0;\r\n\r\n    for (int i=0; i < k; ++i) {\r\n        curr_sum += v[i];\r\n    }\r\n\r\n    \r\n    ll ans = curr_sum;\r\n\r\n    for (int i=k; i < n; ++i){\r\n        curr_sum -= v[i-k];\r\n        curr_sum += v[i];\r\n\r\n        ans ^= curr_sum;\r\n    }\r\n\r\n    cout << ans << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 39,
+  "fields": {
+    "problem": 39,
+    "explanation": "An instinct is to brute-force all possible subarrays to see which one is the longest and has a sum that is within <code>t</code>. However, because <code>n</code> can go up to <code>10<sup>5</sup></code>, this solution would be too slow.\r\n\r\nThe key information we have is that we're looking for subarrays, or contiguous pieces of data. Whenever you need to process a contiguous piece and brute force is too slow, a sliding window is often an algorithm that stands out. The one we will use here is a dynamic sliding window, so the size of the window can vary.\r\n\r\n\r\nWe need the left and right bounds for the window. It wouldn't make sense to start somewhere in the middle of the array, so let's just define the left boundary at the start of the array. \r\n\r\nIn most dynamic sliding window algorithms, you can freely move the right pointer, growing the window size until you can't anymore. How do we know when we can't grow our window anymore? - Well, Valera only has at most <code>t</code> minutes to read, so we have to stop growing the window once the total time we've spent reading (a.k.a. total subarray sum) exceeds <code>t</code>. Why do we want to grow the window? - The problem is asking for the longest possible subarray, so we want to grow the window as big as possible.\r\n\r\n\r\nBut what happens when we can't grow our window anymore? \r\n\r\nThen, we have to shrink our window until it is valid. Meaning, we increment our left bound until the sum of the subarray is within <code>t</code>. Keep in mind that we have to subtract the elements that the left bound passes, since those numbers aren't in the window anymore, so we can't count them.\r\n\r\nAlso, we need to keep track of the longest length we've seen so far, and the length of the subarray is <code>r - l + 1</code>.",
+    "py_solution": "import sys\r\n\r\ndef main():\r\n    data = sys.stdin.read().strip().split()\r\n    \r\n    n = int(data[0])\r\n    t = int(data[1])\r\n    arr = list(map(int, data[2:2+n]))\r\n\r\n    ans = 0\r\n    curr_sum = 0\r\n    l = 0    \r\n\r\n    for r in range(n):\r\n        curr_sum += arr[r]\r\n\r\n        while curr_sum > t:\r\n            curr_sum -= arr[l]\r\n            l += 1\r\n\r\n        ans = max(ans, r - l + 1)\r\n\r\n    print(ans)\r\n\r\nif __name__ == \"__main__\":\r\n    main()",
+    "cpp_solution": "#include <iostream>\r\n#include <vector>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n\r\n    int n, t;\r\n    cin >> n >> t;\r\n\r\n    vector<int> v(n);\r\n    for (int x=0; x < n; ++x){\r\n        cin >> v[x];\r\n    }\r\n\r\n    int ans = 0;\r\n    int curr_sum = 0;\r\n    int l = 0;\r\n\r\n    for (int r=0; r < n; ++r){\r\n        curr_sum += v[r];\r\n\r\n        while (curr_sum > t){\r\n            curr_sum -= v[l];\r\n            l++;\r\n        }\r\n\r\n        ans = max(ans, r - l + 1);\r\n    }\r\n\r\n    cout << ans << '\\n';\r\n\r\n    return 0;\r\n}"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 40,
+  "fields": {
+    "problem": 40,
+    "explanation": "Before trying to solve this problem, you should look at the explanation for Codeforces problem 279B \"Books\". This problem also uses a dynamic sliding window algorithm to calculate the length of the longest subarray such that its sum fits within a given value. Most of the explanation for this problem will be based on the Codeforces problem.\r\n\r\nYou can quickly see that this isn't a typical sliding window problem; in fact, it is actually a bit weird. Normally, we would have an explicit condition to keep growing our window, but here we are asked to find the minimal length (instead of the longest) such that the sum of the subarray is greater than or equal to <code>target</code>.\r\n\r\nIt wouldn't make sense for the condition to be <code>while (curr_sum < target)</code> (you may try using the opposite condition, leading to this approach), since having invalid subarrays wouldn't help us in any way. However, the answer lies in plain sight with a standard dynamic sliding window algorithm.\r\n\r\n\r\nWe most commonly use a while loop to shrink the window. When dealing with sums, we usually do something like:\r\n\r\n<code>while (curr_sum >= target):\r\n     curr_sum -= nums[l]\r\n     l += 1\r\n</code>\r\n\r\nThis is how we shrink the window when it becomes invalid. But how does this help us? When <code>curr_sum >= target</code>, the window is valid, so why would we want to shrink it?\r\n\r\nThat's the key word: shrink. Remember, the problem is asking for the minimal-length subarray, so we should shrink a valid subarray as much as possible to get a minimal length. So, in the while loop, just keep track of the minimum length you've seen so far: <code>ans = min(ans, r - l + 1)</code>.\r\n\r\n\r\nWhy don't we start with the entire array and start shrinking?\r\n\r\nWe could, but this doesn't necessarily give us the correct answer. You would have to figure out how to shrink the array. You could shrink from left to right, but then how do you know if a middle subarray is actually the shortest? Doing it the standard way (as explained above) ensures that we can check those middle subarrays and find the minimal length.",
+    "py_solution": "class Solution:\r\n    def minSubArrayLen(self, target: int, nums: list[int]) -> int:\r\n        curr_sum = 0\r\n        ans = float('inf')\r\n        l = 0\r\n\r\n        for r in range(len(nums)):\r\n            curr_sum += nums[r]\r\n\r\n            while curr_sum >= target:\r\n                ans = min(ans, r - l + 1)\r\n                curr_sum -= nums[l]\r\n                l += 1\r\n    \r\n        return ans if ans != float('inf') else 0",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    int minSubArrayLen(int target, vector<int>& nums) {\r\n        int curr_sum = 0;\r\n        int ans = INT_MAX;\r\n        int l = 0;\r\n\r\n        for (int r=0; r < nums.size(); ++r){\r\n            curr_sum += nums[r];\r\n\r\n            while (curr_sum >= target){\r\n                ans = min(ans, r - l + 1);\r\n                \r\n                curr_sum -= nums[l];\r\n                l++;\r\n            }\r\n        }\r\n\r\n        return ans != INT_MAX ? ans : 0;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 1,
+  "fields": {
+    "name": "Arrays & Hashing",
+    "slug_name": "arrays-hashing",
+    "description": "Arrays and hashing are some basic data structures that help in storing and managing data effectively. An array is defined as a sequence of values that are stored adjacent to one another in memory, and therefore you can find any particular value in the array if you know its index. But it will take a long time to find out a particular value in unsorted arrays and also insertion and deletion operations in arrays will take much time since you need to do operations on all the elements of the array. On the other hand, hashing will allow you to overcome the searching operation in an array. It maps data to an index with the help of a hash function, making access to that data incredibly fast.",
+    "topic_level": 1,
+    "mini_level_req": 1,
+    "user_level_req": 0,
+    "requirements": []
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 2,
+  "fields": {
+    "name": "Two Pointers",
+    "slug_name": "two-pointers",
+    "description": "Two Pointers is an algorithmic technique in which two reference variables (you can think of them as indices) are maintained to point to distinct indices within the same array or string to solve problems effectively. This algorithm does not make use of any nested loops that are too slow, as it operates with a time complexity of <code>O(n)</code>. However, it makes use of traversing the data structure in two different directions or at two different speeds to solve the problem in an efficient manner. The common techniques include the two-sum problem (using pointers starting from two different ends and moving towards the center of the sorted array) and the fast and slow pointer problem (to check for cycles in linked lists).",
+    "topic_level": 2,
+    "mini_level_req": 1,
+    "user_level_req": 1,
+    "requirements": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 3,
+  "fields": {
+    "name": "Stack",
+    "slug_name": "stack",
+    "description": "Stacks are linear data structures, characterized by the Last-In, First-Out (LIFO) nature of the structure. This means that the last item to be inserted into the stack will be the first to leave it. It can be visualized as a physical stack of plates at the cafeteria. In this case, one may insert an item only on the top, and also remove the top item first, before any other items below it can be reached. The stack has two main operations; the push operation that pushes an item on the top of the stack and the pop operation that pops off the topmost item.",
+    "topic_level": 2,
+    "mini_level_req": 1,
+    "user_level_req": 1,
+    "requirements": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 4,
+  "fields": {
+    "name": "Binary Search",
+    "slug_name": "binary-search",
+    "description": "Binary Search is a very efficient divide-and-conquer searching algorithm that determines the index position of a particular target value in a sorted array. Rather than going through each element sequentially from start to finish, this algorithm first determines the midpoint element in the array. If they do not match, the algorithm determines whether the target value is greater or less than the midpoint value. In case the target value is smaller, the entire right side of the array can be safely ignored; if it is bigger, the left side is completely ignored. This algorithm divides the array in half each time, hence the name \"binary search.\" By dividing the available information into two halves each time, it has a very efficient time complexity of <code>O(log n)</code>, enabling it to determine a particular value among billions of other values within a matter of dozens of steps.",
+    "topic_level": 3,
+    "mini_level_req": 1,
+    "user_level_req": 2,
+    "requirements": [
+      2
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 5,
+  "fields": {
+    "name": "Complete Search",
+    "slug_name": "complete-search",
+    "description": "Complete Search is one of the basics in Competitive Programming. In Complete Search, all possible solutions in the search space of a particular problem must be traversed to find all feasible solutions or even an optimal solution. The idea behind this algorithm is based on the blazing-fast speed of modern computers. That is, using loops or even recursion, like backtracking, we must visit all possible combinations, like generating all subsets, all permutations, and so on. The time complexity of complete search is always exponential or factorial (like <code>O(2<sup>n</sup>)</code> or <code>O(n!)</code>). Thus, it can only be applied when constraints (<code>N</code>) of the problem are very low, like (<code>N</code> ≤ 20). In contests, it is a great idea for obtaining partial points or even as a stress-testing tool.",
+    "topic_level": 1,
+    "mini_level_req": 3,
+    "user_level_req": 0,
+    "requirements": [
+      1
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 6,
+  "fields": {
+    "name": "Simulation",
+    "slug_name": "simulation",
+    "description": "Simulation competitive programming is where one solves a particular problem by writing code that simulates a real-world procedure, game, or a sequence of actions as it is stated in the problem itself. This type of problem-solving does not involve searching for complicated formulas or sophisticated data structures. In most cases, this kind of problem solving requires accurate tracking and updating of the system's \"state\" through the use of loops, arrays, or simple conditional statements.",
+    "topic_level": 1,
+    "mini_level_req": 2,
+    "user_level_req": 0,
+    "requirements": [
+      1
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 7,
+  "fields": {
+    "name": "Sliding Window",
+    "slug_name": "sliding-window",
+    "description": "The Sliding Window is an optimization strategy that helps to solve the problem of processing sequential data structures such as arrays or strings. Unlike using multiple loops that check every possible overlap of elements in a data structure, resulting in inefficient performance due to its quadratic time complexity (<code>O(n<sup>2</sup>)</code>), it utilizes two pointers to maintain a continuous \"window\" of elements in a data set. To calculate the result incrementally, the window adds a single new element at the start of the sliding window and subtracts the element from the end of the sliding window while shifting it from left to right throughout the entire data structure. Such an approach allows significantly decreasing the runtime to a much faster linear time complexity (<code>O(n)</code>). The sliding window could be fixed or dynamic depending on the task, for instance, finding the shortest/longest subarray that meets some condition.",
+    "topic_level": 3,
+    "mini_level_req": 1,
+    "user_level_req": 2,
+    "requirements": [
+      2
+    ]
   }
 }
 ]

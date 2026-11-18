@@ -120,10 +120,15 @@ USE_I18N = True
 
 USE_TZ = True
 
-SECURE_SSL_REDIRECT = True
+
+SECURE_PROXY_SSL_HEADER = (
+    'HTTP_X_FORWARDED_PROTO',
+    'https'
+)
+SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-CSRF_TRUSTED_ORIGINS = ['https://algostep.org', 'https://algostep.org']
+CSRF_TRUSTED_ORIGINS = ['https://algostep.org', 'https://www.algostep.org']
 
 
 # Static files (CSS, JavaScript, Images)

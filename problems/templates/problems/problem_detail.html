@@ -177,7 +177,7 @@
         new_tab.classList.replace('text-gray-500', 'text-white');
         new_tab.classList.add('bg-zinc-600');
     }
-    
+
     function showHint(event){
         const clickedHint = event.currentTarget;
         const visible = clickedHint.dataset.visible;
@@ -203,7 +203,7 @@
     hint_tab.addEventListener('click', () => switchTabs(editorial_tab, hint_tab, editorial, hints));
     cpp_tab.addEventListener('click', () => switchTabs(py_tab, cpp_tab, py_code, cpp_code));
     py_tab.addEventListener('click', () => switchTabs(cpp_tab, py_tab, cpp_code, py_code));
-    
+
     Array.from(hints.children).forEach(child => {
         child.addEventListener('click', showHint);
     });
@@ -233,7 +233,6 @@
             this.classList.remove('hover:bg-gray-600', 'cursor-pointer');
         }
     });
-
 </script>
 
 {% endblock %}

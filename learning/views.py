@@ -47,10 +47,17 @@ def skill_tree(request):
 
         topic.user_level_requirement = num_2_level[topic.user_level_req]
 
+
+    lvl1 = [t for t in topics if t.topic_level == 1]
+    for i, t in enumerate(lvl1):
+        if t.slug_name == "time-space-complexity":
+            lvl1.insert(0, lvl1.pop(i))
+
+
     context = {
         'level': level,
         'mini_level': mini_level,
-        'level1': [t for t in topics if t.topic_level == 1],
+        'level1': lvl1,
         'level2': [t for t in topics if t.topic_level == 2],
         'level3': [t for t in topics if t.topic_level == 3],
         'level4': [t for t in topics if t.topic_level == 4],

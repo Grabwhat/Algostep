@@ -79,11 +79,35 @@
                                 {{ topic.name }}
                             </h2>
 
+                            {% if topic.prereqs %}
+                                <div data-visible="false"
+                                    class="prereqs bg-indigo-200 rounded-lg py-2 px-4 text-indigo-700 border-2 border-indigo-500
+                                            transition-colors hover:bg-indigo-300 hover:text-indigo-800 cursor-pointer">
+                                    
+                                    <h3 class="font-semibold">
+                                        Data Structure / Algorithm Prerequisites
+                                        <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                        <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                    </h3>
+
+                                    <div class="hidden pre-reqs overflow-x-auto rounded-lg border-2 border-indigo-300 bg-indigo-100 my-8 p-5">
+                                        <pre class="text-wrap">{{ topic.prereqs|safe }}</pre>
+                                    </div>
+                                </div>
+                            {% endif %}
+
                             <div data-visible="false"
                                  class="cheat-sheet bg-sky-200 rounded-lg py-2 px-4 text-sky-700 border-2 border-sky-500
                                         transition-colors hover:bg-sky-300 hover:text-sky-800 cursor-pointer">
                                 <h3 class="font-semibold">
-                                    Time Complexity Cheat Sheet
+                                    {% if topic.slug_name == "time-space-complexity" %}
+                                        Cheat Sheet
+
+                                    {% else %}
+                                        Time Complexity Cheat Sheet
+
+                                    {% endif %}
+
                                     <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
                                     <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
                                 </h3>
@@ -98,44 +122,99 @@
                                      class="problems bg-amber-200 border-2 border-amber-500 rounded-lg py-2 px-4 text-amber-600
                                             transition-colors hover:bg-amber-300 hover:text-amber-500 cursor-pointer">
                                     <h3 class="font-semibold">
-                                        {{ topic.name }} Problems
+                                        {% if topic.slug_name == "time-space-complexity" %}
+                                            Resources
+
+                                        {% else %}
+                                            {{ topic.name }} Problems
+
+                                        {% endif %}
+
                                         <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
                                         <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
                                     </h3>
 
                                     <div class="hidden problem-container">
                                         <div class="rounded-lg overflow-hidden mt-3">
-                                            {% for problem in topic.problems.all %}
-                                                {% if forloop.counter <= 10 %}
-                                                    {% if level == problem.user_level_access and mini_level >= problem.mini_level_access or level > problem.user_level_access %}
-                                                        <div data-difficulty="{{ problem.category_difficulty }}"
-                                                            class="prob-container relative flex flex-row items-center space-x-5
-                                                                    p-2 odd:bg-sky-700 even:bg-sky-500 transition-shadow hover:shadow-around
-                                                                    hover:shadow-blue-200 hover:z-10"
-                                                        >
-                                                            <p class="text-white font-semibold">{{ problem.title }}</p>
+                                            {% if topic.slug_name != "time-space-complexity" %}
 
-                                                            <p class="text-white bg-orange-400 py-1 px-2 rounded-lg font-medium italic">
-                                                                {{ problem.platform }}
-                                                            </p>
+                                                {% for problem in topic.problems.all %}
+                                                    {% if forloop.counter <= 10 %}
+                                                        {% if level == problem.user_level_access and mini_level >= problem.mini_level_access or level > problem.user_level_access %}
+                                                            <div data-difficulty="{{ problem.category_difficulty }}"
+                                                                class="prob-container relative flex flex-row items-center space-x-5
+                                                                        p-2 odd:bg-sky-700 even:bg-sky-500 transition-shadow hover:shadow-around
+                                                                        hover:shadow-blue-200 hover:z-10"
+                                                            >
+                                                                <p class="text-white font-semibold">{{ problem.title }}</p>
 
-                                                            <p class="difficulty font-semibold {{ problem.difficulty_color }}">
-                                                                {{ problem.difficulty }}
-                                                            </p>
+                                                                <p class="text-white bg-orange-400 py-1 px-2 rounded-lg font-medium italic">
+                                                                    {{ problem.platform }}
+                                                                </p>
 
-                                                            <a href="{% url 'problem-detail' slug=problem.slug %}"
-                                                            class="absolute inset-0 z-10"></a>
-                                                        </div>
+                                                                <p class="difficulty font-semibold {{ problem.difficulty_color }}">
+                                                                    {{ problem.difficulty }}
+                                                                </p>
+
+                                                                <a href="{% url 'problem-detail' slug=problem.slug %}"
+                                                                class="absolute inset-0 z-10"></a>
+                                                            </div>
+                                                        {% endif %}
                                                     {% endif %}
-                                                {% endif %}
-                                            {% endfor %}
-                                        </div>
+                                                {% endfor %}
 
-                                        <a href="{% url 'problem-list' topic.slug_name %}"
-                                           class="bg-sky-800 border-2 border-sky-600 rounded-lg py-1 px-3 text-mist-100 font-semibold
-                                                  transition-colors hover:bg-sky-700 hover:text-mist-300 mt-3 block w-fit">
-                                            All Problems
-                                        </a>
+                                            {% else %}
+                                                <div class="flex flex-row space-x-5">
+                                                    <ul class="space-y-3 my-3">
+                                                        <li class="whitespace-nowrap"><a href="https://usaco.guide/bronze/time-comp" target="_blank" 
+                                                            rel="noopener noreferrer" 
+                                                            class="rounded-full cursor-pointer border-2 border-violet-600 bg-violet-400 py-1 px-2 font-semibold text-violet-700">
+                                                            USACO Guide
+                                                        </a></li>
+
+                                                        <li class="whitespace-nowrap"><a href="https://www.codechef.com/learn/course/time-complexity" target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            class="rounded-full cursor-pointer border-2 border-orange-600 bg-orange-400 py-1 px-2 font-semibold text-orange-700">
+                                                            Codechef
+                                                        </a></li>
+
+                                                        <li class="whitespace-nowrap"><a href="https://leetcode.com/discuss/post/5750835/understanding-time-complexity-a-guide-fo-aqci/" target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            class="rounded-full cursor-pointer border-2 border-amber-600 bg-amber-400 py-1 px-2 font-semibold text-amber-700">
+                                                            LeetCode
+                                                        </a></li>
+
+                                                        <li class="whitespace-nowrap"><a href="https://www.youtube.com/watch?v=XMUe3zFhM5c" target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            class="rounded-full cursor-pointer border-2 border-cyan-600 bg-cyan-400 py-1 px-2 font-semibold text-cyan-700">
+                                                            Bro Code
+                                                        </a></li>
+
+                                                        <li class="whitespace-nowrap"><a href="https://www.datacamp.com/tutorial/space-complexity" target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            class="rounded-full cursor-pointer border-2 border-emerald-600 bg-emerald-400 py-1 px-2 font-semibold text-emerald-700">
+                                                            Data Camp (Start from "Types of Space Complexity")
+                                                        </a></li>
+                                                    </ul>
+
+                                                    <div class="border-2 border-amber-600 bg-amber-300 rounded-lg p-5 text-amber-700 text-sm">
+                                                        Understanding Time and Space Complexity is usually a skill that you pick
+                                                        up as you solve more and more problems, seeing what solutions are too slow
+                                                        and ones that pass fine. You will mostly just be looking for solutions
+                                                        that have a good enough time complexity that don't exceed the time limit (TLE).
+                                                    </div>
+                                                </div>
+
+                                            {% endif %}
+                                        </div>
+                                        
+                                        {% if topic.slug_name != "time-space-complexity" %}
+                                            <a href="{% url 'problem-list' topic.slug_name %}"
+                                            class="bg-sky-800 border-2 border-sky-600 rounded-lg py-1 px-3 text-mist-100 font-semibold
+                                                    transition-colors hover:bg-sky-700 hover:text-mist-300 mt-3 block w-fit">
+                                                All Problems
+                                            </a>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -221,6 +300,23 @@
                             <h2 class="text-white text-xl font-semibold">
                                 {{ topic.name }}
                             </h2>
+
+                            {% if topic.prereqs %}
+                                <div data-visible="false"
+                                    class="prereqs bg-indigo-200 rounded-lg py-2 px-4 text-indigo-700 border-2 border-indigo-500
+                                            transition-colors hover:bg-indigo-300 hover:text-indigo-800 cursor-pointer">
+                                    
+                                    <h3 class="font-semibold">
+                                        Data Structure / Algorithm Prerequisites
+                                        <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                        <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                    </h3>
+
+                                    <div class="hidden pre-reqs overflow-x-auto rounded-lg border-2 border-indigo-300 bg-indigo-100 my-8 p-5">
+                                        <pre class="text-wrap">{{ topic.prereqs|safe }}</pre>
+                                    </div>
+                                </div>
+                            {% endif %}
 
                             <div data-visible="false"
                                  class="cheat-sheet bg-sky-200 rounded-lg py-2 px-4 text-sky-700 border-2 border-sky-500
@@ -362,6 +458,23 @@
                             <h2 class="text-white text-xl font-semibold">
                                 {{ topic.name }}
                             </h2>
+
+                            {% if topic.prereqs %}
+                                <div data-visible="false"
+                                    class="prereqs bg-indigo-200 rounded-lg py-2 px-4 text-indigo-700 border-2 border-indigo-500
+                                            transition-colors hover:bg-indigo-300 hover:text-indigo-800 cursor-pointer">
+                                    
+                                    <h3 class="font-semibold">
+                                        Data Structure / Algorithm Prerequisites
+                                        <i class="down fa-solid fa-angle-down ml-2" aria-hidden="true"></i>
+                                        <i class="up fa-solid fa-angle-up ml-2 !hidden" aria-hidden="true"></i>
+                                    </h3>
+
+                                    <div class="hidden pre-reqs overflow-x-auto rounded-lg border-2 border-indigo-300 bg-indigo-100 my-8 p-5">
+                                        <pre class="text-wrap">{{ topic.prereqs|safe }}</pre>
+                                    </div>
+                                </div>
+                            {% endif %}
 
                             <div data-visible="false"
                                  class="cheat-sheet bg-sky-200 rounded-lg py-2 px-4 text-sky-700 border-2 border-sky-500
@@ -611,7 +724,8 @@
     const problems = document.querySelectorAll('.problems');
     problems.forEach(tab => tab.addEventListener('click', (e) => showMore(e, 'problem-container', 'amber-300')));
 
-    
+    const prereqs = document.querySelectorAll('.prereqs');
+    prereqs.forEach(reqs => reqs.addEventListener('click', (e) => showMore(e, 'pre-reqs', 'indigo-300')));
     
 </script>
 

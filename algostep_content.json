@@ -1,5 +1,131 @@
 [
 {
+  "model": "learning.cptopic",
+  "pk": 1,
+  "fields": {
+    "name": "Arrays & Hashing",
+    "slug_name": "arrays-hashing",
+    "description": "Arrays and hashing are some basic data structures that help in storing and managing data effectively. An array is defined as a sequence of values that are stored adjacent to one another in memory, and therefore you can find any particular value in the array if you know its index. But it will take a long time to find out a particular value in unsorted arrays and also insertion and deletion operations in arrays will take much time since you need to do operations on all the elements of the array. On the other hand, hashing will allow you to overcome the searching operation in an array. It maps data to an index with the help of a hash function, making access to that data incredibly fast.",
+    "topic_level": 1,
+    "prereqs": "<span class=\"text-sky-600 font-semibold\">What a hash set is and how/when to use one.</span>\r\n\r\n<ul><li>Checks if an element is inside (membership) in <code>O(1)</code> time</li>\r\n<li>Inserting and removing is also <code>O(1)</code></li>\r\n<li>Stores unique items</li>\r\n<li><code>set()</code> in Python; <code>unordered_set<> / set<></code> in C++; <code>HashSet<></code> in Java</li></ul>\r\n\r\n<span class=\"text-sky-600 font-semibold\">What a hash map is and how/when to use one.</span>\r\n\r\n<ul><li>Lookups, insertions, and deletions in <code>O(1)</code> time</li>\r\n<li>Stores key-value pairs</li>\r\n<li>Checking membership for keys is also <code>O(1)</code></li>\r\n<li>dictionaries in Python; <code>unordered_map<> / map<></code> in C++; <code>HashMap<></code> in Java</li></ul>",
+    "mini_level_req": 1,
+    "user_level_req": 0,
+    "requirements": []
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 2,
+  "fields": {
+    "name": "Two Pointers",
+    "slug_name": "two-pointers",
+    "description": "Two Pointers is an algorithmic technique in which two reference variables (you can think of them as indices) are maintained to point to distinct indices within the same array or string to solve problems effectively. This algorithm does not make use of any nested loops that are too slow, as it operates with a time complexity of <code>O(n)</code>. However, it makes use of traversing the data structure in two different directions or at two different speeds to solve the problem in an efficient manner. The common techniques include the two-sum problem (using pointers starting from two different ends and moving towards the center of the sorted array) and the fast and slow pointer problem (to check for cycles in linked lists).",
+    "topic_level": 2,
+    "prereqs": "<span class=\"text-sky-600 font-semibold\">General two-pointers algorithm</span>\r\n\r\n<ul><li>(usually) start both pointers at the ends of the array/string</li>\r\n<li>They will move toward the middle of the array/string</li>\r\n<li>In some problems, you move them at the same time; in other problems, you move them at different times</li>\r\n<li>You usually move the pointers based on some condition that you decide from the problem</li>\r\n<li>Stop moving the pointers when a) <code>left == right</code> or b) <code>left > right</code></li>\r\n<li>Translating in while loop terms: a) <code>while (l < r)</code> or b) <code>while (l <= r)</code></li>\r\n<li>Choosing a) or b) depends on the problem you are solving</li></ul>",
+    "mini_level_req": 1,
+    "user_level_req": 1,
+    "requirements": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 3,
+  "fields": {
+    "name": "Stack",
+    "slug_name": "stack",
+    "description": "Stacks are linear data structures, characterized by the Last-In, First-Out (LIFO) nature of the structure. This means that the last item to be inserted into the stack will be the first to leave it. It can be visualized as a physical stack of plates at the cafeteria. In this case, one may insert an item only on the top, and also remove the top item first, before any other items below it can be reached. The stack has two main operations; the push operation that pushes an item on the top of the stack and the pop operation that pops off the topmost item.",
+    "topic_level": 2,
+    "prereqs": "<span class=\"text-sky-600 font-semibold\">Stack data structure</span>\r\n\r\n<ul><li>Last-In, First-Out (LIFO)</li>\r\n<li>The last element added to the stack is the first that is removed</li>\r\n<li>Think of a stack of cafeteria trays: you can only add and remove a tray at the top.</li>\r\n<li>Common operations: <code>push()</code>, <code>pop()</code>, <code>peek() / top()</code>, <code>isEmpty()</code></li>\r\n<li>Normal list in Python; <code>stack<></code> in C++; <code>ArrayDeque<></code> in Java (<code>Stack<></code> is mostly legacy now)</li>\r\n<li>Of course, you can use a standard dynamic array in any language for a stack, but some languages have built-in stack data structures (though in some problems it is easier to just use an array)</li></ul>",
+    "mini_level_req": 1,
+    "user_level_req": 1,
+    "requirements": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 4,
+  "fields": {
+    "name": "Binary Search",
+    "slug_name": "binary-search",
+    "description": "Binary Search is a very efficient divide-and-conquer searching algorithm that determines the index position of a particular target value in a sorted array. Rather than going through each element sequentially from start to finish, this algorithm first determines the midpoint element in the array. If they do not match, the algorithm determines whether the target value is greater or less than the midpoint value. In case the target value is smaller, the entire right side of the array can be safely ignored; if it is bigger, the left side is completely ignored. This algorithm divides the array in half each time, hence the name \"binary search.\" By dividing the available information into two halves each time, it has a very efficient time complexity of <code>O(log n)</code>, enabling it to determine a particular value among billions of other values within a matter of dozens of steps.",
+    "topic_level": 3,
+    "prereqs": "<span class=\"text-sky-600 font-semibold\">General binary search</span>\r\n\r\n<ul><li>Array must be sorted first</li>\r\n<li>Always find the middle index</li>\r\n<li>If the target is less than the middle, search the left half of the array</li>\r\n<li>If the target is greater than the middle, search the right half of the array</li>\r\n<li>Cutting array in half every step = <code>O(log n)</code> time complexity</li></ul>\r\n\r\n<h2 class=\"font-semibold text-lg\">Python Implmentation:</h2><pre><code class=\"language-py\">def binary_search(nums, target):\r\n    l, r = 0, len(nums) - 1\r\n\r\n    while l <= r:\r\n        mid = (l + r) // 2\r\n\r\n        if nums[mid] == target:\r\n            return mid\r\n\r\n        elif nums[mid] < target:\r\n            l = mid + 1\r\n\r\n        else:\r\n            r = mid - 1\r\n\r\n    return -1</code></pre>\r\n<h2 class=\"font-semibold text-lg\">C++ Implmentation</h2><pre><code class=\"language-cpp\">int binary_search(vector&lt;int&gt;& nums, int target) {\r\n    int l = 0; \r\n    int r = nums.size() - 1;\r\n\r\n    while (l <= r) {\r\n        // if input sizes are very large, do int mid = l + (r - l) / 2;\r\n        // this is to prevent integer overflow\r\n        int mid = (l + r) / 2;\r\n\r\n        if (nums[mid] == target) {\r\n            return mid;\r\n\r\n        } else if (nums[mid] < target) {\r\n            l = mid + 1;\r\n\r\n        } else { \r\n            r = mid - 1;\r\n        }\r\n    }\r\n\r\n    return -1;\r\n}</code></pre>\r\n<h2 class=\"font-semibold text-lg\">Java Implmentation</h2><pre><code class=\"language-java\">public static int binarySearch(int[] nums, int target) {\r\n    int l = 0;\r\n    int r = nums.length - 1;\r\n\r\n    while (l <= r) {\r\n        // if input sizes are very large, do int mid = l + (r - l) / 2;\r\n        // this is to prevent integer overflow\r\n        int mid = (l + r) / 2;\r\n\r\n        if (nums[mid] == target) {\r\n            return mid; \r\n\r\n        } else if (nums[mid] < target) {\r\n            l = mid + 1; \r\n\r\n        } else {\r\n            r = mid - 1;\r\n        }\r\n    }\r\n\r\n    return -1;\r\n}</code></pre>",
+    "mini_level_req": 1,
+    "user_level_req": 2,
+    "requirements": [
+      2
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 5,
+  "fields": {
+    "name": "Complete Search",
+    "slug_name": "complete-search",
+    "description": "Complete Search is one of the basics in Competitive Programming. In Complete Search, all possible solutions in the search space of a particular problem must be traversed to find all feasible solutions or even an optimal solution. The idea behind this algorithm is based on the blazing-fast speed of modern computers. That is, using loops or even recursion, like backtracking, we must visit all possible combinations, like generating all subsets, all permutations, and so on. The time complexity of complete search is always exponential or factorial (like <code>O(2<sup>n</sup>)</code> or <code>O(n!)</code>). Thus, it can only be applied when constraints (<code>N</code>) of the problem are very low, like (<code>N</code> ≤ 20). In contests, it is a great idea for obtaining partial points or even as a stress-testing tool.",
+    "topic_level": 1,
+    "prereqs": "",
+    "mini_level_req": 3,
+    "user_level_req": 0,
+    "requirements": [
+      1
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 6,
+  "fields": {
+    "name": "Simulation",
+    "slug_name": "simulation",
+    "description": "Simulation competitive programming is where one solves a particular problem by writing code that simulates a real-world procedure, game, or a sequence of actions as it is stated in the problem itself. This type of problem-solving does not involve searching for complicated formulas or sophisticated data structures. In most cases, this kind of problem solving requires accurate tracking and updating of the system's \"state\" through the use of loops, arrays, or simple conditional statements.",
+    "topic_level": 1,
+    "prereqs": "",
+    "mini_level_req": 2,
+    "user_level_req": 0,
+    "requirements": [
+      1
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 7,
+  "fields": {
+    "name": "Sliding Window",
+    "slug_name": "sliding-window",
+    "description": "The Sliding Window is an optimization strategy that helps to solve the problem of processing sequential data structures such as arrays or strings. Unlike using multiple loops that check every possible overlap of elements in a data structure, resulting in inefficient performance due to its quadratic time complexity (<code>O(n<sup>2</sup>)</code>), it utilizes two pointers to maintain a continuous \"window\" of elements in a data set. To calculate the result incrementally, the window adds a single new element at the start of the sliding window and subtracts the element from the end of the sliding window while shifting it from left to right throughout the entire data structure. Such an approach allows significantly decreasing the runtime to a much faster linear time complexity (<code>O(n)</code>). The sliding window could be fixed or dynamic depending on the task, for instance, finding the shortest/longest subarray that meets some condition.",
+    "topic_level": 3,
+    "prereqs": "<span class=\"text-blue-600 font-semibold\">Fixed-Sized Sliding Window</span>\r\n\r\n<ul><li>Processes contiguous subarrays/substrings with size <code>k</code></li>\r\n<li>Usually <code>O(n)</code> time complexity</li>\r\n<li>First, build/compute the initial window</li>\r\n<li>Then, slide the window (duh)</li>\r\n<li>Add the incoming element at index <code>i</code> to the window</li>\r\n<li>Remove the old element at the start of the window at index <code>i - k</code></li>\r\n<li>Update your overall answer (e.g., max sum, min sum, etc.)</li></ul>\r\n\r\n<span class=\"text-blue-600 font-semibold\">Dynamic Sliding Window</span>\r\n\r\n<ul><li>Find contiguous subarrays/substrings that satisfy a certain condition</li>\r\n<li>Size of window is not specified (hence, \"dynamic\")</li>\r\n<li>First, initialize two pointers at the start of the array/string</li>\r\n<li>Then, expand the window using the right pointer (usually done with a for-loop)</li>\r\n<li>Whenever the window violates the condition (determined by the problem), shrink the window using the left pointer</li>\r\n<li>Pseudocode to shrink window: <code>while current window is invalid, update your current result and move the left poitner</code> (as you can tell, this is done with a while loop)</li>\r\n<li>Update your overall answer (e.g., max length, min length, etc.)</li></ul>",
+    "mini_level_req": 1,
+    "user_level_req": 2,
+    "requirements": [
+      2
+    ]
+  }
+},
+{
+  "model": "learning.cptopic",
+  "pk": 8,
+  "fields": {
+    "name": "Time and Space Complexity",
+    "slug_name": "time-space-complexity",
+    "description": "Time and space complexity describe an algorithm's efficiency and memory requirements as the input volume increases. Instead of counting specific seconds or megabytes, they express the number of operations and memory slots required as the data volume grows, using Big O notation. You can imagine it in a way similar to cooking: the time complexity is how much longer it takes to slice vegetables as more people join, and the space complexity is how many more bowls you will require.",
+    "topic_level": 1,
+    "prereqs": "",
+    "mini_level_req": 1,
+    "user_level_req": 0,
+    "requirements": []
+  }
+},
+{
   "model": "problems.problem",
   "pk": 2,
   "fields": {
@@ -791,7 +917,7 @@
   "fields": {
     "problem": 4,
     "order": 1,
-    "text": "Just like an array, we can loop through each character in a string."
+    "text": "Just like an array, we can loop through each character in a string. How can we check if a certain letter is a vowel?"
   }
 },
 {
@@ -800,7 +926,7 @@
   "fields": {
     "problem": 4,
     "order": 2,
-    "text": "How do we check if something contains a certain value or element?"
+    "text": "We could manually check each letter like <code>if letter == 'a' or letter == 'e' or letter == 'i' ...</code> for each letter in the string. This works, but it is a bit tedious to type out. What if we just kept a string of all the vowels and checked if the letter is inside that string?"
   }
 },
 {
@@ -818,7 +944,7 @@
   "fields": {
     "problem": 5,
     "order": 2,
-    "text": "After we've gotten the height of the second-tallest mountain, how do we know the name of the mountain? Maybe we could use a HashMap to map the height to the name of the mountain?"
+    "text": "After we've gotten the height of the second-tallest mountain, how do we know the name of the mountain? Maybe we could use a dictionary (also called a hash map) to map the height to the name of the mountain? Something like <code>{6: \"name1\", 9: \"name2\", 20: \"name3\" ...}</code>."
   }
 },
 {
@@ -863,7 +989,7 @@
   "fields": {
     "problem": 7,
     "order": 1,
-    "text": "A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions just for completeness. It is from these brute force solutions that you can come up with optimizations."
+    "text": "A straightforward approach would be to use two nested loops to try every possible pair of numbers. While this works, it has <code>O(n<sup>2</sup>)</code> time complexity, which isn't great for this problem. Can you think of a faster solution that uses only one loop?"
   }
 },
 {
@@ -872,7 +998,7 @@
   "fields": {
     "problem": 7,
     "order": 2,
-    "text": "So, if we fix one of the numbers, say <code>x</code>, we have to scan the entire array to find the next number <code>y</code> which is <code>value - x</code> where value is the input parameter. Can we change our array somehow so that this search becomes faster?"
+    "text": "If we have a number <code>x</code>, adding <code>target - x</code> gives us <code>target</code>. So, for a number <code>x</code>, we want to look for <code>target - x</code>. However, we need the indices of each number. How about we store a number and its respective index somewhere? Does a certain data structure sound perfect for this?"
   }
 },
 {
@@ -881,7 +1007,7 @@
   "fields": {
     "problem": 7,
     "order": 3,
-    "text": "The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?"
+    "text": "We can use a hash map to find the indices of a number. Remember that a hash map is a data structure that stores elements as key-value pairs. The key here would be the number itself, and the value would be the index of that number. Recall that it only takes <code>O(1)</code> time to check if a key is present in a hash map. So, for a number <code>x</code>, check if <code>target - x</code> is in the hash map, then return their indices."
   }
 },
 {
@@ -1704,6 +1830,15 @@
   }
 },
 {
+  "model": "problems.hint",
+  "pk": 111,
+  "fields": {
+    "problem": 4,
+    "order": 3,
+    "text": "For each letter, check if the letter is present in the string of vowels; if it is, then this letter is a vowel, and we can increment our answer."
+  }
+},
+{
   "model": "problems.editorial",
   "pk": 2,
   "fields": {
@@ -1758,9 +1893,9 @@
   "pk": 7,
   "fields": {
     "problem": 7,
-    "explanation": "<strong>Intuition</strong>\r\n\r\nTo improve our runtime complexity, we need a more efficient way to check if the complement exists in the array. If the complement exists, we need to get its index. What is the best way to maintain a mapping of each element in the array to its index? A hash table.\r\n\r\nWe can reduce the lookup time from O(n) to O(1) by trading space for speed. A hash table is well suited for this purpose because it supports fast lookup in near constant time. I say \"near\" because if a collision occurred, a lookup could degenerate to O(n) time. However, lookup in a hash table should be amortized O(1) time as long as the hash function was chosen carefully.\r\n\r\n<strong>Algorithm</strong>\r\n\r\nA simple implementation uses two iterations. In the first iteration, we add each element's value as a key and its index as a value to the hash table. Then, in the second iteration, we check if each element's complement (target−nums[i]) exists in the hash table. If it does exist, we return current element's index and its complement's index. Beware that the complement must not be nums[i] itself!",
-    "py_solution": "class Solution:\r\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\r\n        seen = {}\r\n\r\n        for i, num in enumerate(nums):\r\n            comp = target - num\r\n            if comp in seen:\r\n                return [i, seen[comp]]\r\n\r\n            seen[num] = i",
-    "cpp_solution": "class Solution {\r\npublic:\r\n    vector<int> twoSum(vector<int>& nums, int target) {\r\n        unordered_map<int, int> seen;\r\n        for (int i = 0; i < nums.size(); i++){\r\n            int comp = target - nums[i];\r\n            if (seen.find(comp) != seen.end()){\r\n                return {i, seen[comp]};\r\n            }\r\n\r\n            seen[nums[i]] = i;\r\n        }\r\n\r\n        return {};\r\n    }\r\n};"
+    "explanation": "While a brute-force solution using two nested for-loops to check every pair of numbers works for this problem, we can do better. The brute-force solution has <code>O(n<sup>2</sup>)</code> time complexity, but we can achieve <code>O(n)</code>.\r\n\r\nAs a side note, brute-force solutions are not inherently bad, and you should implement one if you do not have any other ideas. Even if the code times out, implementing a brute-force solution helps you think about optimizations. And, in some cases, a brute-force solution is the intended solution.\r\n\r\n\r\nTo optimize the brute-force solution, we have to find areas where we can simplify. Let's just summarize our current solution:\r\n\r\n     \"Try every possible pair of numbers\"\r\n\r\nSo, if <code>x + y = target</code> (for some number <code>x</code> and <code>y</code>), then we've found a pair of numbers that works. \r\n\r\nLet's do some simplification: <code>y = target - x</code>. How about, instead of looking for random <code>y</code>-values, we just look for <code>target - x</code>? Since <code>x + target - x = target</code>.\r\n\r\nOkay, but that doesn't necessarily get rid of the nested loops yet. How about we use a hash set? (recall what a hash set is in your skill tree) We keep track of all the numbers we've seen so far; then, for a number <code>x</code>, if <code>target - x</code> is in the hash set, then we've found a valid pair.\r\n\r\nThe order in which we iterate doesn't matter, since we just care if a valid pair exists. If one does exist, then we'll find both numbers eventually.\r\n\r\n\r\nUnfortunately, this approach has a slight flaw: we can't get the index of <code>target - x</code>. The problem asks us for the indices of the two numbers, but we don't have all of them. You might say: \"Why can't we find the index of <code>target - x</code> using a built-in index function? Like <code>.index()</code> in Python?\"\r\n\r\nThe problem with this is that index functions always return the first index of the number you're looking for. Take this test case: <code>nums = [5, 5], target = 10</code>. <code>nums.index(5)</code> gives us <code>0</code>... and that's the problem. It will never give us <code>1</code>, the index we need for the other <code>5</code>. So, we return <code>[0, 0]</code>, which is wrong.\r\n\r\n\r\nThankfully, the fix is not that far from a hash set. Instead of a hash set, we can use a hash map. Recall that a hash map stores elements in key-value pairs. This is perfect for us because we're looking for two values: the number and its index. There's our key-value pair.\r\n\r\nSo, just like our hash set approach, we store all the numbers we've seen so far; only this time, we store them with their index. If you are concerned about the time complexity of checking if a number is in a hash map, don't worry, as checking membership is still <code>O(1)</code> time complexity, just like a hash set.\r\n\r\nNow we have our algorithm: store numbers in key-value pairs with key = number and value = index, and check if <code>target - x</code> is in the hash map. If it is, then return their indices by using the index of your loop iteration and the value in the hash map with key = <code>target - x</code>.\r\n\r\n\r\nWe've now optimized our solution to <code>O(n)</code> time complexity. Optimizing solutions like this takes time to get good at, but the key is to find areas where you can simplify. Most of the time, you simplify by replacing unnecessary operations with math, data structures (like we did here), or other, more efficient algorithms.",
+    "py_solution": "class Solution:\r\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\r\n        seen = {}\r\n\r\n        for i, num in enumerate(nums):\r\n            comp = target - num\r\n\r\n            if comp in seen:\r\n                return [i, seen[comp]]\r\n\r\n            seen[num] = i",
+    "cpp_solution": "class Solution {\r\npublic:\r\n    vector<int> twoSum(vector<int>& nums, int target) {\r\n        unordered_map<int, int> seen;\r\n\r\n        for (int i = 0; i < nums.size(); i++){\r\n            int comp = target - nums[i];\r\n\r\n            if (seen.find(comp) != seen.end()){\r\n                return {i, seen[comp]};\r\n            }\r\n\r\n            seen[nums[i]] = i;\r\n        }\r\n\r\n        return {};\r\n    }\r\n};"
   }
 },
 {
@@ -2091,111 +2226,6 @@
     "explanation": "Before trying to solve this problem, you should look at the explanation for Codeforces problem 279B \"Books\". This problem also uses a dynamic sliding window algorithm to calculate the length of the longest subarray such that its sum fits within a given value. Most of the explanation for this problem will be based on the Codeforces problem.\r\n\r\nYou can quickly see that this isn't a typical sliding window problem; in fact, it is actually a bit weird. Normally, we would have an explicit condition to keep growing our window, but here we are asked to find the minimal length (instead of the longest) such that the sum of the subarray is greater than or equal to <code>target</code>.\r\n\r\nIt wouldn't make sense for the condition to be <code>while (curr_sum < target)</code> (you may try using the opposite condition, leading to this approach), since having invalid subarrays wouldn't help us in any way. However, the answer lies in plain sight with a standard dynamic sliding window algorithm.\r\n\r\n\r\nWe most commonly use a while loop to shrink the window. When dealing with sums, we usually do something like:\r\n\r\n<code>while (curr_sum >= target):\r\n     curr_sum -= nums[l]\r\n     l += 1\r\n</code>\r\n\r\nThis is how we shrink the window when it becomes invalid. But how does this help us? When <code>curr_sum >= target</code>, the window is valid, so why would we want to shrink it?\r\n\r\nThat's the key word: shrink. Remember, the problem is asking for the minimal-length subarray, so we should shrink a valid subarray as much as possible to get a minimal length. So, in the while loop, just keep track of the minimum length you've seen so far: <code>ans = min(ans, r - l + 1)</code>.\r\n\r\n\r\nWhy don't we start with the entire array and start shrinking?\r\n\r\nWe could, but this doesn't necessarily give us the correct answer. You would have to figure out how to shrink the array. You could shrink from left to right, but then how do you know if a middle subarray is actually the shortest? Doing it the standard way (as explained above) ensures that we can check those middle subarrays and find the minimal length.",
     "py_solution": "class Solution:\r\n    def minSubArrayLen(self, target: int, nums: list[int]) -> int:\r\n        curr_sum = 0\r\n        ans = float('inf')\r\n        l = 0\r\n\r\n        for r in range(len(nums)):\r\n            curr_sum += nums[r]\r\n\r\n            while curr_sum >= target:\r\n                ans = min(ans, r - l + 1)\r\n                curr_sum -= nums[l]\r\n                l += 1\r\n    \r\n        return ans if ans != float('inf') else 0",
     "cpp_solution": "class Solution {\r\npublic:\r\n    int minSubArrayLen(int target, vector<int>& nums) {\r\n        int curr_sum = 0;\r\n        int ans = INT_MAX;\r\n        int l = 0;\r\n\r\n        for (int r=0; r < nums.size(); ++r){\r\n            curr_sum += nums[r];\r\n\r\n            while (curr_sum >= target){\r\n                ans = min(ans, r - l + 1);\r\n                \r\n                curr_sum -= nums[l];\r\n                l++;\r\n            }\r\n        }\r\n\r\n        return ans != INT_MAX ? ans : 0;\r\n    }\r\n};"
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 1,
-  "fields": {
-    "name": "Arrays & Hashing",
-    "slug_name": "arrays-hashing",
-    "description": "Arrays and hashing are some basic data structures that help in storing and managing data effectively. An array is defined as a sequence of values that are stored adjacent to one another in memory, and therefore you can find any particular value in the array if you know its index. But it will take a long time to find out a particular value in unsorted arrays and also insertion and deletion operations in arrays will take much time since you need to do operations on all the elements of the array. On the other hand, hashing will allow you to overcome the searching operation in an array. It maps data to an index with the help of a hash function, making access to that data incredibly fast.",
-    "topic_level": 1,
-    "mini_level_req": 1,
-    "user_level_req": 0,
-    "requirements": []
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 2,
-  "fields": {
-    "name": "Two Pointers",
-    "slug_name": "two-pointers",
-    "description": "Two Pointers is an algorithmic technique in which two reference variables (you can think of them as indices) are maintained to point to distinct indices within the same array or string to solve problems effectively. This algorithm does not make use of any nested loops that are too slow, as it operates with a time complexity of <code>O(n)</code>. However, it makes use of traversing the data structure in two different directions or at two different speeds to solve the problem in an efficient manner. The common techniques include the two-sum problem (using pointers starting from two different ends and moving towards the center of the sorted array) and the fast and slow pointer problem (to check for cycles in linked lists).",
-    "topic_level": 2,
-    "mini_level_req": 1,
-    "user_level_req": 1,
-    "requirements": [
-      5,
-      6
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 3,
-  "fields": {
-    "name": "Stack",
-    "slug_name": "stack",
-    "description": "Stacks are linear data structures, characterized by the Last-In, First-Out (LIFO) nature of the structure. This means that the last item to be inserted into the stack will be the first to leave it. It can be visualized as a physical stack of plates at the cafeteria. In this case, one may insert an item only on the top, and also remove the top item first, before any other items below it can be reached. The stack has two main operations; the push operation that pushes an item on the top of the stack and the pop operation that pops off the topmost item.",
-    "topic_level": 2,
-    "mini_level_req": 1,
-    "user_level_req": 1,
-    "requirements": [
-      5,
-      6
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 4,
-  "fields": {
-    "name": "Binary Search",
-    "slug_name": "binary-search",
-    "description": "Binary Search is a very efficient divide-and-conquer searching algorithm that determines the index position of a particular target value in a sorted array. Rather than going through each element sequentially from start to finish, this algorithm first determines the midpoint element in the array. If they do not match, the algorithm determines whether the target value is greater or less than the midpoint value. In case the target value is smaller, the entire right side of the array can be safely ignored; if it is bigger, the left side is completely ignored. This algorithm divides the array in half each time, hence the name \"binary search.\" By dividing the available information into two halves each time, it has a very efficient time complexity of <code>O(log n)</code>, enabling it to determine a particular value among billions of other values within a matter of dozens of steps.",
-    "topic_level": 3,
-    "mini_level_req": 1,
-    "user_level_req": 2,
-    "requirements": [
-      2
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 5,
-  "fields": {
-    "name": "Complete Search",
-    "slug_name": "complete-search",
-    "description": "Complete Search is one of the basics in Competitive Programming. In Complete Search, all possible solutions in the search space of a particular problem must be traversed to find all feasible solutions or even an optimal solution. The idea behind this algorithm is based on the blazing-fast speed of modern computers. That is, using loops or even recursion, like backtracking, we must visit all possible combinations, like generating all subsets, all permutations, and so on. The time complexity of complete search is always exponential or factorial (like <code>O(2<sup>n</sup>)</code> or <code>O(n!)</code>). Thus, it can only be applied when constraints (<code>N</code>) of the problem are very low, like (<code>N</code> ≤ 20). In contests, it is a great idea for obtaining partial points or even as a stress-testing tool.",
-    "topic_level": 1,
-    "mini_level_req": 3,
-    "user_level_req": 0,
-    "requirements": [
-      1
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 6,
-  "fields": {
-    "name": "Simulation",
-    "slug_name": "simulation",
-    "description": "Simulation competitive programming is where one solves a particular problem by writing code that simulates a real-world procedure, game, or a sequence of actions as it is stated in the problem itself. This type of problem-solving does not involve searching for complicated formulas or sophisticated data structures. In most cases, this kind of problem solving requires accurate tracking and updating of the system's \"state\" through the use of loops, arrays, or simple conditional statements.",
-    "topic_level": 1,
-    "mini_level_req": 2,
-    "user_level_req": 0,
-    "requirements": [
-      1
-    ]
-  }
-},
-{
-  "model": "learning.cptopic",
-  "pk": 7,
-  "fields": {
-    "name": "Sliding Window",
-    "slug_name": "sliding-window",
-    "description": "The Sliding Window is an optimization strategy that helps to solve the problem of processing sequential data structures such as arrays or strings. Unlike using multiple loops that check every possible overlap of elements in a data structure, resulting in inefficient performance due to its quadratic time complexity (<code>O(n<sup>2</sup>)</code>), it utilizes two pointers to maintain a continuous \"window\" of elements in a data set. To calculate the result incrementally, the window adds a single new element at the start of the sliding window and subtracts the element from the end of the sliding window while shifting it from left to right throughout the entire data structure. Such an approach allows significantly decreasing the runtime to a much faster linear time complexity (<code>O(n)</code>). The sliding window could be fixed or dynamic depending on the task, for instance, finding the shortest/longest subarray that meets some condition.",
-    "topic_level": 3,
-    "mini_level_req": 1,
-    "user_level_req": 2,
-    "requirements": [
-      2
-    ]
   }
 }
 ]

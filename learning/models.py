@@ -32,6 +32,8 @@ class CPTopic(models.Model):
         related_name='unlocks'
     )
 
+    prereqs = models.TextField(blank=True)
+
     mini_level_req = models.PositiveIntegerField(default=1)
     user_level_req = models.PositiveIntegerField(default=1)
 

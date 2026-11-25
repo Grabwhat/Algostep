@@ -1,0 +1,53 @@
+<table class="w-full border-collapse text-left">
+    <thead class="border-b border-sky-300">
+        <tr>
+            <th scope="col" class="px-6 py-10 font-semibold tracking-wider text-sky-600">Time Complexity</th>
+            <th scope="col" class="px-6 py-10 font-semibold tracking-wider text-sky-600">Example</th>
+            <th scope="col" class="px-6 py-10 font-semibold tracking-wider text-sky-600">Explanation</th>
+        </tr>
+    </thead>
+
+    <tbody class="divide-y divide-sky-300">
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">O(1)</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Array indexing</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Elements are stored in a block of memory, and the computer only needs a simple equation to calculate the value at an index</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">O(log n)</th>
+            <td class="px-6 py-8 font-medium text-sky-500">Binary Search</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Each step cuts the remaining search space in half</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n)</th>
+            <td class="px-6 py-8 font-medium text-sky-500">Looping through an array</td>
+            <td class="px-6 py-8 font-medium text-sky-500">The loop runs n times, whether n is 10 or 100 billion</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n log n)</th>
+            <td class="px-6 py-8 font-medium text-sky-500">Sorting an array</td>
+            <td class="px-6 py-8 font-medium text-sky-500">There a n! possible arrangements and each comparison of elements cuts the valid arrangements roughly in half. So, you need log<sub>2</sub> n! comparisons, which simplifies to n log n.</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n<sup>2</sup>)</th>
+            <td class="px-6 py-8 font-medium text-sky-500">Nested loops</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Performing n operations n times, so n * n = n<sup>2</sup></td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">O(2<sup>n</sup>)</th>
+            <td class="px-6 py-8 font-medium text-sky-500">Using recursion for the Fibonacci Sequence</td>
+            <td class="px-6 py-8 font-medium text-sky-500">Each recursive call branches out into two other recursive calls</td>
+        </tr>
+
+        <tr>
+            <td class="px-6 py-8 font-medium text-sky-500">O(n!)</th>
+            <td class="px-6 py-8 font-medium text-sky-500">Generating all permutations</td>
+            <td class="px-6 py-8 font-medium text-sky-500">You have to go through n! arrangements</td>
+        </tr>
+    </tbody>
+</table>

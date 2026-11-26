@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
 from problems.models import ProblemStatus
@@ -6,6 +6,12 @@ from accounts.views import aggregate_problems
 
 class LandingPage(TemplateView):
     template_name = 'core/landing_page.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('home')
+
+        return super().get(request, *args, **kwargs)
 
 
 class HomePage(LoginRequiredMixin, TemplateView):

@@ -867,6 +867,25 @@
   }
 },
 {
+  "model": "problems.problem",
+  "pk": 41,
+  "fields": {
+    "title": "Boy or Girl",
+    "platform": "Codeforces",
+    "url": "https://codeforces.com/problemset/problem/236/A",
+    "slug": "boy-or-girl",
+    "external_id": "236A",
+    "difficulty": "800",
+    "category_difficulty": "EASY",
+    "description": "Those days, many boys use beautiful girls' photos as avatars in forums. So it is pretty hard to tell the gender of a user at the first glance. Last year, our hero went to a forum and had a nice chat with a beauty (he thought so). After that they talked very often and eventually they became a couple in the network.\r\n\r\nBut yesterday, he came to see \"her\" in the real world and found out \"she\" is actually a very strong man! Our hero is very sad and he is too tired to love again now. So he came up with a way to recognize users' genders by their user names.\r\n\r\nThis is his method: if the number of distinct characters in one's user name is odd, then he is a male, otherwise she is a female. You are given the string that denotes the user name, please help our hero to determine the gender of this user by his method.\r\n\r\nInput\r\nThe first line contains a non-empty string, that contains only lowercase English letters — the user name. This string contains at most 100 letters.\r\n\r\nOutput\r\nIf it is a female by our hero's method, print <code>\"CHAT WITH HER!\"</code> (without the quotes), otherwise, print <code>\"IGNORE HIM!\"</code> (without the quotes).\r\n\r\nExamples\r\n\r\ninput\r\nwjmzbmr\r\noutput\r\nCHAT WITH HER!\r\n\r\ninput\r\nxiaodao\r\noutput\r\nIGNORE HIM!\r\n\r\ninput\r\nsevenkplus\r\noutput\r\nCHAT WITH HER!",
+    "topic": "arrays-hashing",
+    "topic_relation": 1,
+    "user_level_access": 0,
+    "mini_level_access": 1,
+    "difficulty_color": "text-green-500"
+  }
+},
+{
   "model": "problems.hint",
   "pk": 4,
   "fields": {
@@ -1839,6 +1858,33 @@
   }
 },
 {
+  "model": "problems.hint",
+  "pk": 112,
+  "fields": {
+    "problem": 41,
+    "order": 1,
+    "text": "Yes, the problem has a fairly long (and pretty useless) backstory, but this isn't English class so we can ignore most of it. The key part of the problem statement is this: if the number of distinct characters in one's user name is odd, then he is a male, otherwise she is a female. What key part about the given string is important to us?"
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 113,
+  "fields": {
+    "problem": 41,
+    "order": 2,
+    "text": "We want to know the number of unique letters in the string; how might we find that? Imagine we have a big bag of characters, but if there were a duplicate letter, we would just throw it away. So maybe some kind of data structure that only stores unique items."
+  }
+},
+{
+  "model": "problems.hint",
+  "pk": 114,
+  "fields": {
+    "problem": 41,
+    "order": 3,
+    "text": "Use a set to track the unique letters in the string. But now we have to determine whether the user is a boy or a girl. How can we use the set to determine whether there is an even or odd number of unique characters?"
+  }
+},
+{
   "model": "problems.editorial",
   "pk": 2,
   "fields": {
@@ -2226,6 +2272,16 @@
     "explanation": "Before trying to solve this problem, you should look at the explanation for Codeforces problem 279B \"Books\". This problem also uses a dynamic sliding window algorithm to calculate the length of the longest subarray such that its sum fits within a given value. Most of the explanation for this problem will be based on the Codeforces problem.\r\n\r\nYou can quickly see that this isn't a typical sliding window problem; in fact, it is actually a bit weird. Normally, we would have an explicit condition to keep growing our window, but here we are asked to find the minimal length (instead of the longest) such that the sum of the subarray is greater than or equal to <code>target</code>.\r\n\r\nIt wouldn't make sense for the condition to be <code>while (curr_sum < target)</code> (you may try using the opposite condition, leading to this approach), since having invalid subarrays wouldn't help us in any way. However, the answer lies in plain sight with a standard dynamic sliding window algorithm.\r\n\r\n\r\nWe most commonly use a while loop to shrink the window. When dealing with sums, we usually do something like:\r\n\r\n<code>while (curr_sum >= target):\r\n     curr_sum -= nums[l]\r\n     l += 1\r\n</code>\r\n\r\nThis is how we shrink the window when it becomes invalid. But how does this help us? When <code>curr_sum >= target</code>, the window is valid, so why would we want to shrink it?\r\n\r\nThat's the key word: shrink. Remember, the problem is asking for the minimal-length subarray, so we should shrink a valid subarray as much as possible to get a minimal length. So, in the while loop, just keep track of the minimum length you've seen so far: <code>ans = min(ans, r - l + 1)</code>.\r\n\r\n\r\nWhy don't we start with the entire array and start shrinking?\r\n\r\nWe could, but this doesn't necessarily give us the correct answer. You would have to figure out how to shrink the array. You could shrink from left to right, but then how do you know if a middle subarray is actually the shortest? Doing it the standard way (as explained above) ensures that we can check those middle subarrays and find the minimal length.",
     "py_solution": "class Solution:\r\n    def minSubArrayLen(self, target: int, nums: list[int]) -> int:\r\n        curr_sum = 0\r\n        ans = float('inf')\r\n        l = 0\r\n\r\n        for r in range(len(nums)):\r\n            curr_sum += nums[r]\r\n\r\n            while curr_sum >= target:\r\n                ans = min(ans, r - l + 1)\r\n                curr_sum -= nums[l]\r\n                l += 1\r\n    \r\n        return ans if ans != float('inf') else 0",
     "cpp_solution": "class Solution {\r\npublic:\r\n    int minSubArrayLen(int target, vector<int>& nums) {\r\n        int curr_sum = 0;\r\n        int ans = INT_MAX;\r\n        int l = 0;\r\n\r\n        for (int r=0; r < nums.size(); ++r){\r\n            curr_sum += nums[r];\r\n\r\n            while (curr_sum >= target){\r\n                ans = min(ans, r - l + 1);\r\n                \r\n                curr_sum -= nums[l];\r\n                l++;\r\n            }\r\n        }\r\n\r\n        return ans != INT_MAX ? ans : 0;\r\n    }\r\n};"
+  }
+},
+{
+  "model": "problems.editorial",
+  "pk": 41,
+  "fields": {
+    "problem": 41,
+    "explanation": "When it comes to problems like these with long descriptions, you need to cherry-pick the actually useful information out of them. Here, we get an interesting yet useless backstory; in fact, we could get rid of the first two paragraphs and still be able to solve this problem.\r\n\r\nThe key information we actually need is this line: if the number of distinct characters in one's user name is odd, then he is a male, otherwise she is a female.\r\n\r\nSo, we have to count the number of unique characters in the given string. But how do we do that?\r\n\r\n\r\nMaybe we can keep a variable for every letter in the alphabet. Then we can count how many times each letter appears in the string as we loop through it. The only problem is that it takes too long to type out. \r\n\r\nWe have to think a bit smarter. Whenever you see an approach like this where you might have to keep variables for every single item (like letters, numbers, etc.), you can almost always avoid it by using a data structure to store them instead.\r\n\r\n\r\nBut what data structure would help us here? Well, the keyword here is \"unique\". Two primary data structures store unique items: hash sets and hash maps. \r\n\r\nAre we dealing with keys and values here? - Maybe, since maybe we count the number of times each letter appears? While we could do this, it is unnecessary. We only need to know the number of unique letters, not how many times we see each letter.\r\n\r\nSo, let's use a hash set. Note that \"hash set\" is more of a fancy term, so we can just call it a \"set\". Now the problem becomes very simple. We will add each character in the string to the set. Since sets only store unique values, we won't have to worry about adding the same letter more than once. \r\n\r\n\r\nNow, the number of unique letters is simply the number of letters in the set. Why? - Because the set handles duplicates, it will only store the unique letters in the string. So, the number of letters in the set is the number of unique letters in the string.\r\n\r\nBut we're not quite done yet. We have to check if the number of unique letters is even or odd. We can do that with the modulo <code>%</code> operator by doing modulo <code>2</code>.\r\n\r\n\r\nImplementation Note: Instead of looping through the string and adding each character to the set, some languages allow you to directly convert a data type (in this case, a string) into a set.",
+    "py_solution": "username = input().strip()\r\nunique = set(username)\r\n\r\nif len(unique) % 2 == 0:\r\n    print(\"CHAT WITH HER!\")\r\n\r\nelse:\r\n    print(\"IGNORE HIM!\")",
+    "cpp_solution": "#include <iostream>\r\n#include <string>\r\n#include <unordered_set>\r\nusing namespace std;\r\n\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n    \r\n    string s;\r\n    cin >> s;\r\n    \r\n    // set<char> also works\r\n    unordered_set<char> unique(s.begin(), s.end());\r\n\r\n    if (unique.size() % 2 == 0){\r\n        cout << \"CHAT WITH HER!\\n\";\r\n        \r\n    } else{\r\n        cout << \"IGNORE HIM!\\n\";\r\n    }\r\n\r\n    return 0;\r\n}"
   }
 }
 ]
